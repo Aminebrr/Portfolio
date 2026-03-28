@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
 
+<script>document.documentElement.classList.add('js');</script>
+
 <style>
 /* ═══════════════════════════════
    DESIGN TOKENS
@@ -195,18 +197,29 @@ nav {
   grid-template-rows: 1fr auto;
   position: relative;
   overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(247,244,239,0.97) 0%, rgba(247,244,239,0.94) 36%, rgba(247,244,239,0.86) 62%, rgba(247,244,239,0.74) 100%),
+    url('takeaway-hero-bg.png') 72% center/cover no-repeat;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.10) 0%, rgba(26,24,20,0.10) 100%);
+  pointer-events: none;
+  z-index: 0;
 }
 .hero-grain {
   position: absolute; inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
   pointer-events: none;
-  opacity: 0.6;
+  opacity: 0.35;
 }
 .hero-glow {
   position: absolute;
   top: -10%; right: -5%;
   width: 60vw; height: 80vh;
-  background: radial-gradient(ellipse at 70% 30%, rgba(200,132,42,0.10) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 70% 30%, rgba(200,132,42,0.08) 0%, transparent 60%);
   pointer-events: none;
 }
 .hero-grid {
@@ -215,6 +228,7 @@ nav {
     linear-gradient(rgba(30,28,25,0.035) 1px, transparent 1px),
     linear-gradient(90deg, rgba(30,28,25,0.035) 1px, transparent 1px);
   background-size: 60px 60px;
+  opacity: 0.35;
   pointer-events: none;
 }
 .hero-body {
@@ -226,7 +240,16 @@ nav {
   width: 100%;
   position: relative; z-index: 2;
 }
-.hero-content { max-width: 700px; }
+.hero-content {
+  max-width: 760px;
+  padding: 28px 30px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(247,244,239,0.78) 0%, rgba(247,244,239,0.58) 100%);
+  backdrop-filter: blur(10px) saturate(1.05);
+  -webkit-backdrop-filter: blur(10px) saturate(1.05);
+  border: 1px solid rgba(255,255,255,0.38);
+  box-shadow: 0 18px 60px rgba(30,28,25,0.08);
+}
 
 .eyebrow {
   display: inline-flex;
@@ -262,11 +285,15 @@ nav {
   margin-bottom: 28px;
   opacity: 0;
   animation: fadeUp .6s .12s ease both;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.65);
 }
 .hero-title em { color: var(--accent); }
 .hero-title .hero-now {
   color: var(--text3);
   font-style: italic;
+}
+.hero-title, .hero-desc {
+  text-shadow: 0 1px 0 rgba(255,255,255,0.4);
 }
 
 .hero-desc {
@@ -392,11 +419,15 @@ nav {
 
 /* Reveal animation */
 .reveal {
+  opacity: 1;
+  transform: none;
+}
+.js .reveal {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity .55s ease, transform .55s ease;
 }
-.reveal.in { opacity: 1; transform: translateY(0); }
+.js .reveal.in { opacity: 1; transform: translateY(0); }
 .reveal-delay-1 { transition-delay: .08s; }
 .reveal-delay-2 { transition-delay: .16s; }
 .reveal-delay-3 { transition-delay: .24s; }
@@ -880,7 +911,13 @@ footer {
 ══════════════════════════════ */
 @media (max-width: 900px) {
   .cs-section { padding: 64px 24px; }
+  .hero-content {
+    padding: 22px 20px;
+    border-radius: 20px;
+  }
+
   .hero-body, .hero-footer { padding-left: 24px; padding-right: 24px; }
+  .hero { background-position: 64% center; }
   .brief-grid, .pillars-grid, .creatives-grid, .kpi-grid,
   .channels-grid, .checklist-grid { grid-template-columns: 1fr; }
   .hero-meta { flex-direction: column; }
@@ -904,7 +941,7 @@ footer {
 <nav>
   <div class="nav-inner">
     <div class="nav-left">
-      <a href="../index.html" class="nav-logo">AB<span>.</span></a>
+      <a href="index.html" class="nav-logo">AB<span>.</span></a>
       <div class="nav-sep"></div>
       <span class="nav-title-text" data-en="Takeaway — Campaign Case Study" data-fr="Takeaway — Étude de Cas">Takeaway — Campaign Case Study</span>
     </div>
@@ -913,7 +950,7 @@ footer {
         <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
         <button class="lang-btn" id="btn-fr" onclick="setLang('fr')">FR</button>
       </div>
-      <a href="../index.html" class="btn-back">
+      <a href="index.html" class="btn-back">
         <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11.5 7H2.5M6 3.5L2.5 7 6 10.5"/></svg>
         <span data-en="Portfolio" data-fr="Portfolio">Portfolio</span>
       </a>
@@ -1058,8 +1095,8 @@ footer {
         <div class="pillar-num-bg">3</div>
         <div class="pillar-icon">📣</div>
         <div class="pillar-name" data-en="Build cultural presence" data-fr="Créer une présence culturelle">Build cultural presence</div>
-        <p class="pillar-desc" data-en="Work with creators and platform-native formats to make craving feel relatable and shareable, helping the campaign live within everyday social content rather than only in paid media." data-fr="Travailler avec des créateurs et des formats natifs aux plateformes pour rendre l'envie plus relatable et partageable, afin que la campagne vive dans le contenu social du quotidien et pas seulement dans le paid media.">
-          Work with creators and platform-native formats to make craving feel relatable and shareable, helping the campaign live within everyday social content rather than only in paid media.
+        <p class="pillar-desc" data-en="Work with creators and platform-native formats to make craving feel relatable and shareable — so the campaign shows up in genuine content, not just bought space." data-fr="Travailler avec des créateurs et des formats natifs aux plateformes pour rendre l'envie plus relatable et partageable — afin que la campagne apparaisse dans du vrai contenu, pas seulement dans de l'espace acheté.">
+          Work with creators and platform-native formats to make craving feel relatable and shareable — so the campaign shows up in genuine content, not just bought space.
         </p>
       </div>
     </div>
@@ -1119,8 +1156,8 @@ footer {
         <div>
           <div class="phase-tag" data-en="Weeks 11–12 · Convert" data-fr="Semaines 11–12 · Conversion">Weeks 11–12 · Convert</div>
           <div class="phase-name" data-en="Performance Sprint & Retention Close" data-fr="Sprint Performance & Clôture Rétention">Performance Sprint &amp; Retention Close</div>
-          <p class="phase-body" data-en="The final phase focused on conversion and retention: short promotional bursts, win-back CRM sequences, and personalised recap mechanics designed to increase repeat intent and close the campaign on a stronger loyalty message." data-fr="La phase finale s'est concentrée sur la conversion et la rétention : courtes séquences promotionnelles, dispositifs CRM de win-back et mécaniques de récapitulatif personnalisées conçues pour renforcer l'intention de réachat et conclure la campagne sur un message de fidélité plus fort.">
-            The final phase focused on conversion and retention: short promotional bursts, win-back CRM sequences, and personalised recap mechanics designed to increase repeat intent and close the campaign on a stronger loyalty message.
+          <p class="phase-body" data-en="The final phase focused on conversion and retention: short promotional bursts, win-back CRM sequences, and personalised recap formats designed to increase repeat intent and close the campaign on a stronger loyalty message." data-fr="La phase finale s'est concentrée sur la conversion et la rétention : courtes séquences promotionnelles, dispositifs CRM de win-back et formats de récapitulatif personnalisés conçus pour renforcer l'intention de réachat et conclure la campagne sur un message de fidélité plus fort.">
+            The final phase focused on conversion and retention: short promotional bursts, win-back CRM sequences, and personalised recap formats designed to increase repeat intent and close the campaign on a stronger loyalty message.
           </p>
           <div class="tags-row">
             <span class="tag-pill">Flash Offers</span><span class="tag-pill">CRM Win-back</span><span class="tag-pill">Data Story</span><span class="tag-pill">Loyalty</span>
@@ -1244,7 +1281,7 @@ footer {
         <div class="ch-icon">📱</div>
         <div class="ch-info">
           <div class="ch-name" data-en="TikTok Ads + Creator Deals" data-fr="TikTok Ads + Partenariats Créateurs">TikTok Ads + Creator Deals</div>
-          <div class="ch-desc" data-en="In-feed, TopView, Spark Ads · 68 creators" data-fr="In-feed, TopView, Spark Ads · 68 créateurs">In-feed, TopView, Spark Ads · 68 creators</div>
+          <div class="ch-desc" data-en="In-feed, TopView, Spark Ads · creator partnerships" data-fr="In-feed, TopView, Spark Ads · partenariats créateurs">In-feed, TopView, Spark Ads · creator partnerships</div>
         </div>
         <div class="ch-budget"><div class="ch-amount">€620K</div><div class="ch-pct">26%</div></div>
       </div>
@@ -1326,9 +1363,9 @@ footer {
         <div class="kpi-trend" data-en="Market dependent" data-fr="Selon les marchés">Market dependent</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-num"><span>4.2</span>M</div>
-        <div class="kpi-label" data-en="TikTok and creator reach" data-fr="Portée TikTok et créateurs">TikTok and creator reach</div>
-        <div class="kpi-trend" data-en="Strong participation in creator-led formats" data-fr="Bonne participation aux formats créateurs">Strong participation in creator-led formats</div>
+        <div class="kpi-num">↑</div>
+        <div class="kpi-label" data-en="Creator & social reach" data-fr="Portée créateurs & réseaux">Creator &amp; social reach</div>
+        <div class="kpi-trend" data-en="Strong organic amplification" data-fr="Forte amplification organique">Strong organic amplification</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-num">↓</div>
@@ -1341,18 +1378,18 @@ footer {
         <div class="kpi-trend" data-en="Above previous campaign benchmarks" data-fr="Au-dessus des benchmarks précédents">Above previous campaign benchmarks</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-num"><span>180</span>K</div>
+        <div class="kpi-num">✓</div>
         <div class="kpi-label" data-en="Quiz interactions" data-fr="Interactions quiz">Quiz interactions</div>
         <div class="kpi-trend" data-en="High engagement in teaser phase" data-fr="Fort engagement en phase teaser">High engagement in teaser phase</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-num">+<span>lift</span></div>
+        <div class="kpi-num">↑</div>
         <div class="kpi-label" data-en="Brand relevance among 18–34s" data-fr="Pertinence de marque chez les 18–34 ans">Brand relevance among 18–34s</div>
         <div class="kpi-trend" data-en="Post-campaign tracking" data-fr="Suivi post-campagne">Post-campaign tracking</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-num"><span>68</span>K</div>
-        <div class="kpi-label" data-en="Loyalty programme signups" data-fr="Inscriptions au programme fidélité">Loyalty programme signups</div>
+        <div class="kpi-num">↑</div>
+        <div class="kpi-label" data-en="Loyalty signups" data-fr="Inscriptions fidélité">Loyalty signups</div>
         <div class="kpi-trend" data-en="Strong early adoption" data-fr="Forte adoption au lancement">Strong early adoption</div>
       </div>
       <div class="kpi-card">
@@ -1361,8 +1398,11 @@ footer {
         <div class="kpi-trend" data-en="The teaser phase drove strong engagement but lower-than-expected conversion, which led to a simpler funnel later in the rollout." data-fr="La phase teaser a généré un fort engagement mais une conversion plus faible qu'attendu, ce qui a conduit à simplifier le funnel dans la suite du déploiement.">The teaser phase drove strong engagement but lower-than-expected conversion, which led to a simpler funnel later in the rollout.</div>
       </div>
     </div>
+  </div>
 </section>
 
+<section class="cs-section" id="summary" style="background: var(--bg2);">
+  <div class="cs-inner">
     <div class="summary-block reveal">
       <p><strong>Project:</strong> "Crave It. Own It. Now." — Takeaway campaign concept</p>
       <p><strong>Role:</strong> Campaign strategy and communication development</p>
@@ -1379,7 +1419,7 @@ footer {
   <div class="footer-inner">
     <span class="footer-logo">AB<span>.</span></span>
     <span class="footer-copy">© 2026 Amine Brahimi — <span data-en="Communication & Marketing Specialist" data-fr="Spécialiste Communication & Marketing">Communication &amp; Marketing Specialist</span></span>
-    <a class="footer-back" href="../index.html">
+    <a class="footer-back" href="index.html">
       <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11.5 7H2.5M6 3.5L2.5 7 6 10.5"/></svg>
       <span data-en="Back to portfolio" data-fr="Retour au portfolio">Back to portfolio</span>
     </a>
