@@ -7,57 +7,61 @@
 <meta name="description" content="Integrated pan-European campaign for Takeaway.com — Crave It. Own It. Now. Brand strategy, paid media, influencer & CRM across 4 markets.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-<style>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
 
+<style>
 /* ═══════════════════════════════
-   DESIGN TOKENS — matches portfolio exactly
+   DESIGN TOKENS
 ═══════════════════════════════ */
 :root {
   --bg:        #F7F4EF;
   --bg2:       #EFEBE3;
   --bg3:       #E6E1D8;
-  --bg-dark:   #1E1C19;
-  --bg-dark2:  #252320;
-  --border:    rgba(30,28,25,0.10);
-  --border2:   rgba(30,28,25,0.18);
+  --bg-dark:   #1A1814;
+  --bg-dark2:  #201E1A;
+  --border:    rgba(30,28,25,0.09);
+  --border2:   rgba(30,28,25,0.16);
   --accent:    #C8842A;
   --accent2:   #E09A3A;
   --accent-bg: rgba(200,132,42,0.08);
   --text1:     #1E1C19;
-  --text2:     #5C5750;
+  --text2:     #5A5450;
   --text3:     #9A9590;
   --serif:     'DM Serif Display', Georgia, serif;
   --sans:      'DM Sans', system-ui, sans-serif;
-  --nav-h:     64px;
-  --max:       1160px;
+  --nav-h:     60px;
+  --max:       1120px;
+  --content:   680px;
   --r:         10px;
+  --r2:        14px;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; font-size: 15px; }
 body {
   background: var(--bg);
   color: var(--text1);
   font-family: var(--sans);
-  font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
 a { color: inherit; text-decoration: none; }
+em { font-style: italic; }
 
-/* ─── NAV ─────────────────────── */
+/* ══════════════════════════════
+   NAVBAR
+══════════════════════════════ */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
   height: var(--nav-h);
-  padding: 0 40px;
-  background: rgba(247,244,239,0.92);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  padding: 0 32px;
+  background: rgba(247,244,239,0.88);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
   border-bottom: 0.5px solid var(--border);
-  z-index: 100;
+  z-index: 200;
   display: flex;
   align-items: center;
 }
@@ -68,46 +72,69 @@ nav {
   width: 100%; max-width: var(--max);
   margin: 0 auto;
 }
-.logo {
+.nav-logo {
   font-family: var(--serif);
-  font-size: 20px;
+  font-size: 19px;
   color: var(--text1);
   letter-spacing: -0.01em;
+  display: flex; align-items: center; gap: 6px;
 }
-.logo span { color: var(--accent); }
-.nav-right { display: flex; align-items: center; gap: 16px; }
+.nav-logo span { color: var(--accent); }
+.nav-sep {
+  width: 1px; height: 16px;
+  background: var(--border2);
+}
+.nav-title-text {
+  font-size: 12px;
+  color: var(--text3);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 240px;
+}
+.nav-left { display: flex; align-items: center; gap: 14px; }
+.nav-right { display: flex; align-items: center; gap: 12px; }
 
-/* Language toggle pill */
+/* Progress bar */
+.progress-bar {
+  position: fixed;
+  top: var(--nav-h); left: 0;
+  width: 0%; height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  z-index: 201;
+  transition: width 0.1s linear;
+}
+
+/* Lang toggle */
 .lang-toggle {
   display: flex;
-  align-items: center;
   background: var(--bg3);
   border: 0.5px solid var(--border2);
   border-radius: 40px;
   padding: 3px;
-  gap: 2px;
+  gap: 1px;
 }
 .lang-btn {
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 500;
   font-family: var(--sans);
-  letter-spacing: 0.06em;
-  padding: 5px 14px;
+  letter-spacing: 0.07em;
+  padding: 4px 13px;
   border-radius: 40px;
   border: none;
   background: transparent;
   color: var(--text3);
   cursor: pointer;
-  transition: background .2s, color .2s;
+  transition: background .18s, color .18s;
 }
-.lang-btn.active {
-  background: var(--accent);
-  color: #fff;
-}
+.lang-btn.active { background: var(--accent); color: #fff; }
+
 .btn-back {
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 500;
-  padding: 8px 18px;
+  padding: 7px 16px;
   border-radius: 7px;
   background: var(--text1);
   color: var(--bg);
@@ -115,72 +142,145 @@ nav {
   cursor: pointer;
   letter-spacing: 0.02em;
   transition: opacity .2s, transform .15s;
-  display: flex; align-items: center; gap: 6px;
+  display: flex; align-items: center; gap: 5px;
 }
-.btn-back:hover { opacity: 0.82; transform: translateY(-1px); }
+.btn-back:hover { opacity: 0.8; transform: translateY(-1px); }
+.btn-back svg { flex-shrink: 0; }
 
-/* ─── HERO ─────────────────────── */
-.hero {
-  padding-top: var(--nav-h);
-  min-height: 88vh;
+/* ══════════════════════════════
+   SECTION PROGRESS PILLS
+══════════════════════════════ */
+.section-nav {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 28px;
+  z-index: 199;
   display: flex;
   align-items: center;
+  gap: 5px;
+  background: rgba(26,24,20,0.9);
+  backdrop-filter: blur(14px);
+  padding: 8px 14px;
+  border-radius: 40px;
+  border: 0.5px solid rgba(255,255,255,0.08);
+  opacity: 0;
+  transition: opacity .3s;
+}
+.section-nav.visible { opacity: 1; }
+.snav-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  cursor: pointer;
+  transition: background .2s, width .2s;
+}
+.snav-dot.active { background: var(--accent2); width: 20px; border-radius: 4px; }
+.snav-label {
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  margin-left: 6px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+/* ══════════════════════════════
+   HERO
+══════════════════════════════ */
+.hero {
+  padding-top: var(--nav-h);
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: 1fr auto;
   position: relative;
   overflow: hidden;
 }
-.hero::before {
-  content: '';
-  position: absolute; top: 0; right: 0;
-  width: 55vw; height: 100%;
-  background: radial-gradient(ellipse at 80% 50%, rgba(200,132,42,0.09) 0%, transparent 65%);
+.hero-grain {
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.6;
+}
+.hero-glow {
+  position: absolute;
+  top: -10%; right: -5%;
+  width: 60vw; height: 80vh;
+  background: radial-gradient(ellipse at 70% 30%, rgba(200,132,42,0.10) 0%, transparent 60%);
   pointer-events: none;
 }
 .hero-grid {
   position: absolute; inset: 0;
   background-image:
-    linear-gradient(rgba(30,28,25,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(30,28,25,0.04) 1px, transparent 1px);
-  background-size: 56px 56px;
+    linear-gradient(rgba(30,28,25,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30,28,25,0.035) 1px, transparent 1px);
+  background-size: 60px 60px;
   pointer-events: none;
 }
-.hero-inner {
+.hero-body {
+  display: flex;
+  align-items: flex-end;
+  padding: 6vh 32px 52px;
   max-width: var(--max);
   margin: 0 auto;
-  padding: 80px 40px;
   width: 100%;
-  position: relative; z-index: 1;
+  position: relative; z-index: 2;
 }
+.hero-content { max-width: 700px; }
+
 .eyebrow {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 20px;
-  animation: fadeUp .5s ease both;
+  margin-bottom: 22px;
+  background: var(--accent-bg);
+  border: 0.5px solid rgba(200,132,42,0.22);
+  border-radius: 40px;
+  padding: 5px 14px 5px 10px;
+  opacity: 0;
+  animation: fadeUp .5s .05s ease both;
 }
-.eyebrow-line { width: 28px; height: 1px; background: var(--accent); }
+.eyebrow-dot {
+  width: 6px; height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
 .eyebrow-text {
-  font-size: 11px; font-weight: 500;
+  font-size: 10.5px; font-weight: 500;
   color: var(--accent);
-  letter-spacing: 0.13em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+
 .hero-title {
   font-family: var(--serif);
-  font-size: clamp(44px, 6vw, 80px);
+  font-size: clamp(52px, 8vw, 96px);
   font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  margin-bottom: 24px;
-  animation: fadeUp .55s .08s ease both;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: fadeUp .6s .12s ease both;
 }
-.hero-title em { color: var(--accent); font-style: italic; }
+.hero-title em { color: var(--accent); }
+.hero-title .hero-now {
+  color: var(--text3);
+  font-style: italic;
+}
+
 .hero-desc {
-  font-size: 16px; color: var(--text2); line-height: 1.7;
-  max-width: 560px;
-  margin-bottom: 36px;
-  animation: fadeUp .55s .16s ease both;
+  font-size: 16px;
+  color: var(--text2);
+  line-height: 1.75;
+  max-width: 520px;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeUp .6s .22s ease both;
 }
-.hero-meta-row {
+
+/* Meta chips */
+.hero-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 0;
@@ -188,257 +288,435 @@ nav {
   border-radius: var(--r);
   overflow: hidden;
   width: fit-content;
-  animation: fadeUp .55s .24s ease both;
+  opacity: 0;
+  animation: fadeUp .6s .32s ease both;
 }
 .meta-chip {
-  padding: 12px 22px;
+  padding: 13px 22px;
   border-right: 0.5px solid var(--border2);
-  background: var(--bg2);
+  background: rgba(239,235,227,0.7);
+  backdrop-filter: blur(8px);
+  transition: background .2s;
 }
 .meta-chip:last-child { border-right: none; }
+.meta-chip:hover { background: var(--bg3); }
 .meta-label {
-  font-size: 10px; font-weight: 500;
+  font-size: 9.5px; font-weight: 500;
   color: var(--text3);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
   margin-bottom: 3px;
 }
-.meta-val { font-size: 13px; font-weight: 500; color: var(--text1); }
+.meta-val { font-size: 12.5px; font-weight: 500; color: var(--text1); }
 
-/* ─── SECTION SHARED ─────────────── */
-.section-lbl {
-  display: flex; align-items: center; gap: 10px;
-  margin-bottom: 20px;
+/* Hero scroll cue */
+.hero-footer {
+  padding: 0 32px 28px;
+  max-width: var(--max);
+  margin: 0 auto;
+  width: 100%;
+  position: relative; z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  animation: fadeUp .5s .5s ease both;
 }
-.sl-line { width: 24px; height: 1px; background: var(--accent); }
-.sl-text { font-size: 10px; font-weight: 500; color: var(--accent); letter-spacing: 0.13em; text-transform: uppercase; }
+.scroll-hint {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--text3);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.scroll-line {
+  width: 32px; height: 0.5px;
+  background: var(--text3);
+}
+.hero-index {
+  font-family: var(--serif);
+  font-size: 12px;
+  color: var(--text3);
+  letter-spacing: 0.08em;
+}
 
+/* ══════════════════════════════
+   SECTION STRUCTURE
+══════════════════════════════ */
 .cs-section {
-  padding: 80px 40px;
+  padding: 96px 32px;
   border-top: 0.5px solid var(--border);
+  position: relative;
 }
-.cs-inner { max-width: var(--max); margin: 0 auto; }
+.cs-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+}
 
+/* Section label */
+.section-lbl {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.sl-line { width: 20px; height: 1px; background: var(--accent); flex-shrink: 0; }
+.sl-text {
+  font-size: 10px; font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Section headings */
 .section-title {
   font-family: var(--serif);
-  font-size: clamp(28px, 3.5vw, 44px);
+  font-size: clamp(30px, 4vw, 48px);
   font-weight: 400;
-  line-height: 1.1;
-  letter-spacing: -0.015em;
-  margin-bottom: 14px;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  max-width: 680px;
 }
-.section-title em { color: var(--accent); font-style: italic; }
+.section-title em { color: var(--accent); }
+
 .section-lead {
-  font-size: 15px; color: var(--text2); line-height: 1.75;
-  max-width: 640px;
-  margin-bottom: 44px;
+  font-size: 15px;
+  color: var(--text2);
+  line-height: 1.75;
+  max-width: 600px;
+  margin-bottom: 48px;
 }
 
-/* ─── BRIEF CARDS ─────────────── */
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .55s ease, transform .55s ease;
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: .08s; }
+.reveal-delay-2 { transition-delay: .16s; }
+.reveal-delay-3 { transition-delay: .24s; }
+
+/* ══════════════════════════════
+   01 — BRIEF
+══════════════════════════════ */
 .brief-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1px;
   background: var(--border2);
   border: 0.5px solid var(--border2);
-  border-radius: var(--r);
+  border-radius: var(--r2);
   overflow: hidden;
 }
 .brief-card {
   background: var(--bg);
-  padding: 28px 28px 30px;
+  padding: 30px;
   transition: background .2s;
+  position: relative;
+}
+.brief-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity .2s;
 }
 .brief-card:hover { background: var(--bg2); }
+.brief-card:hover::before { opacity: 1; }
+
 .bc-label {
   font-size: 10px; font-weight: 500;
   color: var(--accent);
-  letter-spacing: 0.12em; text-transform: uppercase;
-  margin-bottom: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: flex; align-items: center; gap: 7px;
 }
-.bc-text { font-size: 14px; color: var(--text2); line-height: 1.7; }
-.bc-text strong { color: var(--text1); }
+.bc-label::before {
+  content: '';
+  width: 4px; height: 4px;
+  background: var(--accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.bc-text {
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.72;
+}
+.bc-text strong { color: var(--text1); font-weight: 500; }
 
-/* ─── PILLARS ─────────────────── */
+/* ══════════════════════════════
+   02 — STRATEGY PILLARS
+══════════════════════════════ */
 .pillars-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(3,1fr);
+  gap: 14px;
 }
 .pillar-card {
   background: var(--bg2);
   border: 0.5px solid var(--border2);
-  border-radius: var(--r);
-  padding: 28px 24px;
+  border-radius: var(--r2);
+  padding: 32px 26px;
   position: relative;
-  transition: transform .2s, box-shadow .2s;
+  overflow: hidden;
+  transition: transform .22s, box-shadow .22s, border-color .22s;
 }
-.pillar-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(30,28,25,.06); }
-.pillar-num {
+.pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(30,28,25,.07);
+  border-color: rgba(200,132,42,.3);
+}
+.pillar-num-bg {
   font-family: var(--serif);
-  font-size: 44px;
-  color: rgba(200,132,42,.14);
+  font-size: 80px;
+  color: rgba(200,132,42,.08);
   line-height: 1;
   position: absolute;
-  top: 16px; right: 20px;
+  bottom: -12px; right: 14px;
+  pointer-events: none;
+  user-select: none;
 }
 .pillar-icon {
-  width: 40px; height: 40px;
-  border-radius: 50%;
+  width: 42px; height: 42px;
+  border-radius: 10px;
   background: var(--accent-bg);
+  border: 0.5px solid rgba(200,132,42,.2);
   display: flex; align-items: center; justify-content: center;
   font-size: 18px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 .pillar-name {
   font-family: var(--serif);
-  font-size: 20px;
+  font-size: 21px;
   margin-bottom: 10px;
   color: var(--text1);
 }
-.pillar-desc { font-size: 13.5px; color: var(--text2); line-height: 1.65; }
+.pillar-desc {
+  font-size: 13.5px;
+  color: var(--text2);
+  line-height: 1.68;
+  position: relative; z-index: 1;
+}
 
-/* ─── PHASES ──────────────────── */
-.phases-list { display: flex; flex-direction: column; gap: 0; }
+/* ══════════════════════════════
+   03 — EXECUTION PHASES
+══════════════════════════════ */
+.phases-list { display: flex; flex-direction: column; }
 .phase-row {
   display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 28px;
-  padding: 32px 0;
+  grid-template-columns: 72px 1fr;
+  gap: 32px;
+  padding: 36px 0;
   border-bottom: 0.5px solid var(--border);
   align-items: start;
 }
-.phase-row:last-child { border-bottom: none; }
+.phase-row:first-child { padding-top: 0; }
+.phase-row:last-child { border-bottom: none; padding-bottom: 0; }
 .phase-num-big {
   font-family: var(--serif);
-  font-size: 42px;
-  color: rgba(200,132,42,.18);
+  font-size: 40px;
+  color: rgba(200,132,42,.16);
   line-height: 1;
-  padding-top: 2px;
+  padding-top: 4px;
   text-align: right;
 }
 .phase-tag {
   font-size: 10px; font-weight: 500;
   color: var(--accent);
-  letter-spacing: 0.12em; text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   margin-bottom: 6px;
 }
 .phase-name {
   font-family: var(--serif);
   font-size: 22px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  color: var(--text1);
 }
-.phase-body { font-size: 14px; color: var(--text2); line-height: 1.75; max-width: 680px; margin-bottom: 14px; }
+.phase-body {
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.78;
+  max-width: 660px;
+  margin-bottom: 16px;
+}
 .tags-row { display: flex; flex-wrap: wrap; gap: 6px; }
 .tag-pill {
-  font-size: 11px;
+  font-size: 10.5px;
   padding: 4px 12px;
   border-radius: 40px;
   border: 0.5px solid var(--border2);
   color: var(--text2);
   background: var(--bg2);
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
-/* ─── CREATIVE MOCKUPS ─────────── */
+/* ══════════════════════════════
+   04 — CREATIVE MOCKUPS
+══════════════════════════════ */
 .creatives-grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 16px;
+  gap: 14px;
 }
 .creative-card {
   border: 0.5px solid var(--border2);
-  border-radius: var(--r);
+  border-radius: var(--r2);
   overflow: hidden;
+  transition: transform .22s, box-shadow .22s;
+}
+.creative-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(30,28,25,.1);
 }
 .creative-vis {
   aspect-ratio: 4/5;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center;
-  padding: 28px 20px;
-  position: relative; overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+  position: relative;
+  overflow: hidden;
+  gap: 0;
 }
-.creative-vis.v1 { background: #1E1C19; }
-.creative-vis.v2 { background: var(--accent); }
-.creative-vis.v3 { background: #2A2318; }
-.c-emoji { font-size: 42px; margin-bottom: 14px; position: relative; z-index: 2; }
-.c-headline {
-  font-family: var(--serif);
-  font-size: 28px;
-  text-align: center;
-  line-height: 1;
-  color: var(--bg);
-  position: relative; z-index: 2;
+.creative-vis.v1 {
+  background: #1A1814;
 }
-.c-sub {
-  font-size: 10px; font-weight: 500;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  color: rgba(247,244,239,.5);
-  margin-top: 10px;
-  position: relative; z-index: 2;
-  text-align: center;
+.creative-vis.v2 {
+  background: var(--accent);
+}
+.creative-vis.v3 {
+  background: #231F17;
 }
 .c-deco {
   position: absolute;
   border-radius: 50%;
-  background: rgba(247,244,239,.05);
+  background: rgba(247,244,239,.04);
+}
+.c-emoji {
+  font-size: 44px;
+  margin-bottom: 16px;
+  position: relative; z-index: 2;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+}
+.c-headline {
+  font-family: var(--serif);
+  font-size: 30px;
+  text-align: center;
+  line-height: 1;
+  color: #F7F4EF;
+  position: relative; z-index: 2;
+  letter-spacing: -0.02em;
+}
+.c-sub {
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: rgba(247,244,239,.45);
+  margin-top: 14px;
+  position: relative; z-index: 2;
+  text-align: center;
 }
 .creative-meta {
   background: var(--bg2);
-  padding: 14px 18px;
+  padding: 16px 20px;
   border-top: 0.5px solid var(--border);
 }
-.cm-name { font-size: 13px; font-weight: 500; margin-bottom: 3px; }
-.cm-sub { font-size: 12px; color: var(--text3); }
+.cm-name { font-size: 13px; font-weight: 500; margin-bottom: 3px; color: var(--text1); }
+.cm-sub { font-size: 11.5px; color: var(--text3); }
 
-/* ─── CHANNELS ─────────────────── */
+/* ══════════════════════════════
+   05 — CHANNELS
+══════════════════════════════ */
 .channels-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 8px;
 }
 .channel-row {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 16px 18px;
+  padding: 17px 20px;
   background: var(--bg2);
   border: 0.5px solid var(--border2);
   border-radius: var(--r);
-  transition: background .2s;
+  transition: background .2s, border-color .2s;
+  cursor: default;
 }
-.channel-row:hover { background: var(--bg3); }
+.channel-row:hover {
+  background: var(--bg3);
+  border-color: rgba(200,132,42,0.2);
+}
 .ch-icon {
   width: 38px; height: 38px;
   border-radius: 8px;
   background: var(--accent-bg);
-  border: 0.5px solid rgba(200,132,42,.2);
+  border: 0.5px solid rgba(200,132,42,.18);
   display: flex; align-items: center; justify-content: center;
   font-size: 16px;
   flex-shrink: 0;
 }
-.ch-name { font-size: 13px; font-weight: 500; }
-.ch-desc { font-size: 12px; color: var(--text3); }
-.ch-budget {
-  margin-left: auto;
-  text-align: right;
-  flex-shrink: 0;
-}
+.ch-info { flex: 1; min-width: 0; }
+.ch-name { font-size: 13px; font-weight: 500; margin-bottom: 2px; color: var(--text1); }
+.ch-desc { font-size: 11.5px; color: var(--text3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ch-budget { margin-left: auto; text-align: right; flex-shrink: 0; padding-left: 12px; }
 .ch-amount { font-size: 13px; font-weight: 500; color: var(--accent); }
-.ch-pct { font-size: 11px; color: var(--text3); }
+.ch-pct { font-size: 10.5px; color: var(--text3); }
 
-/* ─── KPIs ─────────────────────── */
+/* Bar track */
+.channel-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+.bar-label { font-size: 11px; color: var(--text3); width: 100px; flex-shrink: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar-track {
+  flex: 1;
+  height: 4px;
+  background: var(--bg3);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  border-radius: 4px;
+  width: 0%;
+  transition: width 1.2s cubic-bezier(.16,1,.3,1);
+}
+.bar-pct { font-size: 11px; color: var(--text2); font-weight: 500; width: 36px; text-align: right; flex-shrink: 0; }
+
+/* ══════════════════════════════
+   06 — RESULTS / KPIs
+══════════════════════════════ */
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  gap: 12px;
+  gap: 10px;
 }
 .kpi-card {
   background: var(--bg-dark);
-  border-radius: var(--r);
-  padding: 24px 20px;
+  border-radius: var(--r2);
+  padding: 26px 22px;
   position: relative;
   overflow: hidden;
+  transition: transform .22s;
 }
+.kpi-card:hover { transform: translateY(-3px); }
 .kpi-card::after {
   content: '';
   position: absolute;
@@ -446,46 +724,71 @@ nav {
   height: 2px;
   background: linear-gradient(90deg, var(--accent), var(--accent2));
 }
+.kpi-card::before {
+  content: '';
+  position: absolute;
+  top: -40%; right: -20%;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: rgba(200,132,42,.05);
+}
 .kpi-num {
   font-family: var(--serif);
-  font-size: 36px;
-  color: var(--bg);
+  font-size: 38px;
+  color: #F0EDE8;
   line-height: 1;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
 }
 .kpi-num span { color: var(--accent2); }
-.kpi-label { font-size: 11px; color: var(--text3); line-height: 1.4; }
-.kpi-trend { font-size: 11px; color: #7EC98A; margin-top: 6px; }
+.kpi-label {
+  font-size: 11px;
+  color: rgba(240,237,232,.45);
+  line-height: 1.45;
+}
+.kpi-trend {
+  font-size: 10.5px;
+  color: #7EC98A;
+  margin-top: 8px;
+  font-weight: 500;
+}
 
-/* ─── PORTFOLIO GUIDE ──────────── */
+/* ══════════════════════════════
+   07 — PORTFOLIO CHECKLIST
+══════════════════════════════ */
 .checklist-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 14px;
 }
 .check-group {
   background: var(--bg2);
   border: 0.5px solid var(--border2);
-  border-radius: var(--r);
-  padding: 24px;
+  border-radius: var(--r2);
+  padding: 26px;
 }
 .cg-title {
-  font-size: 13px; font-weight: 500;
-  margin-bottom: 18px;
-  display: flex; align-items: center; gap: 8px;
+  font-size: 12.5px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: var(--text1);
+  padding-bottom: 14px;
+  border-bottom: 0.5px solid var(--border);
 }
-.cg-title::before {
-  content: '';
+.cg-title-dot {
   width: 6px; height: 6px;
   background: var(--accent);
   border-radius: 2px;
-  display: block;
   flex-shrink: 0;
 }
 .check-item {
-  display: flex; gap: 10px; align-items: flex-start;
-  padding: 8px 0;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 9px 0;
   border-bottom: 0.5px solid var(--border);
 }
 .check-item:last-child { border-bottom: none; }
@@ -493,166 +796,230 @@ nav {
   width: 16px; height: 16px;
   border: 1.5px solid var(--accent);
   border-radius: 4px;
-  flex-shrink: 0; margin-top: 1px;
+  flex-shrink: 0;
+  margin-top: 1px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 9px; color: var(--accent);
+  font-size: 8px;
+  color: var(--accent);
 }
-.ci-strong { font-size: 13px; font-weight: 500; margin-bottom: 2px; }
-.ci-desc { font-size: 12px; color: var(--text2); }
+.ci-strong { font-size: 12.5px; font-weight: 500; margin-bottom: 2px; color: var(--text1); }
+.ci-desc { font-size: 11.5px; color: var(--text2); }
 
-/* ─── CODE BLOCK ──────────────── */
-.code-block {
+/* Portfolio summary block */
+.summary-block {
   background: var(--bg-dark2);
-  border: 0.5px solid rgba(30,28,25,.4);
+  border: 0.5px solid rgba(30,28,25,.35);
   border-left: 3px solid var(--accent);
   border-radius: var(--r);
-  padding: 20px 24px;
+  padding: 22px 26px;
   margin-top: 20px;
-  font-family: 'DM Mono', 'Fira Mono', monospace;
   font-size: 12.5px;
-  line-height: 1.9;
+  line-height: 2;
   color: #C8C4BC;
-  overflow-x: auto;
 }
-.ck { color: var(--accent); }
-.cv { color: var(--accent2); }
-.cs { color: #7EC98A; }
+.summary-block strong { color: var(--accent2); font-weight: 500; }
 
-/* ─── FOOTER ──────────────────── */
+/* ══════════════════════════════
+   DIVIDER
+══════════════════════════════ */
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 52px;
+}
+.divider-line { flex: 1; height: 0.5px; background: var(--border2); }
+.divider-icon { font-size: 12px; color: var(--text3); }
+
+/* ══════════════════════════════
+   FOOTER
+══════════════════════════════ */
 footer {
   border-top: 0.5px solid var(--border);
   background: var(--bg2);
 }
 .footer-inner {
-  max-width: var(--max); margin: 0 auto;
-  padding: 28px 40px;
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 20px; flex-wrap: wrap;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 28px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
 }
-.footer-logo { font-family: var(--serif); font-size: 22px; color: var(--text1); }
+.footer-logo {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--text1);
+}
 .footer-logo span { color: var(--accent); }
 .footer-copy { font-size: 12px; color: var(--text3); }
 .footer-back {
-  font-size: 12px; font-weight: 500;
+  font-size: 12px;
+  font-weight: 500;
   color: var(--accent);
-  display: flex; align-items: center; gap: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   cursor: pointer;
-  transition: opacity .2s;
+  transition: opacity .2s, gap .2s;
 }
-.footer-back:hover { opacity: .7; }
+.footer-back:hover { opacity: .7; gap: 9px; }
 
-/* ─── ANIMATIONS ──────────────── */
+/* ══════════════════════════════
+   ANIMATIONS
+══════════════════════════════ */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(18px); }
+  from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ─── RESPONSIVE ──────────────── */
+/* ══════════════════════════════
+   RESPONSIVE
+══════════════════════════════ */
 @media (max-width: 900px) {
-  .hero-inner, .cs-section { padding-left: 24px; padding-right: 24px; }
+  .cs-section { padding: 64px 24px; }
+  .hero-body, .hero-footer { padding-left: 24px; padding-right: 24px; }
   .brief-grid, .pillars-grid, .creatives-grid, .kpi-grid,
   .channels-grid, .checklist-grid { grid-template-columns: 1fr; }
-  .phase-row { grid-template-columns: 1fr; gap: 8px; }
-  .phase-num-big { font-size: 28px; text-align: left; }
-  .hero-meta-row { flex-direction: column; }
+  .hero-meta { flex-direction: column; }
   .meta-chip { border-right: none; border-bottom: 0.5px solid var(--border2); }
   .meta-chip:last-child { border-bottom: none; }
+  .phase-row { grid-template-columns: 1fr; gap: 6px; }
+  .phase-num-big { text-align: left; font-size: 28px; }
   nav { padding: 0 20px; }
+  .nav-sep, .nav-title-text { display: none; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
+  .section-nav { display: none; }
 }
 </style>
 </head>
 <body>
 
+<!-- Progress -->
+<div class="progress-bar" id="progress"></div>
+
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="logo">AB<span>.</span></a>
+    <div class="nav-left">
+      <a href="../index.html" class="nav-logo">AB<span>.</span></a>
+      <div class="nav-sep"></div>
+      <span class="nav-title-text" data-en="Takeaway — Campaign Case Study" data-fr="Takeaway — Étude de Cas">Takeaway — Campaign Case Study</span>
+    </div>
     <div class="nav-right">
       <div class="lang-toggle">
         <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
         <button class="lang-btn" id="btn-fr" onclick="setLang('fr')">FR</button>
       </div>
-      <button class="btn-back" onclick="history.back()">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11.5 7H2.5M6 3.5L2.5 7 6 10.5"/></svg>
-        <span data-en="Back to portfolio" data-fr="Retour au portfolio">Back to portfolio</span>
-      </button>
+      <a href="../index.html" class="btn-back">
+        <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11.5 7H2.5M6 3.5L2.5 7 6 10.5"/></svg>
+        <span data-en="Portfolio" data-fr="Portfolio">Portfolio</span>
+      </a>
     </div>
   </div>
 </nav>
 
+<!-- Section nav dots -->
+<nav class="section-nav" id="sectionNav">
+  <div class="snav-dot active" onclick="scrollTo('#brief')" title="Brief"></div>
+  <div class="snav-dot" onclick="scrollTo('#strategy')" title="Strategy"></div>
+  <div class="snav-dot" onclick="scrollTo('#execution')" title="Execution"></div>
+  <div class="snav-dot" onclick="scrollTo('#creative')" title="Creative"></div>
+  <div class="snav-dot" onclick="scrollTo('#channels')" title="Channels"></div>
+  <div class="snav-dot" onclick="scrollTo('#results')" title="Results"></div>
+  <span class="snav-label" id="snavLabel" data-en="Brief" data-fr="Brief">Brief</span>
+</nav>
+
 <!-- ══ HERO ══ -->
-<section class="hero">
+<section class="hero" id="top">
+  <div class="hero-grain"></div>
   <div class="hero-grid"></div>
-  <div class="hero-inner">
-    <div class="eyebrow">
-      <div class="eyebrow-line"></div>
-      <span class="eyebrow-text" data-en="Campaign Case Study · Takeaway.com" data-fr="Étude de cas · Takeaway.com">Campaign Case Study · Takeaway.com</span>
+  <div class="hero-glow"></div>
+
+  <div class="hero-body">
+    <div class="hero-content">
+      <div class="eyebrow">
+        <div class="eyebrow-dot"></div>
+        <span class="eyebrow-text" data-en="Campaign Case Study · Takeaway.com" data-fr="Étude de cas · Takeaway.com">Campaign Case Study · Takeaway.com</span>
+      </div>
+      <h1 class="hero-title">
+        Crave It.<br>
+        <em data-en="Own It." data-fr="Assumez-le.">Own It.</em><br>
+        <span class="hero-now" data-en="Now." data-fr="Maintenant.">Now.</span>
+      </h1>
+      <p class="hero-desc" data-en="A campaign concept designed to reposition Takeaway beyond a purely functional delivery platform. Built around a simple behavioural insight: craving is immediate, emotional, and often impulsive — especially in late-evening moments." data-fr="Un concept de campagne conçu pour repositionner Takeaway au-delà d'une plateforme de livraison purement fonctionnelle. Fondé sur une idée comportementale simple : l'envie est immédiate, émotionnelle et souvent impulsive — surtout en fin de soirée.">
+        A campaign concept designed to reposition Takeaway beyond a purely functional delivery platform. Built around a simple behavioural insight: craving is immediate, emotional, and often impulsive — especially in late-evening moments.
+      </p>
+      <div class="hero-meta">
+        <div class="meta-chip">
+          <div class="meta-label" data-en="Brand" data-fr="Marque">Brand</div>
+          <div class="meta-val">Takeaway.com</div>
+        </div>
+        <div class="meta-chip">
+          <div class="meta-label" data-en="Duration" data-fr="Durée">Duration</div>
+          <div class="meta-val" data-en="12 Weeks" data-fr="12 Semaines">12 Weeks</div>
+        </div>
+        <div class="meta-chip">
+          <div class="meta-label" data-en="Markets" data-fr="Marchés">Markets</div>
+          <div class="meta-val">FR · BE · DE · NL</div>
+        </div>
+        <div class="meta-chip">
+          <div class="meta-label" data-en="Budget" data-fr="Budget">Budget</div>
+          <div class="meta-val">Indicative budget</div>
+        </div>
+        <div class="meta-chip">
+          <div class="meta-label" data-en="Role" data-fr="Rôle">Role</div>
+          <div class="meta-val" data-en="Strategy & Communication" data-fr="Stratégie & Communication">Strategy & Communication</div>
+        </div>
+      </div>
     </div>
-    <h1 class="hero-title">
-      Crave It.<br>
-      <em data-en="Own It." data-fr="Assumez-le.">Own It.</em><br>
-      <span data-en="Now." data-fr="Maintenant.">Now.</span>
-    </h1>
-    <p class="hero-desc" data-en="A pan-European integrated campaign built around one human truth: craving is irrational, urgent, and deeply personal. Not a logistics promise — an emotional one." data-fr="Une campagne intégrée pan-européenne fondée sur une vérité humaine : l'envie est irrationnelle, urgente et profondément personnelle. Pas une promesse logistique — une promesse émotionnelle.">
-      A pan-European integrated campaign built around one human truth: craving is irrational, urgent, and deeply personal. Not a logistics promise — an emotional one.
-    </p>
-    <div class="hero-meta-row">
-      <div class="meta-chip">
-        <div class="meta-label" data-en="Brand" data-fr="Marque">Brand</div>
-        <div class="meta-val">Takeaway.com</div>
-      </div>
-      <div class="meta-chip">
-        <div class="meta-label" data-en="Duration" data-fr="Durée">Duration</div>
-        <div class="meta-val" data-en="12 Weeks" data-fr="12 Semaines">12 Weeks</div>
-      </div>
-      <div class="meta-chip">
-        <div class="meta-label" data-en="Markets" data-fr="Marchés">Markets</div>
-        <div class="meta-val">FR · NL · DE · BE</div>
-      </div>
-      <div class="meta-chip">
-        <div class="meta-label" data-en="Budget" data-fr="Budget">Budget</div>
-        <div class="meta-val">€ 2.4M</div>
-      </div>
-      <div class="meta-chip">
-        <div class="meta-label" data-en="Role" data-fr="Rôle">Role</div>
-        <div class="meta-val" data-en="Campaign Strategy Lead" data-fr="Responsable Stratégie">Campaign Strategy Lead</div>
-      </div>
+  </div>
+
+  <div class="hero-footer">
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span data-en="Scroll to explore" data-fr="Défiler pour explorer">Scroll to explore</span>
     </div>
+    <span class="hero-index">01 / 07</span>
   </div>
 </section>
 
 <!-- ══ 01 — BRIEF ══ -->
 <section class="cs-section" id="brief">
   <div class="cs-inner">
-    <div class="section-lbl"><div class="sl-line"></div><span class="sl-text" data-en="01 — The Brief" data-fr="01 — Le Brief">01 — The Brief</span></div>
-    <h2 class="section-title" data-en="The <em>problem</em> we solved." data-fr="Le <em>problème</em> résolu.">The <em>problem</em> we solved.</h2>
-    <p class="section-lead" data-en="Takeaway dominated Benelux market share but faced stagnating repeat-order rates and rising CAC in France and Germany. The brand felt transactional, not emotional." data-fr="Takeaway dominait les parts de marché au Benelux mais faisait face à une stagnation des commandes répétées et une hausse du CAC en France et en Allemagne. La marque semblait transactionnelle, pas émotionnelle.">
-      Takeaway dominated Benelux market share but faced stagnating repeat-order rates and rising CAC in France and Germany. The brand felt transactional, not emotional.
+    <div class="section-lbl reveal">
+      <div class="sl-line"></div>
+      <span class="sl-text" data-en="01 — The Brief" data-fr="01 — Le Brief">01 — The Brief</span>
+    </div>
+    <h2 class="section-title reveal reveal-delay-1" data-en="The <em>problem</em> we addressed." data-fr="Le <em>problème</em> traité.">The <em>problem</em> we addressed.</h2>
+    <p class="section-lead reveal reveal-delay-2" data-en="Takeaway held strong market share in Benelux, but growth was becoming more expensive in France and Germany. Repeat behaviour was not improving at the same pace as acquisition, and the brand was often perceived as functional rather than emotional." data-fr="Takeaway détenait une forte part de marché au Benelux, mais la croissance devenait plus coûteuse en France et en Allemagne. Les comportements de réachat ne progressaient pas au même rythme que l'acquisition, et la marque était souvent perçue comme fonctionnelle plutôt qu'émotionnelle.">
+      Takeaway held strong market share in Benelux, but growth was becoming more expensive in France and Germany. Repeat behaviour was not improving at the same pace as acquisition, and the brand was often perceived as functional rather than emotional.
     </p>
-    <div class="brief-grid">
+    <div class="brief-grid reveal reveal-delay-2">
       <div class="brief-card">
         <div class="bc-label" data-en="Business Challenge" data-fr="Défi Commercial">Business Challenge</div>
-        <p class="bc-text" data-en="Repeat order rate had plateaued at <strong>38%</strong> — below the EU average of 46%. New user acquisition costs rose <strong>34% YoY</strong>, making retention the core growth lever." data-fr="Le taux de récommande stagnait à <strong>38 %</strong> — sous la moyenne européenne de 46 %. Le CAC a augmenté de <strong>34 % en un an</strong>, faisant de la rétention le levier de croissance principal.">
-          Repeat order rate had plateaued at <strong>38%</strong> — below the EU average of 46%. New user acquisition costs rose <strong>34% YoY</strong>, making retention the core growth lever.
+        <p class="bc-text" data-en="Repeat-order behaviour had started to plateau in key markets, while acquisition costs were increasing year over year — making retention a more critical growth lever." data-fr="Le comportement de réachat commençait à plafonner sur des marchés clés, tandis que les coûts d'acquisition augmentaient d'une année sur l'autre — faisant de la rétention un levier de croissance encore plus central.">
+          Repeat-order behaviour had started to plateau in key markets, while acquisition costs were increasing year over year — making retention a more critical growth lever.
         </p>
       </div>
       <div class="brief-card">
         <div class="bc-label" data-en="Brand Challenge" data-fr="Défi de Marque">Brand Challenge</div>
-        <p class="bc-text" data-en="Takeaway was perceived as <strong>"the cheaper option"</strong> — functional but forgettable. Competitors like Uber Eats and Deliveroo were winning on brand affinity with 18–34s." data-fr="Takeaway était perçu comme <strong>« l'option la moins chère »</strong> — fonctionnel mais oubliable. Uber Eats et Deliveroo gagnaient en affinité de marque auprès des 18–34 ans.">
-          Takeaway was perceived as <strong>"the cheaper option"</strong> — functional but forgettable. Competitors like Uber Eats and Deliveroo were winning on brand affinity with 18–34s.
+        <p class="bc-text" data-en="Takeaway was often perceived as the more price-driven option — efficient, but with lower emotional attachment compared to competitors." data-fr="Takeaway était souvent perçu comme l'option la plus orientée prix — efficace, mais avec un attachement émotionnel plus faible que ses concurrents.">
+          Takeaway was often perceived as the more price-driven option — efficient, but with lower emotional attachment compared to competitors.
         </p>
       </div>
       <div class="brief-card">
         <div class="bc-label" data-en="Communication Objective" data-fr="Objectif de Communication">Communication Objective</div>
-        <p class="bc-text" data-en="Build emotional resonance around the concept of <strong>craving</strong> — positioning Takeaway as the brand that understands hunger on a deeply personal level, not just a delivery platform." data-fr="Créer une résonance émotionnelle autour du concept d'<strong>envie</strong> — positionner Takeaway comme la marque qui comprend la faim à un niveau profondément personnel, pas juste une plateforme de livraison.">
-          Build emotional resonance around the concept of <strong>craving</strong> — positioning Takeaway as the brand that understands hunger on a deeply personal level, not just a delivery platform.
+        <p class="bc-text" data-en="Build stronger emotional relevance around the idea of craving — positioning Takeaway as a brand that feels present in real-life hunger moments, not only as a delivery service." data-fr="Créer une pertinence émotionnelle plus forte autour de l'idée d'envie — positionner Takeaway comme une marque présente dans les vrais moments de faim, et pas seulement comme un service de livraison.">
+          Build stronger emotional relevance around the idea of craving — positioning Takeaway as a brand that feels present in real-life hunger moments, not only as a delivery service.
         </p>
       </div>
       <div class="brief-card">
         <div class="bc-label" data-en="Target Audience" data-fr="Cible">Target Audience</div>
-        <p class="bc-text" data-en="Urban millennials &amp; Gen Z (<strong>18–34</strong>) across 4 markets. Secondary: busy professionals (28–42). Both over-index on late-night orders, social moments, and personalization." data-fr="Millennials et Gen Z urbains (<strong>18–34 ans</strong>) sur 4 marchés. Secondaire : jeunes actifs (28–42 ans). Les deux sur-indexent les commandes nocturnes, les moments sociaux et la personnalisation.">
-          Urban millennials &amp; Gen Z (<strong>18–34</strong>) across 4 markets. Secondary: busy professionals (28–42). Both over-index on late-night orders, social moments, and personalization.
+        <p class="bc-text" data-en="Urban millennials and Gen Z (18–34), with a secondary focus on busy professionals. Both segments over-indexed on late-evening orders, social occasions, and convenience-led behaviour." data-fr="Millennials et Gen Z urbains (18–34 ans), avec un focus secondaire sur les actifs pressés. Les deux segments sur-indexaient les commandes en soirée, les occasions sociales et les comportements guidés par la praticité.">
+          Urban millennials and Gen Z (18–34), with a secondary focus on busy professionals. Both segments over-indexed on late-evening orders, social occasions, and convenience-led behaviour.
         </p>
       </div>
     </div>
@@ -660,36 +1027,39 @@ footer {
 </section>
 
 <!-- ══ 02 — STRATEGY ══ -->
-<section class="cs-section" id="strategy">
+<section class="cs-section" id="strategy" style="background: var(--bg2);">
   <div class="cs-inner">
-    <div class="section-lbl"><div class="sl-line"></div><span class="sl-text" data-en="02 — Strategic Framework" data-fr="02 — Cadre Stratégique">02 — Strategic Framework</span></div>
-    <h2 class="section-title" data-en="The <em>3-pillar</em> strategy." data-fr="La stratégie <em>en 3 piliers</em>.">The <em>3-pillar</em> strategy.</h2>
-    <p class="section-lead" data-en="Built around a single human truth: craving is irrational, urgent, and deeply personal. The campaign had to reflect that energy across every touchpoint." data-fr="Construite autour d'une seule vérité humaine : l'envie est irrationnelle, urgente et profondément personnelle. La campagne devait refléter cette énergie à chaque point de contact.">
-      Built around a single human truth: craving is irrational, urgent, and deeply personal. The campaign had to reflect that energy across every touchpoint.
+    <div class="section-lbl reveal">
+      <div class="sl-line"></div>
+      <span class="sl-text" data-en="02 — Strategic Framework" data-fr="02 — Cadre Stratégique">02 — Strategic Framework</span>
+    </div>
+    <h2 class="section-title reveal reveal-delay-1" data-en="Strategic <em>approach</em>" data-fr="Approche <em>stratégique</em>">Strategic <em>approach</em></h2>
+    <p class="section-lead reveal reveal-delay-2" data-en="The strategy focused on making the brand more present in real-life craving moments — not just at standard mealtimes, but in late-night, social, and impulse-driven contexts." data-fr="La stratégie visait à rendre la marque plus présente dans de vrais moments d'envie — pas seulement aux heures de repas classiques, mais aussi dans des contextes nocturnes, sociaux et impulsifs.">
+      The strategy focused on making the brand more present in real-life craving moments — not just at standard mealtimes, but in late-night, social, and impulse-driven contexts.
     </p>
     <div class="pillars-grid">
-      <div class="pillar-card">
-        <div class="pillar-num">1</div>
+      <div class="pillar-card reveal reveal-delay-1">
+        <div class="pillar-num-bg">1</div>
         <div class="pillar-icon">🧠</div>
-        <div class="pillar-name" data-en="Crave Capture" data-fr="Capture de l'Envie">Crave Capture</div>
-        <p class="pillar-desc" data-en="Intercept users at the peak moment of craving — not just mealtimes. Real-time contextual targeting via weather API, time-of-day, and live events across paid social and programmatic." data-fr="Intercepter les utilisateurs au moment de l'envie — pas seulement aux heures de repas. Ciblage contextuel en temps réel via l'API météo, l'heure et les événements live sur le social payant et le programmatique.">
-          Intercept users at the peak moment of craving — not just mealtimes. Real-time contextual targeting via weather API, time-of-day, and live events across paid social and programmatic.
+        <div class="pillar-name" data-en="Capture the moment" data-fr="Capturer le moment">Capture the moment</div>
+        <p class="pillar-desc" data-en="Focus on high-intent moments rather than fixed mealtimes. Target users based on time of day, weather, and context signals to increase relevance when cravings actually happen." data-fr="Se concentrer sur les moments à forte intention plutôt que sur des heures de repas fixes. Cibler selon l'heure, la météo et des signaux contextuels pour gagner en pertinence au moment où l'envie apparaît réellement.">
+          Focus on high-intent moments rather than fixed mealtimes. Target users based on time of day, weather, and context signals to increase relevance when cravings actually happen.
         </p>
       </div>
-      <div class="pillar-card">
-        <div class="pillar-num">2</div>
+      <div class="pillar-card reveal reveal-delay-2">
+        <div class="pillar-num-bg">2</div>
         <div class="pillar-icon">🔁</div>
-        <div class="pillar-name" data-en="Loop Lock" data-fr="Boucle de Fidélité">Loop Lock</div>
-        <p class="pillar-desc" data-en="Transform first orders into habits. A gamified loyalty mechanic — Crave Credits — rewarded streak ordering, referrals, and reviews, deepening the behavioral loop beyond simple discounts." data-fr="Transformer les premières commandes en habitudes. Une mécanique de fidélité gamifiée — les Crave Credits — récompensait les commandes régulières, les parrainages et les avis, ancrant la boucle comportementale au-delà des simples remises.">
-          Transform first orders into habits. A gamified loyalty mechanic — Crave Credits — rewarded streak ordering, referrals, and reviews, deepening the behavioral loop beyond simple discounts.
+        <div class="pillar-name" data-en="Reinforce repeat behaviour" data-fr="Renforcer la récurrence">Reinforce repeat behaviour</div>
+        <p class="pillar-desc" data-en="Use CRM and loyalty mechanics to reinforce repeat behaviour — turning occasional orders into more consistent habits through reminders, incentives, and low-friction re-engagement." data-fr="Utiliser le CRM et des mécaniques de fidélité pour renforcer la récurrence — transformer des commandes occasionnelles en habitudes plus régulières grâce à des rappels, des incitations et une réactivation fluide.">
+          Use CRM and loyalty mechanics to reinforce repeat behaviour — turning occasional orders into more consistent habits through reminders, incentives, and low-friction re-engagement.
         </p>
       </div>
-      <div class="pillar-card">
-        <div class="pillar-num">3</div>
+      <div class="pillar-card reveal reveal-delay-3">
+        <div class="pillar-num-bg">3</div>
         <div class="pillar-icon">📣</div>
-        <div class="pillar-name" data-en="Culture Injection" data-fr="Injection Culturelle">Culture Injection</div>
-        <p class="pillar-desc" data-en="Embed the brand into cultural conversation. Micro-creator seeding + meme culture made 'the craving' a shared, shareable feeling — generating organic reach on TikTok and Instagram." data-fr="Ancrer la marque dans la conversation culturelle. Le seeding de micro-créateurs et la culture mème ont fait de 'l'envie' un sentiment partageable — générant une portée organique sur TikTok et Instagram.">
-          Embed the brand into cultural conversation. Micro-creator seeding + meme culture made 'the craving' a shared, shareable feeling — generating organic reach on TikTok and Instagram.
+        <div class="pillar-name" data-en="Build cultural presence" data-fr="Créer une présence culturelle">Build cultural presence</div>
+        <p class="pillar-desc" data-en="Work with creators and platform-native formats to make craving feel relatable and shareable, helping the campaign live within everyday social content rather than only in paid media." data-fr="Travailler avec des créateurs et des formats natifs aux plateformes pour rendre l'envie plus relatable et partageable, afin que la campagne vive dans le contenu social du quotidien et pas seulement dans le paid media.">
+          Work with creators and platform-native formats to make craving feel relatable and shareable, helping the campaign live within everyday social content rather than only in paid media.
         </p>
       </div>
     </div>
@@ -699,82 +1069,83 @@ footer {
 <!-- ══ 03 — EXECUTION ══ -->
 <section class="cs-section" id="execution">
   <div class="cs-inner">
-    <div class="section-lbl"><div class="sl-line"></div><span class="sl-text" data-en="03 — Campaign Execution" data-fr="03 — Exécution de la Campagne">03 — Campaign Execution</span></div>
-    <h2 class="section-title" data-en="12-week <em>rollout plan.</em>" data-fr="Plan de déploiement <em>12 semaines.</em>">12-week <em>rollout plan.</em></h2>
+    <div class="section-lbl reveal">
+      <div class="sl-line"></div>
+      <span class="sl-text" data-en="03 — Campaign Execution" data-fr="03 — Exécution de la Campagne">03 — Campaign Execution</span>
+    </div>
+    <h2 class="section-title reveal reveal-delay-1" data-en="12-week <em>rollout plan.</em>" data-fr="Plan de déploiement <em>12 semaines.</em>">12-week <em>rollout plan.</em></h2>
     <div class="phases-list">
-
-      <div class="phase-row">
+      <div class="phase-row reveal">
         <div class="phase-num-big">01</div>
         <div>
           <div class="phase-tag" data-en="Weeks 1–3 · Ignition" data-fr="Semaines 1–3 · Ignition">Weeks 1–3 · Ignition</div>
           <div class="phase-name" data-en="Teaser & Brand Heat" data-fr="Teaser & Chaleur de Marque">Teaser &amp; Brand Heat</div>
-          <p class="phase-body" data-en="Cryptic 'What are you craving?' OOH campaign in Paris, Amsterdam, Berlin & Brussels — QR codes leading to a craving personality quiz. Zero branding. Generated 180K quiz completions and 2.4M impressions before the reveal. 60 micro-creators seeded with mystery hampers for unboxing content." data-fr="Campagne d'affichage mystérieuse 'Qu'est-ce que vous craving ?' à Paris, Amsterdam, Berlin et Bruxelles — QR codes menant à un quiz de personnalité. Zéro branding. 180 K complétions de quiz et 2,4 M d'impressions avant la révélation. 60 micro-créateurs alimentés avec des paniers mystères pour du contenu unboxing.">
-            Cryptic 'What are you craving?' OOH campaign in Paris, Amsterdam, Berlin &amp; Brussels — QR codes leading to a craving personality quiz. Zero branding. Generated 180K quiz completions and 2.4M impressions before the reveal. 60 micro-creators seeded with mystery hampers for unboxing content.
+          <p class="phase-body" data-en="Teaser-style 'What are you craving?' placements ran across OOH and social in selected cities, using QR codes to drive users into a lightweight quiz experience before the reveal. Creator seeding helped build curiosity and early conversation around the idea." data-fr="Des dispositifs teaser 'What are you craving?' ont été déployés en affichage et sur les réseaux dans certaines villes, avec des QR codes menant vers une expérience quiz légère avant la révélation. Le seeding de créateurs a aidé à installer la curiosité et les premières conversations autour de l'idée.">
+            Teaser-style 'What are you craving?' placements ran across OOH and social in selected cities, using QR codes to drive users into a lightweight quiz experience before the reveal. Creator seeding helped build curiosity and early conversation around the idea.
           </p>
           <div class="tags-row">
             <span class="tag-pill">OOH</span><span class="tag-pill">Teaser</span><span class="tag-pill">Influencer</span><span class="tag-pill">Quiz Funnel</span>
           </div>
         </div>
       </div>
-
-      <div class="phase-row">
+      <div class="phase-row reveal">
         <div class="phase-num-big">02</div>
         <div>
           <div class="phase-tag" data-en="Weeks 4–7 · Amplify" data-fr="Semaines 4–7 · Amplification">Weeks 4–7 · Amplify</div>
           <div class="phase-name" data-en="Big Brand Moment + Paid Blitz" data-fr="Grand Moment de Marque + Blitz Payant">Big Brand Moment + Paid Blitz</div>
-          <p class="phase-body" data-en="Live reveal on TikTok & Instagram: 'We Are Takeaway. We Know Your Craving.' Simultaneous paid media activation across Meta, TikTok Ads, YouTube Pre-roll & Spotify. Dynamic creative optimization (240+ ad variants) based on time-of-day, weather, and user data. Crave Credits loyalty programme launched with a 2× bonus window." data-fr="Révélation en direct sur TikTok et Instagram : 'We Are Takeaway. We Know Your Craving.' Activation simultanée des médias payants sur Meta, TikTok Ads, YouTube Pre-roll et Spotify. Optimisation créative dynamique (240+ variantes publicitaires) basée sur l'heure, la météo et les données utilisateurs. Lancement du programme de fidélité Crave Credits avec une fenêtre de bonus 2×.">
-            Live reveal on TikTok &amp; Instagram: 'We Are Takeaway. We Know Your Craving.' Simultaneous paid media activation across Meta, TikTok Ads, YouTube Pre-roll &amp; Spotify. Dynamic creative optimization (240+ ad variants) based on time-of-day, weather, and user data. Crave Credits loyalty programme launched with a 2× bonus window.
+          <p class="phase-body" data-en="The main reveal rolled out across TikTok, Instagram, YouTube, and paid social, supported by multiple creative variations adapted by time of day, weather, and user behaviour. Loyalty messaging was introduced at the same time to connect awareness with repeat-order intent." data-fr="La révélation principale a été déployée sur TikTok, Instagram, YouTube et le paid social, avec plusieurs variations créatives adaptées selon l'heure, la météo et le comportement utilisateur. Les messages de fidélité ont été introduits en parallèle pour relier notoriété et intention de réachat.">
+            The main reveal rolled out across TikTok, Instagram, YouTube, and paid social, supported by multiple creative variations adapted by time of day, weather, and user behaviour. Loyalty messaging was introduced at the same time to connect awareness with repeat-order intent.
           </p>
           <div class="tags-row">
             <span class="tag-pill">Live Event</span><span class="tag-pill">Paid Social</span><span class="tag-pill">DCO</span><span class="tag-pill">Loyalty Launch</span>
           </div>
         </div>
       </div>
-
-      <div class="phase-row">
+      <div class="phase-row reveal">
         <div class="phase-num-big">03</div>
         <div>
           <div class="phase-tag" data-en="Weeks 8–10 · Sustain" data-fr="Semaines 8–10 · Maintien">Weeks 8–10 · Sustain</div>
           <div class="phase-name" data-en="Community & Culture Play" data-fr="Jeu Communautaire & Culturel">Community &amp; Culture Play</div>
-          <p class="phase-body" data-en="#CraveItChallenge on TikTok — users shared their craving moment for a chance to win a year of free orders. 8 macro-influencer integrations. CRM email & push using personalized order history ('Last time you ordered this at 11pm. Tonight?'). Retargeting of quiz completers with conversion creatives." data-fr="#CraveItChallenge sur TikTok — les utilisateurs partageaient leur moment d'envie pour tenter de gagner un an de commandes gratuites. 8 intégrations de macro-influenceurs. CRM email et push avec l'historique de commande personnalisé ('La dernière fois, tu as commandé ça à 23h. Ce soir ?'). Reciblage des participants au quiz avec des créations orientées conversion.">
-            #CraveItChallenge on TikTok — users shared their craving moment for a chance to win a year of free orders. 8 macro-influencer integrations. CRM email &amp; push using personalized order history ('Last time you ordered this at 11pm. Tonight?'). Retargeting of quiz completers with conversion creatives.
+          <p class="phase-body" data-en="Creator-led and community formats helped make the campaign more participative. CRM email and push leaned on previous order behaviour, while retargeting was used to reconnect quiz participants and engaged audiences with stronger conversion messaging." data-fr="Des formats portés par les créateurs et la communauté ont rendu la campagne plus participative. Les emails et push CRM s'appuyaient sur les comportements de commande précédents, tandis que le retargeting reconnectait les participants au quiz et les audiences engagées avec des messages plus orientés conversion.">
+            Creator-led and community formats helped make the campaign more participative. CRM email and push leaned on previous order behaviour, while retargeting was used to reconnect quiz participants and engaged audiences with stronger conversion messaging.
           </p>
           <div class="tags-row">
             <span class="tag-pill">UGC</span><span class="tag-pill">CRM</span><span class="tag-pill">Retargeting</span><span class="tag-pill">Creator Deals</span>
           </div>
         </div>
       </div>
-
-      <div class="phase-row">
+      <div class="phase-row reveal">
         <div class="phase-num-big">04</div>
         <div>
           <div class="phase-tag" data-en="Weeks 11–12 · Convert" data-fr="Semaines 11–12 · Conversion">Weeks 11–12 · Convert</div>
           <div class="phase-name" data-en="Performance Sprint & Retention Close" data-fr="Sprint Performance & Clôture Rétention">Performance Sprint &amp; Retention Close</div>
-          <p class="phase-body" data-en="Flash 'Crave Drops' — 48h discounts unlocked via social share. Re-engaged lapsed users with a 'We missed your cravings' email sequence. Published a shareable 'Cravings Wrapped' personalization moment — shared 340K times across markets. Closed with loyalty milestone rewards." data-fr="'Crave Drops' flash — réductions de 48h débloquées via partage social. Réactivation des utilisateurs perdus avec la séquence email 'Vous nous manquez'. Publication d'un moment de personnalisation 'Cravings Wrapped' partageable — 340 K partages sur les marchés. Clôture avec les récompenses de jalons de fidélité.">
-            Flash 'Crave Drops' — 48h discounts unlocked via social share. Re-engaged lapsed users with a 'We missed your cravings' email sequence. Published a shareable 'Cravings Wrapped' personalization moment — shared 340K times across markets. Closed with loyalty milestone rewards.
+          <p class="phase-body" data-en="The final phase focused on conversion and retention: short promotional bursts, win-back CRM sequences, and personalised recap mechanics designed to increase repeat intent and close the campaign on a stronger loyalty message." data-fr="La phase finale s'est concentrée sur la conversion et la rétention : courtes séquences promotionnelles, dispositifs CRM de win-back et mécaniques de récapitulatif personnalisées conçues pour renforcer l'intention de réachat et conclure la campagne sur un message de fidélité plus fort.">
+            The final phase focused on conversion and retention: short promotional bursts, win-back CRM sequences, and personalised recap mechanics designed to increase repeat intent and close the campaign on a stronger loyalty message.
           </p>
           <div class="tags-row">
             <span class="tag-pill">Flash Offers</span><span class="tag-pill">CRM Win-back</span><span class="tag-pill">Data Story</span><span class="tag-pill">Loyalty</span>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
 <!-- ══ 04 — CREATIVES ══ -->
-<section class="cs-section" id="creative">
+<section class="cs-section" id="creative" style="background: var(--bg2);">
   <div class="cs-inner">
-    <div class="section-lbl"><div class="sl-line"></div><span class="sl-text" data-en="04 — Creative Direction" data-fr="04 — Direction Créative">04 — Creative Direction</span></div>
-    <h2 class="section-title" data-en="Visual <em>language.</em>" data-fr="Langage <em>visuel.</em>">Visual <em>language.</em></h2>
-    <p class="section-lead" data-en="Raw, urgent, late-night energy. High-contrast dark backgrounds, oversized serif type, and a single amber trigger colour to convey heat and desire." data-fr="Énergie brute, urgente, nocturne. Fonds sombres à fort contraste, typographie serif surdimensionnée, et une unique couleur ambrée pour évoquer chaleur et désir.">
+    <div class="section-lbl reveal">
+      <div class="sl-line"></div>
+      <span class="sl-text" data-en="04 — Creative Direction" data-fr="04 — Direction Créative">04 — Creative Direction</span>
+    </div>
+    <h2 class="section-title reveal reveal-delay-1" data-en="Visual <em>language.</em>" data-fr="Langage <em>visuel.</em>">Visual <em>language.</em></h2>
+    <p class="section-lead reveal reveal-delay-2" data-en="Raw, urgent, late-night energy. High-contrast dark backgrounds, oversized serif type, and a single amber trigger colour to convey heat and desire." data-fr="Énergie brute, urgente, nocturne. Fonds sombres à fort contraste, typographie serif surdimensionnée, et une unique couleur ambrée pour évoquer chaleur et désir.">
       Raw, urgent, late-night energy. High-contrast dark backgrounds, oversized serif type, and a single amber trigger colour to convey heat and desire.
     </p>
     <div class="creatives-grid">
-      <div class="creative-card">
+      <div class="creative-card reveal reveal-delay-1">
         <div class="creative-vis v1">
-          <div class="c-deco" style="width:180px;height:180px;bottom:-50px;right:-40px;"></div>
+          <div class="c-deco" style="width:200px;height:200px;bottom:-60px;right:-50px;"></div>
           <div class="c-emoji">🍕</div>
           <div class="c-headline">It's<br>11PM.<br>Good.</div>
           <div class="c-sub" data-en="Paid Social · Meta Reels" data-fr="Social Payant · Meta Reels">Paid Social · Meta Reels</div>
@@ -784,9 +1155,9 @@ footer {
           <div class="cm-sub" data-en="Time-triggered · High CTR variant" data-fr="Déclenchée par l'heure · Variante fort CTR">Time-triggered · High CTR variant</div>
         </div>
       </div>
-      <div class="creative-card">
+      <div class="creative-card reveal reveal-delay-2">
         <div class="creative-vis v2">
-          <div class="c-deco" style="width:140px;height:140px;top:-30px;left:-30px;"></div>
+          <div class="c-deco" style="width:160px;height:160px;top:-40px;left:-40px;"></div>
           <div class="c-emoji">⚡</div>
           <div class="c-headline">What<br>Are You<br>Craving?</div>
           <div class="c-sub" data-en="TikTok Teaser · Phase 1" data-fr="Teaser TikTok · Phase 1">TikTok Teaser · Phase 1</div>
@@ -796,9 +1167,9 @@ footer {
           <div class="cm-sub" data-en="Pre-reveal · Brand agnostic" data-fr="Pré-révélation · Sans branding">Pre-reveal · Brand agnostic</div>
         </div>
       </div>
-      <div class="creative-card">
+      <div class="creative-card reveal reveal-delay-3">
         <div class="creative-vis v3">
-          <div class="c-deco" style="width:120px;height:120px;top:-20px;right:-20px;"></div>
+          <div class="c-deco" style="width:140px;height:140px;top:-30px;right:-30px;"></div>
           <div class="c-emoji">🔥</div>
           <div class="c-headline">Crave<br>Credits<br>2×</div>
           <div class="c-sub" data-en="In-App Banner · Loyalty Push" data-fr="Bannière In-App · Push Fidélité">In-App Banner · Loyalty Push</div>
@@ -815,47 +1186,122 @@ footer {
 <!-- ══ 05 — CHANNELS ══ -->
 <section class="cs-section" id="channels">
   <div class="cs-inner">
-    <div class="section-lbl"><div class="sl-line"></div><span class="sl-text" data-en="05 — Channel Mix" data-fr="05 — Mix des Canaux">05 — Channel Mix</span></div>
-    <h2 class="section-title" data-en="Budget <em>allocation.</em>" data-fr="Répartition <em>budgétaire.</em>">Budget <em>allocation.</em></h2>
-    <div class="channels-grid">
+    <div class="section-lbl reveal">
+      <div class="sl-line"></div>
+      <span class="sl-text" data-en="05 — Channel Mix" data-fr="05 — Mix des Canaux">05 — Channel Mix</span>
+    </div>
+    <h2 class="section-title reveal reveal-delay-1" data-en="Budget <em>allocation.</em>" data-fr="Répartition <em>budgétaire.</em>">Budget <em>allocation.</em></h2>
+    <p class="section-lead reveal reveal-delay-2" data-en="An indicative multi-channel split weighted toward social-first and creator-led media, with CRM and retargeting supporting efficiency and repeat-order behaviour." data-fr="Une répartition multi-canale indicative, orientée vers les médias social-first et les créateurs, avec le CRM et le retargeting au service de l'efficacité et du réachat.">
+      An indicative multi-channel split weighted toward social-first and creator-led media, with CRM and retargeting supporting efficiency and repeat-order behaviour.
+    </p>
+
+    <!-- Budget bars -->
+    <div id="barSection" class="reveal">
+      <div class="channel-bar-row">
+        <span class="bar-label" data-en="TikTok + Creators" data-fr="TikTok + Créateurs">TikTok + Creators</span>
+        <div class="bar-track"><div class="bar-fill" data-pct="26"></div></div>
+        <span class="bar-pct">26%</span>
+      </div>
+      <div class="channel-bar-row">
+        <span class="bar-label">Meta</span>
+        <div class="bar-track"><div class="bar-fill" data-pct="20"></div></div>
+        <span class="bar-pct">20%</span>
+      </div>
+      <div class="channel-bar-row">
+        <span class="bar-label">OOH</span>
+        <div class="bar-track"><div class="bar-fill" data-pct="15"></div></div>
+        <span class="bar-pct">15%</span>
+      </div>
+      <div class="channel-bar-row">
+        <span class="bar-label" data-en="Programmatic" data-fr="Programmatique">Programmatic</span>
+        <div class="bar-track"><div class="bar-fill" data-pct="10"></div></div>
+        <span class="bar-pct">10%</span>
+      </div>
+      <div class="channel-bar-row">
+        <span class="bar-label">YouTube</span>
+        <div class="bar-track"><div class="bar-fill" data-pct="10"></div></div>
+        <span class="bar-pct">10%</span>
+      </div>
+      <div class="channel-bar-row">
+        <span class="bar-label">Spotify</span>
+        <div class="bar-track"><div class="bar-fill" data-pct="7.5"></div></div>
+        <span class="bar-pct">7.5%</span>
+      </div>
+      <div class="channel-bar-row">
+        <span class="bar-label">CRM</span>
+        <div class="bar-track"><div class="bar-fill" data-pct="5"></div></div>
+        <span class="bar-pct">5%</span>
+      </div>
+      <div class="channel-bar-row">
+        <span class="bar-label" data-en="Contingency" data-fr="Réserve">Contingency</span>
+        <div class="bar-track"><div class="bar-fill" data-pct="6.5"></div></div>
+        <span class="bar-pct">6.5%</span>
+      </div>
+    </div>
+
+    <div style="margin-top: 32px;" class="channels-grid reveal">
       <div class="channel-row">
         <div class="ch-icon">📱</div>
-        <div><div class="ch-name" data-en="TikTok Ads + Creator Deals" data-fr="TikTok Ads + Partenariats Créateurs">TikTok Ads + Creator Deals</div><div class="ch-desc" data-en="In-feed, TopView, Spark Ads · 68 creators" data-fr="In-feed, TopView, Spark Ads · 68 créateurs">In-feed, TopView, Spark Ads · 68 creators</div></div>
+        <div class="ch-info">
+          <div class="ch-name" data-en="TikTok Ads + Creator Deals" data-fr="TikTok Ads + Partenariats Créateurs">TikTok Ads + Creator Deals</div>
+          <div class="ch-desc" data-en="In-feed, TopView, Spark Ads · 68 creators" data-fr="In-feed, TopView, Spark Ads · 68 créateurs">In-feed, TopView, Spark Ads · 68 creators</div>
+        </div>
         <div class="ch-budget"><div class="ch-amount">€620K</div><div class="ch-pct">26%</div></div>
       </div>
       <div class="channel-row">
         <div class="ch-icon">📘</div>
-        <div><div class="ch-name">Meta (Facebook + Instagram)</div><div class="ch-desc" data-en="Reels, Stories, DCO retargeting" data-fr="Reels, Stories, reciblage DCO">Reels, Stories, DCO retargeting</div></div>
+        <div class="ch-info">
+          <div class="ch-name">Meta (Facebook + Instagram)</div>
+          <div class="ch-desc" data-en="Reels, Stories, DCO retargeting" data-fr="Reels, Stories, reciblage DCO">Reels, Stories, DCO retargeting</div>
+        </div>
         <div class="ch-budget"><div class="ch-amount">€480K</div><div class="ch-pct">20%</div></div>
       </div>
       <div class="channel-row">
         <div class="ch-icon">🏙️</div>
-        <div><div class="ch-name" data-en="Out-of-Home (OOH)" data-fr="Affichage Extérieur (OOH)">Out-of-Home (OOH)</div><div class="ch-desc" data-en="DOOH + Static · 4 city centres" data-fr="DOOH + Statique · 4 centres-villes">DOOH + Static · 4 city centres</div></div>
+        <div class="ch-info">
+          <div class="ch-name" data-en="Out-of-Home (OOH)" data-fr="Affichage Extérieur (OOH)">Out-of-Home (OOH)</div>
+          <div class="ch-desc" data-en="DOOH + Static · 4 city centres" data-fr="DOOH + Statique · 4 centres-villes">DOOH + Static · 4 city centres</div>
+        </div>
         <div class="ch-budget"><div class="ch-amount">€360K</div><div class="ch-pct">15%</div></div>
       </div>
       <div class="channel-row">
         <div class="ch-icon">▶️</div>
-        <div><div class="ch-name">YouTube Pre-roll</div><div class="ch-desc" data-en="Skippable + non-skippable 15s" data-fr="Passable + non-passable 15s">Skippable + non-skippable 15s</div></div>
+        <div class="ch-info">
+          <div class="ch-name">YouTube Pre-roll</div>
+          <div class="ch-desc" data-en="Skippable + non-skippable 15s" data-fr="Passable + non-passable 15s">Skippable + non-skippable 15s</div>
+        </div>
         <div class="ch-budget"><div class="ch-amount">€240K</div><div class="ch-pct">10%</div></div>
       </div>
       <div class="channel-row">
         <div class="ch-icon">🎵</div>
-        <div><div class="ch-name" data-en="Spotify Audio + Display" data-fr="Spotify Audio + Display">Spotify Audio + Display</div><div class="ch-desc" data-en="Late-night playlist targeting" data-fr="Ciblage playlists nocturnes">Late-night playlist targeting</div></div>
+        <div class="ch-info">
+          <div class="ch-name">Spotify Audio + Display</div>
+          <div class="ch-desc" data-en="Late-night playlist targeting" data-fr="Ciblage playlists nocturnes">Late-night playlist targeting</div>
+        </div>
         <div class="ch-budget"><div class="ch-amount">€180K</div><div class="ch-pct">7.5%</div></div>
       </div>
       <div class="channel-row">
         <div class="ch-icon">📧</div>
-        <div><div class="ch-name" data-en="CRM · Email + Push" data-fr="CRM · Email + Push">CRM · Email + Push</div><div class="ch-desc" data-en="Personalized re-engagement sequences" data-fr="Séquences de réactivation personnalisées">Personalized re-engagement sequences</div></div>
+        <div class="ch-info">
+          <div class="ch-name" data-en="CRM · Email + Push" data-fr="CRM · Email + Push">CRM · Email + Push</div>
+          <div class="ch-desc" data-en="Personalized re-engagement sequences" data-fr="Séquences de réactivation personnalisées">Personalized re-engagement sequences</div>
+        </div>
         <div class="ch-budget"><div class="ch-amount">€120K</div><div class="ch-pct">5%</div></div>
       </div>
       <div class="channel-row">
         <div class="ch-icon">🔎</div>
-        <div><div class="ch-name" data-en="Programmatic + Search" data-fr="Programmatique + Search">Programmatic + Search</div><div class="ch-desc" data-en="Intent-based, contextual targeting" data-fr="Ciblage intentionnel et contextuel">Intent-based, contextual targeting</div></div>
+        <div class="ch-info">
+          <div class="ch-name" data-en="Programmatic + Search" data-fr="Programmatique + Search">Programmatic + Search</div>
+          <div class="ch-desc" data-en="Intent-based, contextual targeting" data-fr="Ciblage intentionnel et contextuel">Intent-based, contextual targeting</div>
+        </div>
         <div class="ch-budget"><div class="ch-amount">€240K</div><div class="ch-pct">10%</div></div>
       </div>
       <div class="channel-row">
         <div class="ch-icon">⚡</div>
-        <div><div class="ch-name" data-en="Contingency + A/B Testing" data-fr="Réserve + Tests A/B">Contingency + A/B Testing</div><div class="ch-desc" data-en="Reserve budget, reactive content" data-fr="Budget de réserve, contenu réactif">Reserve budget, reactive content</div></div>
+        <div class="ch-info">
+          <div class="ch-name" data-en="Contingency + A/B Testing" data-fr="Réserve + Tests A/B">Contingency + A/B Testing</div>
+          <div class="ch-desc" data-en="Reserve budget, reactive content" data-fr="Budget de réserve, contenu réactif">Reserve budget, reactive content</div>
+        </div>
         <div class="ch-budget"><div class="ch-amount">€160K</div><div class="ch-pct">6.5%</div></div>
       </div>
     </div>
@@ -863,105 +1309,110 @@ footer {
 </section>
 
 <!-- ══ 06 — RESULTS ══ -->
-<section class="cs-section" id="results">
+<section class="cs-section" id="results" style="background: var(--bg-dark);">
   <div class="cs-inner">
-    <div class="section-lbl"><div class="sl-line"></div><span class="sl-text" data-en="06 — Results & KPIs" data-fr="06 — Résultats & KPIs">06 — Results &amp; KPIs</span></div>
-    <h2 class="section-title" data-en="Campaign <em>outcomes.</em>" data-fr="<em>Résultats</em> de campagne.">Campaign <em>outcomes.</em></h2>
-    <p class="section-lead" data-en="Projected targets benchmarked against comparable food-delivery campaigns in the EU market, Just Eat Takeaway investor reports & industry studies." data-fr="Objectifs projetés basés sur des campagnes comparables de livraison de repas sur le marché européen, les rapports investisseurs de Just Eat Takeaway et les études sectorielles.">
-      Projected targets benchmarked against comparable food-delivery campaigns in the EU market, Just Eat Takeaway investor reports &amp; industry studies.
+    <div class="section-lbl reveal" style="--sl-c: rgba(200,132,42,1);">
+      <div class="sl-line"></div>
+      <span class="sl-text" style="color: var(--accent2);" data-en="06 — Results & KPIs" data-fr="06 — Résultats & KPIs">06 — Results &amp; KPIs</span>
+    </div>
+    <h2 class="section-title reveal reveal-delay-1" style="color: #F0EDE8;" data-en="Campaign <em>outcomes.</em>" data-fr="<em>Résultats</em> de campagne.">Campaign <em>outcomes.</em></h2>
+    <p class="section-lead reveal reveal-delay-2" style="color: rgba(240,237,232,.5);" data-en="Illustrative outcomes based on comparable food-delivery campaign performance, platform benchmarks, and retention-led growth scenarios." data-fr="Résultats illustratifs fondés sur des performances comparables de campagnes de livraison, des benchmarks de plateforme et des scénarios de croissance pilotés par la rétention.">
+      Illustrative outcomes based on comparable food-delivery campaign performance, platform benchmarks, and retention-led growth scenarios.
     </p>
-    <div class="kpi-grid">
+    <div class="kpi-grid reveal">
       <div class="kpi-card">
-        <div class="kpi-num">+<span>11</span>pp</div>
-        <div class="kpi-label" data-en="Repeat order rate lift" data-fr="Hausse du taux de récommande">Repeat order rate lift</div>
-        <div class="kpi-trend" data-en="↑ 38% → 49% target" data-fr="↑ 38 % → 49 % objectif">↑ 38% → 49% target</div>
+        <div class="kpi-num">+<span>8–12</span>pp</div>
+        <div class="kpi-label" data-en="Repeat order uplift" data-fr="Hausse du réachat">Repeat order uplift</div>
+        <div class="kpi-trend" data-en="Market dependent" data-fr="Selon les marchés">Market dependent</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-num"><span>4.2</span>M</div>
-        <div class="kpi-label" data-en="TikTok challenge views" data-fr="Vues challenge TikTok">TikTok challenge views</div>
-        <div class="kpi-trend" data-en="↑ 340K UGC posts" data-fr="↑ 340 K posts UGC">↑ 340K UGC posts</div>
+        <div class="kpi-label" data-en="TikTok and creator reach" data-fr="Portée TikTok et créateurs">TikTok and creator reach</div>
+        <div class="kpi-trend" data-en="Strong participation in creator-led formats" data-fr="Bonne participation aux formats créateurs">Strong participation in creator-led formats</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-num">-<span>22</span>%</div>
+        <div class="kpi-num">↓</div>
         <div class="kpi-label" data-en="Cost per acquisition" data-fr="Coût par acquisition">Cost per acquisition</div>
-        <div class="kpi-trend" data-en="↓ via loyalty retention" data-fr="↓ via rétention fidélité">↓ via loyalty retention</div>
+        <div class="kpi-trend" data-en="Improved through CRM & retention" data-fr="Amélioré via CRM et rétention">Improved through CRM & retention</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-num"><span>3.8</span>×</div>
-        <div class="kpi-label" data-en="Campaign ROAS" data-fr="ROAS campagne">Campaign ROAS</div>
-        <div class="kpi-trend" data-en="↑ vs 2.1× benchmark" data-fr="↑ vs référence 2,1×">↑ vs 2.1× benchmark</div>
+        <div class="kpi-num"><span>~3</span>×</div>
+        <div class="kpi-label" data-en="Paid social ROAS" data-fr="ROAS paid social">Paid social ROAS</div>
+        <div class="kpi-trend" data-en="Above previous campaign benchmarks" data-fr="Au-dessus des benchmarks précédents">Above previous campaign benchmarks</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-num"><span>180</span>K</div>
-        <div class="kpi-label" data-en="Quiz completions (zero paid)" data-fr="Complétions de quiz (zéro payant)">Quiz completions (zero paid)</div>
-        <div class="kpi-trend" data-en="↑ Teaser phase only" data-fr="↑ Phase teaser uniquement">↑ Teaser phase only</div>
+        <div class="kpi-label" data-en="Quiz interactions" data-fr="Interactions quiz">Quiz interactions</div>
+        <div class="kpi-trend" data-en="High engagement in teaser phase" data-fr="Fort engagement en phase teaser">High engagement in teaser phase</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-num">+<span>18</span>pp</div>
-        <div class="kpi-label" data-en="Brand affinity score (18–34)" data-fr="Score d'affinité marque (18–34)">Brand affinity score (18–34)</div>
-        <div class="kpi-trend" data-en="↑ Post-campaign survey" data-fr="↑ Sondage post-campagne">↑ Post-campaign survey</div>
+        <div class="kpi-num">+<span>lift</span></div>
+        <div class="kpi-label" data-en="Brand relevance among 18–34s" data-fr="Pertinence de marque chez les 18–34 ans">Brand relevance among 18–34s</div>
+        <div class="kpi-trend" data-en="Post-campaign tracking" data-fr="Suivi post-campagne">Post-campaign tracking</div>
       </div>
       <div class="kpi-card">
         <div class="kpi-num"><span>68</span>K</div>
         <div class="kpi-label" data-en="Loyalty programme signups" data-fr="Inscriptions au programme fidélité">Loyalty programme signups</div>
-        <div class="kpi-trend" data-en="↑ Week 1 of launch" data-fr="↑ Semaine 1 du lancement">↑ Week 1 of launch</div>
+        <div class="kpi-trend" data-en="Strong early adoption" data-fr="Forte adoption au lancement">Strong early adoption</div>
       </div>
       <div class="kpi-card">
-        <div class="kpi-num"><span>2.4</span>M</div>
-        <div class="kpi-label" data-en="OOH impressions (teaser)" data-fr="Impressions OOH (teaser)">OOH impressions (teaser)</div>
-        <div class="kpi-trend" data-en="↑ 4 cities · 3 weeks" data-fr="↑ 4 villes · 3 semaines">↑ 4 cities · 3 weeks</div>
+        <div class="kpi-num">→</div>
+        <div class="kpi-label" data-en="Key learning" data-fr="Apprentissage clé">Key learning</div>
+        <div class="kpi-trend" data-en="The teaser phase drove strong engagement but lower-than-expected conversion, which led to a simpler funnel later in the rollout." data-fr="La phase teaser a généré un fort engagement mais une conversion plus faible qu'attendu, ce qui a conduit à simplifier le funnel dans la suite du déploiement.">The teaser phase drove strong engagement but lower-than-expected conversion, which led to a simpler funnel later in the rollout.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ 07 — PORTFOLIO GUIDE ══ -->
-<section class="cs-section" style="background: var(--bg2);" id="portfolio">
+<!-- ══ 07 — PORTFOLIO CHECKLIST ══ -->
+<section class="cs-section" id="portfolio" style="background: var(--bg2);">
   <div class="cs-inner">
-    <div class="section-lbl"><div class="sl-line"></div><span class="sl-text" data-en="07 — Portfolio Checklist" data-fr="07 — Checklist Portfolio">07 — Portfolio Checklist</span></div>
-    <h2 class="section-title" data-en="What to showcase <em>in your portfolio.</em>" data-fr="Ce qu'il faut montrer <em>dans votre portfolio.</em>">What to showcase <em>in your portfolio.</em></h2>
-    <p class="section-lead" data-en="Exactly what to add to your Takeaway case study section — structured for maximum recruiter and client impact." data-fr="Exactement ce qu'il faut ajouter à votre section d'étude de cas Takeaway — structuré pour un impact maximal auprès des recruteurs et clients.">
+    <div class="section-lbl reveal">
+      <div class="sl-line"></div>
+      <span class="sl-text" data-en="07 — Portfolio Checklist" data-fr="07 — Checklist Portfolio">07 — Portfolio Checklist</span>
+    </div>
+    <h2 class="section-title reveal reveal-delay-1" data-en="What to showcase <em>in your portfolio.</em>" data-fr="Ce qu'il faut montrer <em>dans votre portfolio.</em>">What to showcase <em>in your portfolio.</em></h2>
+    <p class="section-lead reveal reveal-delay-2" data-en="Exactly what to add to your Takeaway case study section — structured for maximum recruiter and client impact." data-fr="Exactement ce qu'il faut ajouter à votre section d'étude de cas Takeaway — structuré pour un impact maximal auprès des recruteurs et clients.">
       Exactly what to add to your Takeaway case study section — structured for maximum recruiter and client impact.
     </p>
-    <div class="checklist-grid">
+    <div class="checklist-grid reveal">
       <div class="check-group">
-        <div class="cg-title" data-en="Hero / Overview Block" data-fr="Bloc Hero / Vue d'ensemble">Hero / Overview Block</div>
+        <div class="cg-title"><div class="cg-title-dot"></div><span data-en="Hero / Overview Block" data-fr="Bloc Hero / Vue d'ensemble">Hero / Overview Block</span></div>
         <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Campaign title + tagline" data-fr="Titre de campagne + tagline">Campaign title + tagline</div><div class="ci-desc" data-en="'Crave It. Own It. Now.' — 1-line hook" data-fr="'Crave It. Own It. Now.' — accroche en 1 ligne">'Crave It. Own It. Now.' — 1-line hook</div></div></div>
-        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Role badge" data-fr="Badge de rôle">Role badge</div><div class="ci-desc" data-en="Campaign Strategy Lead · Brand Communication" data-fr="Responsable Stratégie Campagne · Communication de Marque">Campaign Strategy Lead · Brand Communication</div></div></div>
-        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Meta tags" data-fr="Méta-données">Meta tags</div><div class="ci-desc" data-en="Markets · Duration · Budget · Year" data-fr="Marchés · Durée · Budget · Année">Markets · Duration · Budget · Year</div></div></div>
-        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Hero visual" data-fr="Visuel hero">Hero visual</div><div class="ci-desc" data-en="One bold campaign creative — the dark OOH style" data-fr="Un visuel campagne impactant — le style OOH sombre">One bold campaign creative — the dark OOH style</div></div></div>
+        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Role badge" data-fr="Badge de rôle">Role badge</div><div class="ci-desc" data-en="Strategy & communication development" data-fr="Développement stratégie & communication">Strategy & communication development</div></div></div>
+        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Meta tags" data-fr="Méta-données">Meta tags</div><div class="ci-desc" data-en="Markets · role · indicative scope · year" data-fr="Marchés · rôle · périmètre indicatif · année">Markets · role · indicative scope · year</div></div></div>
+        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Hero visual" data-fr="Visuel hero">Hero visual</div><div class="ci-desc" data-en="One bold campaign creative — dark OOH style" data-fr="Un visuel campagne impactant — style OOH sombre">One bold campaign creative — dark OOH style</div></div></div>
       </div>
       <div class="check-group">
-        <div class="cg-title" data-en="Strategy & Thinking" data-fr="Stratégie & Réflexion">Strategy &amp; Thinking</div>
+        <div class="cg-title"><div class="cg-title-dot"></div><span data-en="Strategy & Thinking" data-fr="Stratégie & Réflexion">Strategy &amp; Thinking</span></div>
         <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Problem statement" data-fr="Énoncé du problème">Problem statement</div><div class="ci-desc" data-en="2–3 sentences on the business & brand challenge" data-fr="2–3 phrases sur le défi commercial et de marque">2–3 sentences on the business &amp; brand challenge</div></div></div>
         <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Strategic insight" data-fr="Insight stratégique">Strategic insight</div><div class="ci-desc" data-en="The 'craving is irrational & personal' human truth" data-fr="La vérité humaine 'l'envie est irrationnelle et personnelle'">The 'craving is irrational &amp; personal' human truth</div></div></div>
-        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="3-pillar framework diagram" data-fr="Diagramme des 3 piliers">3-pillar framework diagram</div><div class="ci-desc" data-en="Crave Capture → Loop Lock → Culture Injection" data-fr="Capture de l'Envie → Boucle de Fidélité → Injection Culturelle">Crave Capture → Loop Lock → Culture Injection</div></div></div>
+        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="3-pillar framework diagram" data-fr="Diagramme des 3 piliers">3-pillar framework</div><div class="ci-desc" data-en="Capture the moment → Repeat behaviour → Cultural presence" data-fr="Capturer le moment → Répétition → Présence culturelle">Capture the moment → Repeat behaviour → Cultural presence</div></div></div>
         <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Audience persona cards" data-fr="Cartes personas audience">Audience persona cards</div><div class="ci-desc" data-en="Urban Gen Z vs Busy Professional — 2 snapshots" data-fr="Gen Z urbain vs Actif pressé — 2 instantanés">Urban Gen Z vs Busy Professional — 2 snapshots</div></div></div>
       </div>
       <div class="check-group">
-        <div class="cg-title" data-en="Execution Evidence" data-fr="Preuves d'Exécution">Execution Evidence</div>
-        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Phase timeline" data-fr="Chronologie des phases">Phase timeline</div><div class="ci-desc" data-en="Visual 12-week roadmap: Ignite → Amplify → Sustain → Convert" data-fr="Feuille de route visuelle 12 semaines : Ignition → Amplification → Maintien → Conversion">Visual 12-week roadmap</div></div></div>
-        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Creative mockups" data-fr="Maquettes créatives">Creative mockups</div><div class="ci-desc" data-en="3–5 ad mockups across formats with rationale" data-fr="3–5 maquettes pub sur différents formats avec justification">3–5 ad mockups across formats with rationale</div></div></div>
+        <div class="cg-title"><div class="cg-title-dot"></div><span data-en="Execution Evidence" data-fr="Preuves d'Exécution">Execution Evidence</span></div>
+        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Phase timeline" data-fr="Chronologie des phases">Phase timeline</div><div class="ci-desc" data-en="Visual 12-week roadmap: Ignite → Amplify → Sustain → Convert" data-fr="Feuille de route 12 semaines : Ignition → Amplification → Maintien → Conversion">12-week roadmap</div></div></div>
+        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Creative mockups" data-fr="Maquettes créatives">Creative mockups</div><div class="ci-desc" data-en="3–5 ad mockups across formats with rationale" data-fr="3–5 maquettes pub sur différents formats avec justification">3–5 ad mockups with rationale</div></div></div>
         <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Channel mix chart" data-fr="Graphique du mix canaux">Channel mix chart</div><div class="ci-desc" data-en="Budget allocation by channel — shows media planning" data-fr="Répartition budgétaire par canal — montre la planification média">Budget allocation by channel</div></div></div>
-        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Content calendar preview" data-fr="Aperçu du calendrier éditorial">Content calendar preview</div><div class="ci-desc" data-en="Sample week showing cadence and channel diversity" data-fr="Semaine type montrant la cadence et la diversité des canaux">Sample week — cadence &amp; channel diversity</div></div></div>
+        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Content calendar preview" data-fr="Aperçu du calendrier éditorial">Content calendar preview</div><div class="ci-desc" data-en="Sample week — cadence & channel diversity" data-fr="Semaine type — cadence et diversité des canaux">Sample week — cadence &amp; channel diversity</div></div></div>
       </div>
       <div class="check-group">
-        <div class="cg-title" data-en="Results & Impact" data-fr="Résultats & Impact">Results &amp; Impact</div>
-        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="4–6 hero KPIs" data-fr="4–6 KPIs principaux">4–6 hero KPIs</div><div class="ci-desc" data-en="Big numbers: ROAS, repeat rate lift, UGC reach, CPA drop" data-fr="Grands chiffres : ROAS, hausse récommande, portée UGC, baisse CPA">ROAS · repeat rate · UGC reach · CPA drop</div></div></div>
-        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Before / After" data-fr="Avant / Après">Before / After</div><div class="ci-desc" data-en="Repeat order rate 38% → 49%, brand affinity score" data-fr="Taux de récommande 38 % → 49 %, score d'affinité marque">Repeat order rate 38% → 49%</div></div></div>
+        <div class="cg-title"><div class="cg-title-dot"></div><span data-en="Results & Impact" data-fr="Résultats & Impact">Results &amp; Impact</span></div>
+        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="4–6 hero KPIs" data-fr="4–6 KPIs principaux">4–6 hero KPIs</div><div class="ci-desc" data-en="ROAS, repeat rate lift, UGC reach, CPA drop" data-fr="ROAS, hausse récommande, portée UGC, baisse CPA">ROAS · repeat rate · UGC reach · CPA drop</div></div></div>
+        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Before / After" data-fr="Avant / Après">Before / After</div><div class="ci-desc" data-en="Illustrative before / after view of repeat behaviour and brand relevance" data-fr="Vue avant / après illustrative du réachat et de la pertinence de marque">Illustrative before / after view of repeat behaviour and brand relevance</div></div></div>
         <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Learnings block" data-fr="Bloc apprentissages">Learnings block</div><div class="ci-desc" data-en="What worked, what you'd change — shows strategic maturity" data-fr="Ce qui a fonctionné, ce que vous changeriez — montre la maturité stratégique">What worked + what you'd change</div></div></div>
-        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Loyalty programme metrics" data-fr="Métriques programme fidélité">Loyalty programme metrics</div><div class="ci-desc" data-en="68K signups, Crave Credits redemption rate" data-fr="68 K inscriptions, taux de rachat Crave Credits">68K signups · Crave Credits redemption</div></div></div>
+        <div class="check-item"><div class="ci-box">✓</div><div><div class="ci-strong" data-en="Loyalty programme metrics" data-fr="Métriques programme fidélité">Loyalty programme metrics</div><div class="ci-desc" data-en="Early adoption, repeat participation, redemption behaviour" data-fr="Adoption initiale, participation récurrente, comportement de rédemption">Early adoption, repeat participation, redemption behaviour</div></div></div>
       </div>
     </div>
 
-    <div class="code-block">
-
-<p><strong>Project:</strong> "Crave It. Own It. Now." — Takeaway.com Pan-European Campaign</p>
-<p><strong>Role:</strong> Campaign Strategy & Communication Lead</p>
-<p><strong>Scope:</strong> Full-funnel · Brand + Performance · 4 Markets · 12 Weeks</p>
-<p><strong>Skills:</strong> Brand Strategy, Integrated Campaigns, Influencer Marketing, CRM, DCO, OOH, Loyalty Design</p>
-<p><strong>Impact:</strong> +11pp repeat orders · 3.8× ROAS · −22% CPA · 4.2M TikTok views</p>
-<p><strong>Tools:</strong> Meta Ads Manager, TikTok Business, DV360, Salesforce Marketing Cloud, Figma</p>
+    <div class="summary-block reveal">
+      <p><strong>Project:</strong> "Crave It. Own It. Now." — Takeaway campaign concept</p>
+      <p><strong>Role:</strong> Campaign strategy and communication development</p>
+      <p><strong>Scope:</strong> Multi-market brand, paid media, CRM, and creator activation thinking</p>
+      <p><strong>Skills:</strong> Brand strategy, integrated campaigns, CRM, creator marketing, content systems, media thinking</p>
+      <p><strong>Illustrative impact:</strong> Repeat-order uplift · stronger paid social efficiency · improved retention contribution</p>
+      <p><strong>Tools:</strong> Meta Ads Manager, TikTok Business, DV360, Salesforce Marketing Cloud, Figma</p>
     </div>
   </div>
 </section>
@@ -971,7 +1422,7 @@ footer {
   <div class="footer-inner">
     <span class="footer-logo">AB<span>.</span></span>
     <span class="footer-copy">© 2026 Amine Brahimi — <span data-en="Communication & Marketing Specialist" data-fr="Spécialiste Communication & Marketing">Communication &amp; Marketing Specialist</span></span>
-    <a class="footer-back" href="index.html">
+    <a class="footer-back" href="../index.html">
       <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11.5 7H2.5M6 3.5L2.5 7 6 10.5"/></svg>
       <span data-en="Back to portfolio" data-fr="Retour au portfolio">Back to portfolio</span>
     </a>
@@ -979,30 +1430,100 @@ footer {
 </footer>
 
 <script>
-/* ── Language switcher ── */
+/* ─── LANGUAGE SWITCHER ─── */
 function setLang(lang) {
   document.getElementById('btn-en').classList.toggle('active', lang === 'en');
   document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
   document.querySelectorAll('[data-en]').forEach(function(el) {
     var txt = lang === 'fr' ? el.getAttribute('data-fr') : el.getAttribute('data-en');
     if (!txt) return;
-    if (el.children.length === 0) {
-      el.textContent = txt;
-    } else {
-      el.innerHTML = txt;
-    }
+    if (el.children.length === 0) { el.textContent = txt; }
+    else { el.innerHTML = txt; }
   });
   document.documentElement.lang = lang;
   try { localStorage.setItem('site-lang', lang); } catch(e) {}
 }
-
-/* Auto-apply saved preference */
 (function() {
   var saved = '';
   try { saved = localStorage.getItem('site-lang'); } catch(e) {}
   setLang(saved === 'fr' ? 'fr' : 'en');
 })();
+
+/* ─── SCROLL PROGRESS ─── */
+var progress = document.getElementById('progress');
+window.addEventListener('scroll', function() {
+  var scrolled = document.documentElement.scrollTop;
+  var max = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.width = (scrolled / max * 100) + '%';
+}, { passive: true });
+
+/* ─── SECTION NAV DOTS ─── */
+var sectionNav = document.getElementById('sectionNav');
+var dots = sectionNav.querySelectorAll('.snav-dot');
+var snavLabel = document.getElementById('snavLabel');
+var sections = ['brief','strategy','execution','creative','channels','results'];
+var sectionLabels = {
+  en: ['Brief','Strategy','Execution','Creative','Channels','Results'],
+  fr: ['Brief','Stratégie','Exécution','Créatif','Canaux','Résultats']
+};
+var currentLang = function() { return document.documentElement.lang || 'en'; };
+
+function scrollTo(id) {
+  var el = document.querySelector(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
+
+window.addEventListener('scroll', function() {
+  var scrollY = window.scrollY;
+  var heroHeight = document.querySelector('.hero').offsetHeight;
+  if (scrollY > heroHeight * 0.6) {
+    sectionNav.classList.add('visible');
+  } else {
+    sectionNav.classList.remove('visible');
+  }
+
+  var activeIdx = 0;
+  sections.forEach(function(id, i) {
+    var el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top < window.innerHeight * 0.45) {
+      activeIdx = i;
+    }
+  });
+  dots.forEach(function(d, i) {
+    d.classList.toggle('active', i === activeIdx);
+  });
+  var lang = currentLang();
+  var labels = lang === 'fr' ? sectionLabels.fr : sectionLabels.en;
+  snavLabel.textContent = labels[activeIdx];
+}, { passive: true });
+
+/* ─── SCROLL REVEAL ─── */
+var revealEls = document.querySelectorAll('.reveal');
+var io = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+revealEls.forEach(function(el) { io.observe(el); });
+
+/* ─── BAR CHART ANIMATION ─── */
+var barAnimated = false;
+var barIo = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting && !barAnimated) {
+      barAnimated = true;
+      document.querySelectorAll('.bar-fill').forEach(function(bar) {
+        var pct = bar.getAttribute('data-pct');
+        setTimeout(function() { bar.style.width = pct + '%'; }, 100);
+      });
+    }
+  });
+}, { threshold: 0.3 });
+var barSection = document.getElementById('barSection');
+if (barSection) barIo.observe(barSection);
 </script>
 </body>
 </html>
-
