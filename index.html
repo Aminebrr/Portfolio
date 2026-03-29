@@ -912,7 +912,54 @@ footer {
   .hero-ctas { flex-wrap: wrap; }
   .profile-photo, .profile-placeholder { width: 200px; height: 200px; border-radius: 50%; }
 }
+/* TAKEAWAY HERO CARD */
+.cs-visual {
+  position: relative;
+  height: 360px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
 
+/* Background image */
+.takeaway-bg {
+  background: url('takeaway-bg.png') center/cover no-repeat;
+}
+
+/* Dark gradient overlay for readability */
+.cs-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.65) 0%,
+    rgba(0,0,0,0.2) 40%,
+    rgba(0,0,0,0.1) 100%
+  );
+}
+
+/* Content */
+.cs-content {
+  position: relative;
+  z-index: 2;
+  padding: 28px;
+  color: white;
+  max-width: 520px;
+}
+
+/* Make text white inside */
+.cs-content .cs-title,
+.cs-content .cs-subtitle,
+.cs-content .cs-meta {
+  color: white;
+}
+
+/* KPI style on dark */
+.cs-content .cs-kpi {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+}
 </style>
 </head>
 <body>
@@ -1025,24 +1072,53 @@ footer {
         <h2 class="work-title" data-en="Campaigns &amp; strategies" data-fr="Campagnes &amp; stratégies">Campaigns &amp; strategies</h2>
       </div>
     </div>
-<!-- PROJECT : Takeaway — Crave It Campaign -->
-    <div class="case-study">
-      <div class="cs-header">
-        <div class="cs-brand-pill">Takeaway.com &middot; Pan-European &middot; 4 Markets</div>
-        <div class="cs-meta"><span>2022&ndash;2024</span><span>&middot; Brand Strategy &middot; Integrated Campaign &middot; Paid Media &middot; CRM</span></div>
-        <h3 class="cs-title">Crave It. Own It. Now. &mdash; <em>Pan-European Campaign</em></h3>
-        <p class="cs-subtitle">Full-funnel integrated campaign repositioning Takeaway as an emotional brand, not just a delivery platform. Built around one human truth: craving is irrational, urgent, and deeply personal.</p>
-        <div class="cs-kpis">
-          <div class="cs-kpi"><span class="cs-kpi-val">3.8×</span><span class="cs-kpi-lbl">ROAS</span></div>
-          <div class="cs-kpi"><span class="cs-kpi-val">−22%</span><span class="cs-kpi-lbl">CPA</span></div>
-          <div class="cs-kpi"><span class="cs-kpi-val">4.2M</span><span class="cs-kpi-lbl">TikTok views</span></div>
-          <div class="cs-kpi"><span class="cs-kpi-val">+11pp</span><span class="cs-kpi-lbl">Repeat orders</span></div>
-        </div>
-        <a href="takeaway-casestudy.html" style="display:inline-flex;align-items:center;gap:7px;margin-top:16px;font-size:12px;font-weight:500;padding:9px 20px;border-radius:7px;background:var(--text1);color:var(--bg);text-decoration:none;letter-spacing:0.02em;transition:opacity .2s;" onmouseover="this.style.opacity='.8'" onmouseout="this.style.opacity='1'">
-          View full case study
-          <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7h9M8 3.5l3.5 3.5L8 10.5"/></svg>
-        </a>
+
+<div class="case-study">
+
+  <!-- NEW VISUAL BLOCK -->
+  <div class="cs-visual takeaway-bg">
+    <div class="cs-overlay"></div>
+
+    <div class="cs-content">
+      <div class="cs-meta">
+        TAKEAWAY.COM · PAN-EUROPEAN · 4 MARKETS<br>
+        2022–2024
       </div>
+
+      <h2 class="cs-title">
+        Crave It. Own It. Now.
+      </h2>
+    </div>
+  </div>
+
+    <!-- PROJECT : Takeaway — Crave It Campaign -->
+  <div class="cs-header">
+    <div class="cs-brand-pill">Takeaway.com · Pan-European · 4 Markets</div>
+
+    <div class="cs-meta">
+      <span>2022–2024</span>
+      <span>· Brand Strategy · Integrated Campaign · Paid Media · CRM</span>
+    </div>
+
+    <h3 class="cs-title">
+      Crave It. Own It. Now. <em>Pan-European Campaign</em>
+    </h3>
+
+    <p class="cs-subtitle">
+      Full-funnel integrated campaign repositioning Takeaway as an emotional brand, not just a delivery platform.
+    </p>
+
+    <div class="cs-kpis">
+      <div class="cs-kpi"><span class="cs-kpi-val">3.8×</span><span class="cs-kpi-lbl">ROAS</span></div>
+      <div class="cs-kpi"><span class="cs-kpi-val">−22%</span><span class="cs-kpi-lbl">CPA</span></div>
+      <div class="cs-kpi"><span class="cs-kpi-val">4.2M</span><span class="cs-kpi-lbl">TikTok views</span></div>
+      <div class="cs-kpi"><span class="cs-kpi-val">+11pp</span><span class="cs-kpi-lbl">Repeat orders</span></div>
+    </div>
+
+    <a href="takeaway-casestudy.html" class="btn-primary" style="margin-top:16px;">
+      View full case study
+    </a>
+  </div>
     </div>
 
     <!-- PROJECT : JustEat Faim de Loup -->
