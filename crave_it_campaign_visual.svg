@@ -1,0 +1,180 @@
+<svg width="100%" viewBox="0 0 1210 690" role="img" xmlns="http://www.w3.org/2000/svg" style="">
+  <title style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Crave It. Own It. Now. — Takeaway.com Pan-European Campaign Visual</title>
+  <desc style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">Dark moody campaign poster with bold typographic headline and food imagery evoking raw craving and desire</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D0B09"/>
+      <stop offset="60%" stop-color="#1A1410"/>
+      <stop offset="100%" stop-color="#221910"/>
+    </linearGradient>
+    <linearGradient id="amberGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B00" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#E8420A" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#C8842A" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="rimLight" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FF5500" stop-opacity="0.0"/>
+      <stop offset="100%" stop-color="#FF8C00" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="plateGrad" cx="40%" cy="35%" r="55%" fx="40%" fy="35%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#2C2218"/>
+      <stop offset="100%" stop-color="#181210"/>
+    </linearGradient>
+    <linearGradient id="steamGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FF7A00" stop-opacity="0.0"/>
+      <stop offset="60%" stop-color="#FFB347" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#FFF0D0" stop-opacity="0.0"/>
+    </linearGradient>
+    <linearGradient id="burgerBase" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C8540A"/>
+      <stop offset="100%" stop-color="#8B3500"/>
+    </linearGradient>
+    <linearGradient id="bunTop" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#D4630F"/>
+      <stop offset="100%" stop-color="#9B4010"/>
+    </linearGradient>
+    <linearGradient id="sesame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8A050"/>
+      <stop offset="100%" stop-color="#C07828"/>
+    </linearGradient>
+    <linearGradient id="textFade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6600" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#FFB347" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="subFade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C8842A"/>
+      <stop offset="100%" stop-color="#E09A3A"/>
+    </linearGradient>
+    <radialGradient id="spotLight" cx="62%" cy="45%" r="42%">
+      <stop offset="0%" stop-color="#FF6600" stop-opacity="0.22"/>
+      <stop offset="60%" stop-color="#FF4400" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="plateShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="subtleBlur">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <clipPath id="canvasClip">
+      <rect width="1200" height="600"/>
+    </clipPath>
+  <mask id="imagine-text-gaps-r66al7" maskUnits="userSpaceOnUse"><rect x="0" y="0" width="1210" height="690" fill="white"/><rect x="84" y="136.1356964111328" width="444.7007141113281" height="17.152398109436035" fill="black" rx="2"/><rect x="75.99999237060547" y="157.3570098876953" width="479.05877685546875" height="126.48170471191406" fill="black" rx="2"/><rect x="75.99999237060547" y="257.35699462890625" width="414.4527893066406" height="126.48170471191406" fill="black" rx="2"/><rect x="71.3067398071289" y="354.3570251464844" width="299.2203063964844" height="126.48170471191406" fill="black" rx="2"/><rect x="84" y="480.84759521484375" width="302.31060791015625" height="20.44049835205078" fill="black" rx="2"/><rect x="92.98067474365234" y="517.9577026367188" width="22.038643836975098" height="15.50834846496582" fill="black" rx="2"/><rect x="132.9806671142578" y="517.9577026367188" width="22.038643836975098" height="15.50834846496582" fill="black" rx="2"/><rect x="172.9806671142578" y="517.9577026367188" width="22.038643836975098" height="15.50834846496582" fill="black" rx="2"/><rect x="212.98068237304688" y="517.9577026367188" width="22.038643836975098" height="15.50834846496582" fill="black" rx="2"/></mask></defs>
+
+  <g clip-path="url(#canvasClip)" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+
+    <!-- Base deep dark background -->
+    <rect width="1200" height="600" fill="url(#bg)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+    <!-- Warm amber heat bloom — right side where food sits -->
+    <ellipse cx="760" cy="320" rx="440" ry="360" fill="url(#amberGlow)" filter="url(#softBlur)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+    <!-- Rim light from below -->
+    <rect width="1200" height="600" fill="url(#rimLight)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+    <!-- Spotlight -->
+    <rect width="1200" height="600" fill="url(#spotLight)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+    <!-- Subtle grain texture via repeating dots -->
+    <g opacity="0.03" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.03;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+      <rect x="0" y="0" width="1200" height="600" fill="none" stroke="#FFA050" stroke-width="0.5" style="stroke-dasharray:1 18;fill:none;stroke:rgb(255, 160, 80);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-dasharray:1px, 18px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    </g>
+
+    <!-- ── FOOD ILLUSTRATION ── centered right column -->
+    <!-- Plate shadow on surface -->
+    <ellipse cx="760" cy="510" rx="200" ry="28" fill="#000000" opacity="0.55" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.55;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+    <!-- Plate -->
+    <ellipse cx="760" cy="490" rx="195" ry="22" fill="#1C1510" style="fill:rgb(28, 21, 16);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <ellipse cx="760" cy="485" rx="190" ry="18" fill="#232018" style="fill:rgb(35, 32, 24);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <ellipse cx="760" cy="482" rx="185" ry="15" fill="#2A2218" opacity="0.9" style="fill:rgb(42, 34, 24);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.9;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+    <!-- Bottom bun -->
+    <ellipse cx="760" cy="430" rx="115" ry="22" fill="#8B3500" style="fill:rgb(139, 53, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <ellipse cx="760" cy="418" rx="115" ry="16" fill="url(#burgerBase)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+    <!-- Lettuce frill -->
+    <path d="M648,412 Q660,402 672,410 Q684,398 696,408 Q708,396 720,406 Q732,394 744,404 Q756,392 768,402 Q780,390 792,400 Q804,392 816,402 Q828,395 840,407 Q852,400 864,410 Q876,403 872,415 L648,415 Z" fill="#2D5E1A" opacity="0.95" style="fill:rgb(45, 94, 26);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.95;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <path d="M652,415 Q666,405 678,413 Q690,403 702,411 Q714,401 726,409 Q738,399 750,407 Q762,397 774,405 Q786,397 798,405 Q810,398 822,406 Q834,400 846,410 Q858,404 868,414" fill="none" stroke="#3A7A22" stroke-width="1.5" opacity="0.7" style="fill:none;stroke:rgb(58, 122, 34);color:rgb(0, 0, 0);stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.7;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+    <!-- Tomato slices -->
+    <ellipse cx="745" cy="408" rx="42" ry="9" fill="#CC2200" opacity="0.9" style="fill:rgb(204, 34, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.9;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <ellipse cx="785" cy="405" rx="38" ry="8" fill="#DD3311" opacity="0.85" style="fill:rgb(221, 51, 17);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.85;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <line x1="745" y1="400" x2="745" y2="416" stroke="#FF4422" stroke-width="0.8" opacity="0.5" style="fill:rgb(0, 0, 0);stroke:rgb(255, 68, 34);color:rgb(0, 0, 0);stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <line x1="738" y1="403" x2="752" y2="413" stroke="#FF4422" stroke-width="0.8" opacity="0.4" style="fill:rgb(0, 0, 0);stroke:rgb(255, 68, 34);color:rgb(0, 0, 0);stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.4;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <line x1="752" y1="403" x2="738" y2="413" stroke="#FF4422" stroke-width="0.8" opacity="0.4" style="fill:rgb(0, 0, 0);stroke:rgb(255, 68, 34);color:rgb(0, 0, 0);stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.4;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+    <!-- Cheese melt drip -->
+    <path d="M700,395 Q695,405 692,415 Q690,422 695,425 Q700,422 702,415 Q704,408 706,398 Z" fill="#F5A800" opacity="0.9" style="fill:rgb(245, 168, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.9;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <path d="M820,392 Q828,402 832,414 Q834,422 829,426 Q824,422 822,414 Q820,405 818,395 Z" fill="#F5A800" opacity="0.85" style="fill:rgb(245, 168, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.85;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <path d="M700,390 L830,390 Q835,390 836,393 L836,398 Q835,395 830,395 L700,395 Q697,395 696,398 L696,393 Q697,390 700,390 Z" fill="#F5C800" opacity="0.9" style="fill:rgb(245, 200, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.9;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+    <!-- Patty -->
+    <ellipse cx="763" cy="382" rx="118" ry="20" fill="#3D1A08" style="fill:rgb(61, 26, 8);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <ellipse cx="763" cy="376" rx="118" ry="18" fill="#4A2008" style="fill:rgb(74, 32, 8);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <!-- patty texture marks -->
+    <path d="M665,374 Q700,368 740,372 Q780,376 820,370 Q850,368 860,374" fill="none" stroke="#5A2A0A" stroke-width="2.5" opacity="0.6" style="fill:none;stroke:rgb(90, 42, 10);color:rgb(0, 0, 0);stroke-width:2.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.6;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <path d="M668,380 Q705,376 745,380 Q782,383 818,378" fill="none" stroke="#5A2A0A" stroke-width="2" opacity="0.4" style="fill:none;stroke:rgb(90, 42, 10);color:rgb(0, 0, 0);stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.4;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+    <!-- Top bun -->
+    <ellipse cx="762" cy="336" rx="122" ry="44" fill="url(#bunTop)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <ellipse cx="762" cy="302" rx="118" ry="28" fill="#C8540A" opacity="0.6" style="fill:rgb(200, 84, 10);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.6;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <!-- bun highlight -->
+    <ellipse cx="748" cy="295" rx="52" ry="14" fill="#E8780A" opacity="0.35" style="fill:rgb(232, 120, 10);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.35;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+    <!-- Sesame seeds -->
+    <ellipse cx="730" cy="290" rx="8" ry="3.5" fill="url(#sesame)" transform="rotate(-15,730,290)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <ellipse cx="755" cy="282" rx="8" ry="3.5" fill="url(#sesame)" transform="rotate(5,755,282)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <ellipse cx="780" cy="287" rx="7" ry="3" fill="url(#sesame)" transform="rotate(-20,780,287)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <ellipse cx="800" cy="296" rx="7" ry="3" fill="url(#sesame)" transform="rotate(10,800,296)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <ellipse cx="718" cy="305" rx="6" ry="2.8" fill="url(#sesame)" transform="rotate(8,718,305)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <ellipse cx="768" cy="300" rx="6" ry="2.5" fill="url(#sesame)" transform="rotate(-8,768,300)" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+    <!-- Steam wisps -->
+    <path d="M720,270 Q715,248 722,228 Q728,210 722,192" fill="none" stroke="url(#steamGrad)" stroke-width="3" opacity="0.5" stroke-linecap="round" style="fill:none;color:rgb(0, 0, 0);stroke-width:3px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.5;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <path d="M762,260 Q756,236 763,214 Q769,194 762,174" fill="none" stroke="url(#steamGrad)" stroke-width="3.5" opacity="0.6" stroke-linecap="round" style="fill:none;color:rgb(0, 0, 0);stroke-width:3.5px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.6;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <path d="M800,268 Q806,244 799,224 Q793,206 800,186" fill="none" stroke="url(#steamGrad)" stroke-width="2.5" opacity="0.45" stroke-linecap="round" style="fill:none;color:rgb(0, 0, 0);stroke-width:2.5px;stroke-linecap:round;stroke-linejoin:miter;opacity:0.45;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+    <!-- ── TYPOGRAPHY — left column ── -->
+
+    <!-- Eyebrow label -->
+    <text x="88" y="148" font-family="'DM Mono', 'Courier New', monospace" font-size="12" font-weight="400" fill="#C8842A" letter-spacing="4" opacity="0.85" style="fill:rgb(200, 132, 42);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.85;font-family:&quot;DM Mono&quot;, &quot;Courier New&quot;, monospace;font-size:12px;font-weight:400;text-anchor:start;dominant-baseline:auto">TAKEAWAY.COM  ·  PAN-EUROPEAN  ·  2022–2024</text>
+
+    <!-- Thin rule under eyebrow -->
+    <line x1="88" y1="162" x2="340" y2="162" stroke="#C8842A" stroke-width="0.8" opacity="0.4" mask="url(#imagine-text-gaps-r66al7)" style="fill:rgb(0, 0, 0);stroke:rgb(200, 132, 42);color:rgb(0, 0, 0);stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.4;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+    <!-- CRAVE IT — main headline, three stacked lines -->
+    <text x="80" y="258" font-family="Georgia, 'Times New Roman', serif" font-size="108" font-weight="700" font-style="italic" fill="url(#textFade)" letter-spacing="-2" style="stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Georgia, &quot;Times New Roman&quot;, serif;font-size:108px;font-weight:700;font-style:italic;text-anchor:start;dominant-baseline:auto">Crave It.</text>
+    <text x="80" y="358" font-family="Georgia, 'Times New Roman', serif" font-size="108" font-weight="700" font-style="italic" fill="#F7F4EF" letter-spacing="-2" opacity="0.95" style="fill:rgb(247, 244, 239);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.95;font-family:Georgia, &quot;Times New Roman&quot;, serif;font-size:108px;font-weight:700;font-style:italic;text-anchor:start;dominant-baseline:auto">Own It.</text>
+    <text x="80" y="455" font-family="Georgia, 'Times New Roman', serif" font-size="108" font-weight="700" font-style="italic" fill="#F7F4EF" letter-spacing="-2" opacity="0.70" style="fill:rgb(247, 244, 239);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.7;font-family:Georgia, &quot;Times New Roman&quot;, serif;font-size:108px;font-weight:700;font-style:italic;text-anchor:start;dominant-baseline:auto">Now.</text>
+
+    <!-- Amber accent bar beside headline -->
+    <rect x="68" y="170" width="3" height="300" fill="#FF6600" opacity="0.7" rx="1" style="fill:rgb(255, 102, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.7;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+    <!-- Subline -->
+    <text x="88" y="496" font-family="'DM Sans', 'Helvetica Neue', sans-serif" font-size="14" font-weight="400" fill="#C8842A" letter-spacing="0.5" opacity="0.9" style="fill:rgb(200, 132, 42);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.9;font-family:&quot;DM Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif;font-size:14px;font-weight:400;text-anchor:start;dominant-baseline:auto">Craving is immediate. Emotional. Impulsive.</text>
+
+    <!-- Market tags -->
+    <rect x="88" y="516" width="32" height="18" rx="3" fill="#C8842A" opacity="0.18" style="fill:rgb(200, 132, 42);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.18;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <rect x="128" y="516" width="32" height="18" rx="3" fill="#C8842A" opacity="0.18" style="fill:rgb(200, 132, 42);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.18;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <rect x="168" y="516" width="32" height="18" rx="3" fill="#C8842A" opacity="0.18" style="fill:rgb(200, 132, 42);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.18;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <rect x="208" y="516" width="32" height="18" rx="3" fill="#C8842A" opacity="0.18" style="fill:rgb(200, 132, 42);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.18;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+    <text x="104" y="529" font-family="'DM Mono', monospace" font-size="10" fill="#E09A3A" text-anchor="middle" letter-spacing="1" opacity="0.9" style="fill:rgb(224, 154, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.9;font-family:&quot;DM Mono&quot;, monospace;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:auto">FR</text>
+    <text x="144" y="529" font-family="'DM Mono', monospace" font-size="10" fill="#E09A3A" text-anchor="middle" letter-spacing="1" opacity="0.9" style="fill:rgb(224, 154, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.9;font-family:&quot;DM Mono&quot;, monospace;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:auto">BE</text>
+    <text x="184" y="529" font-family="'DM Mono', monospace" font-size="10" fill="#E09A3A" text-anchor="middle" letter-spacing="1" opacity="0.9" style="fill:rgb(224, 154, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.9;font-family:&quot;DM Mono&quot;, monospace;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:auto">DE</text>
+    <text x="224" y="529" font-family="'DM Mono', monospace" font-size="10" fill="#E09A3A" text-anchor="middle" letter-spacing="1" opacity="0.9" style="fill:rgb(224, 154, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.9;font-family:&quot;DM Mono&quot;, monospace;font-size:10px;font-weight:400;text-anchor:middle;dominant-baseline:auto">NL</text>
+
+    <!-- Vertical divider between text and food -->
+    <line x1="590" y1="80" x2="590" y2="540" stroke="#C8842A" stroke-width="0.5" opacity="0.12" stroke-dasharray="4 8" style="fill:rgb(0, 0, 0);stroke:rgb(200, 132, 42);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-dasharray:4px, 8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.12;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  </g>
+</svg>
