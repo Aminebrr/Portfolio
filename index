@@ -1,0 +1,2205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amine Brahimi — Brand & Communication Strategist</title>
+<meta name="description" content="Communication Strategy · Digital Marketing · AI-Integrated Practice · Amine Brahimi — 6+ years across France, Belgium and Morocco.">
+<meta property="og:title" content="Amine Brahimi — Brand &amp; Communication Strategist">
+<meta property="og:description" content="Strategic communication and marketing professional with expertise in AI integration, political studies background, and trilingual communication across EU and North Africa.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>AB</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+
+/* ═══════════════════════════════════
+   DESIGN TOKENS — warm editorial palette
+   Light: cream/parchment bg, charcoal text, amber accent
+═══════════════════════════════════ */
+:root {
+  --bg:        #F7F4EF;
+  --bg2:       #EFEBE3;
+  --bg3:       #E6E1D8;
+  --bg-dark:   #1E1C19;
+  --bg-dark2:  #252320;
+  --border:    rgba(30,28,25,0.1);
+  --border2:   rgba(30,28,25,0.18);
+  --accent:    #C8842A;
+  --accent2:   #E09A3A;
+  --accent-bg: rgba(200,132,42,0.08);
+  --text1:     #1E1C19;
+  --text2:     #5C5750;
+  --text3:     #7A7570;
+  --serif:     'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  --sans:      'DM Sans', 'Helvetica Neue', system-ui, sans-serif;
+  --mono:      'DM Mono', 'Courier New', monospace;
+  --nav-h:     64px;
+  --max:       1160px;
+  --r:         10px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text1);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.68;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }
+
+/* ─── NAVIGATION ─────────────────────────── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  padding: 0 40px;
+  background: rgba(247,244,239,0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 0.5px solid var(--border);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.logo {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text1);
+  letter-spacing: -0.01em;
+}
+.logo span { color: var(--accent); }
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 12.5px;
+  font-weight: 400;
+  color: var(--text2);
+  letter-spacing: 0.01em;
+  transition: color .2s;
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0;
+  width: 0; height: 1px;
+  background: var(--accent);
+  transition: width .25s;
+}
+.nav-links a:hover { color: var(--text1); }
+.nav-links a:hover::after { width: 100%; }
+.nav-links a.active { color: var(--accent); }
+.nav-links a.active::after { width: 100%; }
+.nav-right { display: flex; align-items: center; gap: 14px; }
+.lang-sw { font-family: var(--mono); font-size: 11px; font-weight: 400; letter-spacing: 0.06em; color: var(--text3); display: flex; gap: 5px; align-items: center; }
+.lang-sw a { color: var(--text2); transition: color .2s; }
+.lang-sw a:hover { color: var(--accent); }
+.lang-sw a.lang-active { color: var(--accent); font-weight: 500; }
+.lang-sw span { color: var(--text3); }
+.btn-nav {
+  font-family: var(--sans);
+  font-size: 11.5px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 8px 20px;
+  border-radius: 7px;
+  background: var(--text1);
+  color: var(--bg);
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: opacity .2s, transform .15s;
+}
+.btn-nav:hover { opacity: 0.85; transform: translateY(-1px); }
+
+/* ─── HERO ───────────────────────────────── */
+.hero {
+  min-height: 100vh;
+  padding-top: var(--nav-h);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+/* Subtle warm radial behind hero */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 55vw; height: 100%;
+  background: radial-gradient(ellipse at 80% 50%, rgba(200,132,42,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+/* Grid texture */
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(30,28,25,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30,28,25,0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 80px 40px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  animation: fadeUp .55s ease both;
+}
+.eyebrow-line { width: 28px; height: 1px; background: var(--accent); }
+.eyebrow-text {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.hero-name {
+  font-family: var(--serif);
+  font-size: clamp(52px, 5.8vw, 80px);
+  font-weight: 400;
+  color: var(--text1);
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  margin-bottom: 2px;
+  animation: fadeUp .55s .08s ease both;
+}
+.hero-name-it {
+  font-family: var(--serif);
+  font-size: clamp(52px, 5.8vw, 80px);
+  font-weight: 500;
+  font-style: italic;
+  color: var(--accent);
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  display: block;
+  margin-bottom: 24px;
+  animation: fadeUp .55s .12s ease both;
+}
+.hero-role {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 300;
+  color: var(--text2);
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+  animation: fadeUp .55s .16s ease both;
+}
+.hero-role span { color: var(--accent); opacity: 0.5; margin: 0 6px; font-weight: 400; }
+.hero-tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 21px;
+  font-weight: 400;
+  color: var(--text2);
+  margin-bottom: 36px;
+  line-height: 1.55;
+  max-width: 430px;
+  animation: fadeUp .55s .2s ease both;
+}
+.hero-tagline em { color: var(--accent); font-style: normal; font-weight: 600; }
+
+/* KPIs */
+.kpis {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+  animation: fadeUp .55s .24s ease both;
+}
+.kpi {
+  background: var(--bg2);
+  border: 0.5px solid var(--border2);
+  border-radius: var(--r);
+  padding: 12px 16px;
+  min-width: 100px;
+  transition: border-color .2s, transform .2s;
+  position: relative;
+  overflow: hidden;
+}
+.kpi::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity .2s;
+}
+.kpi:hover { border-color: var(--accent); transform: translateY(-2px); }
+.kpi:hover::before { opacity: 1; }
+.kpi-val {
+  font-family: var(--mono);
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--accent);
+  display: block;
+  line-height: 1;
+  margin-bottom: 5px;
+  letter-spacing: -0.02em;
+}
+.kpi-lbl {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 300;
+  color: var(--text3);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+/* CTAs */
+.hero-ctas {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  animation: fadeUp .55s .28s ease both;
+}
+.btn-primary {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 12px 28px;
+  border-radius: 8px;
+  background: var(--text1);
+  color: var(--bg);
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: opacity .2s, transform .15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.btn-primary:hover { opacity: 0.85; transform: translateY(-1px); }
+.btn-secondary {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 400;
+  padding: 11px 26px;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text1);
+  border: 0.5px solid var(--border2);
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background .2s, transform .15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.btn-secondary:hover { background: var(--bg2); transform: translateY(-1px); }
+
+/* Availability */
+.avail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--text3);
+  animation: fadeUp .55s .32s ease both;
+}
+.avail-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #4CAF7D;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Right col — profile photo */
+.hero-right { animation: fadeUp .55s .18s ease both; }
+.profile-wrap {
+  position: relative;
+  display: inline-block;
+}
+.profile-photo {
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  border: 3px solid var(--bg2);
+}
+.profile-photo-wrap {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(200,132,42,0.18);
+  box-shadow: 0 0 0 6px rgba(200,132,42,0.06);
+  flex-shrink: 0;
+}
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+.profile-placeholder::before {
+  content: '';
+  position: absolute;
+  top: -20%; right: -20%;
+  width: 60%; height: 60%;
+  background: radial-gradient(ellipse, rgba(200,132,42,0.1) 0%, transparent 70%);
+}
+.profile-mono {
+  font-family: var(--serif);
+  font-size: 72px;
+  font-weight: 300;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  position: relative;
+}
+.profile-sub {
+  font-size: 10px;
+  color: var(--text3);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+/* Corner accents on profile */
+.corner {
+  position: absolute;
+  width: 16px; height: 16px;
+}
+.c-tl { top: 12px; left: 12px; border-top: 1.5px solid var(--accent); border-left: 1.5px solid var(--accent); border-radius: 3px 0 0 0; }
+.c-tr { top: 12px; right: 12px; border-top: 1.5px solid var(--accent); border-right: 1.5px solid var(--accent); border-radius: 0 3px 0 0; }
+.c-bl { bottom: 12px; left: 12px; border-bottom: 1.5px solid var(--accent); border-left: 1.5px solid var(--accent); border-radius: 0 0 0 3px; }
+.c-br { bottom: 12px; right: 12px; border-bottom: 1.5px solid var(--accent); border-right: 1.5px solid var(--accent); border-radius: 0 0 3px 0; }
+/* Floating info chip */
+.hero-chip {
+  position: absolute;
+  bottom: -16px;
+  right: -20px;
+  background: var(--bg-dark);
+  border-radius: 10px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0.5px solid rgba(255,255,255,0.08);
+}
+.chip-dot { width: 7px; height: 7px; border-radius: 50%; background: #4CAF7D; animation: pulse 2s ease-in-out infinite; }
+.chip-text { font-family: var(--mono); font-size: 10.5px; font-weight: 300; color: #F0EDE8; letter-spacing: 0.06em; white-space: nowrap; }
+
+/* ─── SPEC STRIP ─────────────────────────── */
+.spec-strip {
+  background: var(--bg-dark);
+  padding: 20px 40px;
+  overflow: hidden;
+}
+.spec-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.spec-label {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+.spec-tag {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 300;
+  padding: 5px 13px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.06);
+  border: 0.5px solid rgba(255,255,255,0.1);
+  color: rgba(240,237,232,0.65);
+  letter-spacing: 0.04em;
+  transition: all .2s;
+}
+.spec-tag:hover { background: rgba(200,132,42,0.15); color: #E09A3A; border-color: rgba(200,132,42,0.3); }
+.spec-tag.secondary {
+  font-size: 9.5px;
+  padding: 3px 10px;
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.07);
+  color: rgba(240,237,232,0.45);
+  letter-spacing: 0.04em;
+}
+.spec-tag.secondary:hover { background: rgba(200,132,42,0.10); color: #C8842A; border-color: rgba(200,132,42,0.2); }
+.spec-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+.spec-row + .spec-row {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 0.5px solid rgba(255,255,255,0.06);
+}
+.spec-tag.hi {
+  background: rgba(200,132,42,0.12);
+  border-color: rgba(200,132,42,0.3);
+  color: #E09A3A;
+}
+
+
+/* ─── MOBILE NAV ─────────────────────────── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--text1);
+  transition: all .25s;
+}
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: var(--nav-h);
+  left: 0; right: 0;
+  background: rgba(247,244,239,0.97);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 0.5px solid var(--border);
+  padding: 20px 40px 24px;
+  z-index: 99;
+}
+.mobile-menu.open { display: block; }
+.mobile-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.mobile-menu a {
+  font-size: 15px;
+  color: var(--text2);
+  transition: color .2s;
+}
+.mobile-menu a:hover { color: var(--accent); }
+
+/* ─── SPEC STRIP MOBILE ──────────────────── */
+/* ─── SECTION SHARED ─────────────────────── */
+.section-lbl {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.sl-line { width: 22px; height: 1px; background: var(--accent); }
+.sl-text {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ─── ABOUT ──────────────────────────────── */
+.about-section {
+  padding: 100px 40px;
+  background: var(--bg);
+}
+.about-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+.about-title {
+  font-family: var(--serif);
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--text1);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.about-title em { color: var(--accent); font-style: italic; font-weight: 400; }
+.about-body {
+  font-size: 14.5px;
+  font-weight: 300;
+  color: var(--text2);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.about-body strong { color: var(--text1); font-weight: 500; }
+.fr-block {
+  margin-top: 20px;
+  padding: 14px 16px;
+  background: var(--bg2);
+  border-left: 2px solid rgba(200,132,42,0.4);
+  border-radius: 0 var(--r) var(--r) 0;
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.65;
+}
+.fr-tag {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 400;
+}
+.tools-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.tool-card {
+  background: var(--bg2);
+  border: 0.5px solid var(--border);
+  border-radius: var(--r);
+  padding: 14px 16px;
+  transition: border-color .2s;
+}
+.tool-card:hover { border-color: rgba(200,132,42,0.3); }
+.tool-name {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.tool-list {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 300;
+  color: var(--text2);
+  line-height: 1.75;
+}
+
+/* ─── WORK ───────────────────────────────── */
+.work-section {
+  padding: 100px 40px;
+  background: var(--bg2);
+}
+.work-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.work-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.work-title {
+  font-family: var(--serif);
+  font-size: 42px;
+  font-weight: 500;
+  color: var(--text1);
+  letter-spacing: -0.02em;
+}
+
+/* Case study cards */
+.case-study {
+  background: var(--bg);
+  border: 0.5px solid var(--border2);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  transition: border-color .25s, box-shadow .25s;
+}
+@media (hover: hover) {
+  .case-study:hover {
+    border-color: rgba(200,132,42,0.3);
+    box-shadow: 0 8px 32px rgba(30,28,25,0.08);
+  }
+}
+.cs-header {
+  padding: 28px 32px 22px;
+  border-bottom: 0.5px solid var(--border);
+}
+.cs-brand-pill {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--accent-bg);
+  border: 0.5px solid rgba(200,132,42,0.25);
+  padding: 4px 13px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.cs-meta {
+  display: flex;
+  gap: 12px;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 300;
+  color: var(--text3);
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.cs-title {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--text1);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+.cs-title em { color: var(--accent); font-style: italic; font-weight: 400; }
+.cs-subtitle {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--text2);
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 16px;
+}
+.cs-kpis {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.cs-kpi {
+  background: var(--bg2);
+  border: 0.5px solid var(--border2);
+  border-radius: 8px;
+  padding: 8px 14px;
+  text-align: center;
+  min-width: 78px;
+}
+.cs-kpi-val {
+  display: block;
+  font-family: var(--mono);
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+.cs-kpi-lbl {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 300;
+  color: var(--text3);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.cs-img-wrap {
+  overflow: hidden;
+  background: var(--bg3);
+}
+.cs-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform .4s ease;
+}
+.campaign-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform .4s ease;
+}
+@media (hover: hover) {
+  .case-study:hover .cs-img,
+  .case-study:hover .campaign-img { transform: scale(1.015); }
+}
+.cs-body {
+  padding: 24px 32px 28px;
+}
+/* EN/FR toggle */
+.lang-tog {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+.lt {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 14px;
+  border-radius: 20px;
+  border: 0.5px solid var(--border2);
+  background: transparent;
+  color: var(--text3);
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  transition: all .15s;
+}
+.lt.on {
+  background: var(--text1);
+  color: var(--bg);
+  border-color: var(--text1);
+}
+.cs-lang { display: none; }
+.cs-lang.on { display: block; }
+/* 4-block grid */
+.cs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.cs-block {
+  background: var(--bg2);
+  border: 0.5px solid var(--border);
+  border-radius: var(--r);
+  padding: 14px 16px;
+  transition: border-color .2s;
+}
+.cs-block:hover { border-color: rgba(200,132,42,0.2); }
+.cs-block.result {
+  border-color: rgba(200,132,42,0.25);
+  background: rgba(200,132,42,0.04);
+}
+.cs-blabel {
+  font-family: var(--mono);
+  font-size: 9.5px;
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.cs-btext {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--text2);
+  line-height: 1.7;
+}
+.cs-btext strong { color: var(--text1); font-weight: 500; }
+.cs-btext em { color: var(--accent); font-style: normal; }
+
+
+/* ─── EDUCATION BLOCK ───────────────────── */
+.education-block {
+  margin-top: 20px;
+  padding: 14px 18px;
+  background: var(--bg2);
+  border-left: 2px solid var(--accent);
+  border-radius: 0 var(--r) var(--r) 0;
+  font-size: 13.5px;
+  color: var(--text2);
+  line-height: 1.65;
+}
+.edu-label {
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.edu-sub {
+  font-size: 12px;
+  color: var(--text3);
+  letter-spacing: 0.01em;
+}
+
+/* ─── CERTIFICATIONS SECTION ─────────────── */
+.certs-section {
+  padding: 80px 40px;
+  background: var(--bg2);
+}
+.certs-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+  margin-top: 32px;
+}
+.cert-group-title {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 28px 0 12px;
+  grid-column: 1/-1;
+}
+.cert-card {
+  background: var(--bg);
+  border: 0.5px solid var(--border2);
+  border-radius: var(--r);
+  padding: 14px 16px;
+  transition: border-color .2s, transform .15s;
+}
+.cert-card:hover { border-color: rgba(200,132,42,0.4); transform: translateY(-2px); }
+.cert-card.ai { border-left: 2px solid var(--accent); }
+.cert-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text1);
+  margin-bottom: 5px;
+  line-height: 1.45;
+}
+.cert-issuer {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 300;
+  color: var(--text3);
+  letter-spacing: 0.06em;
+}
+.cert-date {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--accent);
+  margin-top: 5px;
+  letter-spacing: 0.04em;
+}
+
+/* ─── CONTACT ────────────────────────────── */
+.contact-section {
+  background: var(--bg-dark);
+  padding: 72px 40px;
+}
+.contact-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.contact-title {
+  font-family: var(--serif);
+  font-size: 42px;
+  font-weight: 500;
+  color: #F0EDE8;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+.contact-title em { color: var(--accent2); font-style: italic; }
+.contact-sub { font-family: var(--mono); font-size: 11px; font-weight: 300; letter-spacing: 0.05em; color: rgba(240,237,232,0.4); }
+.contact-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-cta {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 13px 28px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #1E1C19;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: opacity .2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-cta:hover { opacity: 0.9; }
+.btn-ghost {
+  font-size: 13px;
+  font-weight: 400;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: transparent;
+  color: rgba(240,237,232,0.7);
+  border: 0.5px solid rgba(255,255,255,0.15);
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: all .2s;
+}
+.btn-ghost:hover { color: #F0EDE8; border-color: rgba(255,255,255,0.3); }
+
+/* ─── FOOTER ─────────────────────────────── */
+footer {
+  background: var(--bg-dark2);
+  border-top: 0.5px solid rgba(255,255,255,0.06);
+  padding: 22px 40px;
+}
+.footer-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: rgba(255,255,255,0.25);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-logo { font-family: var(--serif); font-size: 16px; color: rgba(255,255,255,0.4); }
+.footer-logo span { color: var(--accent); }
+.footer-links { display: flex; gap: 20px; list-style: none; }
+.footer-links a { color: rgba(255,255,255,0.25); transition: color .2s; }
+.footer-links a:hover { color: var(--accent); }
+
+/* ─── TOOLS & PLATFORMS PAGE ────────────── */
+.tools-page {
+  padding: 100px 40px;
+  background: var(--bg);
+}
+.tools-page-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+.tools-page-header {
+  margin-bottom: 56px;
+}
+.tools-page-title {
+  font-family: var(--serif);
+  font-size: 38px;
+  font-weight: 400;
+  color: var(--text1);
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+.tools-page-sub {
+  font-size: 14px;
+  color: var(--text2);
+  max-width: 520px;
+  line-height: 1.6;
+}
+.tools-category {
+  margin-bottom: 52px;
+}
+.tools-cat-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.tools-cat-label::after {
+  content: '';
+  flex: 1;
+  height: 0.5px;
+  background: var(--border2);
+}
+.tools-logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.tool-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px 8px 10px;
+  background: var(--bg2);
+  border: 0.5px solid var(--border);
+  border-radius: 40px;
+  font-size: 13px;
+  color: var(--text1);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  transition: border-color .2s, transform .15s, box-shadow .2s;
+  cursor: default;
+  white-space: nowrap;
+}
+.tool-pill:hover {
+  border-color: rgba(200,132,42,0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(30,28,25,0.07);
+}
+/* ─── Simple Icons (CDN img) ────────────── */
+.si-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: block;
+  /* color swap handled by JS on mouseenter/leave */
+}
+/* ─── Custom fallback SVGs ──────────────── */
+.si-fallback {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--text2);
+  fill: currentColor;
+  transition: color .2s;
+  display: block;
+}
+.tool-pill:hover .si-fallback {
+  color: var(--accent);
+}
+/* ─── Colored brand SVGs (no hover tint) ── */
+.si-color {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: block;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .tools-page { padding: 60px 24px; }
+  .tools-logo-grid { gap: 9px; }
+  .tool-pill { font-size: 12px; padding: 8px 13px; }
+}
+
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 0 3px rgba(76,175,125,0.2); }
+  50%     { box-shadow: 0 0 0 5px rgba(76,175,125,0.08); }
+}
+
+/* ─── RESPONSIVE ─────────────────────────── */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; padding: 60px 24px; }
+  .hero-right { display: flex; justify-content: center; }
+  .hero-chip { display: none; }
+  .about-inner { grid-template-columns: 1fr; gap: 40px; padding-left: 0; padding-right: 0; }
+  .work-section { padding: 60px 24px; }
+  .about-section { padding: 60px 24px; }
+  .cs-grid { grid-template-columns: 1fr; }
+  .cs-body { padding: 18px 20px 22px; }
+  .cs-header { padding: 20px 20px 16px; }
+  .nav-links { display: none; }
+  nav { padding: 0 24px; }
+  .spec-strip { padding: 16px 24px; }
+  .contact-inner { flex-direction: column; text-align: center; }
+  .tools-grid { grid-template-columns: 1fr; }
+  footer { padding: 18px 24px; }
+  .footer-inner { flex-direction: column; text-align: center; }
+}
+@media (max-width: 600px) {
+  .hero-name { font-size: 40px; }
+  .hero-name-it { font-size: 40px; }
+  .kpis { gap: 8px; }
+  .kpi { min-width: 88px; padding: 10px 12px; }
+  .hero-ctas { flex-wrap: wrap; }
+  .profile-photo-wrap { width: 200px; height: 200px; }
+}
+
+/* === TAKEAWAY HERO CARD — CLEAN VERSION === */
+.cs-visual {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  isolation: isolate;
+  background: #c8842a;
+}
+
+/* Single image layer only */
+.takeaway-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("takeaway-bg.png") center center / cover no-repeat;
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform .55s ease, filter .55s ease;
+  z-index: 0;
+}
+
+.cs-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(circle at 70% 25%, rgba(255,145,0,0.22) 0%, rgba(255,145,0,0.08) 22%, transparent 48%),
+    linear-gradient(to top, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.22) 42%, rgba(0,0,0,0.08) 100%);
+  transition: opacity .45s ease;
+}
+
+.cs-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+  pointer-events: none;
+}
+
+.cs-content {
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+  color: #fff;
+  max-width: 560px;
+}
+
+.cs-content .cs-title,
+.cs-content .cs-meta {
+  color: #fff;
+}
+
+.cs-content .cs-title {
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  margin-bottom: 0;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.18);
+}
+
+.cs-content .cs-meta {
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.92;
+  margin-bottom: 12px;
+}
+
+.case-study {
+  position: relative;
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+
+.case-study:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 42px rgba(30,28,25,0.13);
+}
+
+.case-study:hover .takeaway-bg::before {
+  transform: scale(1.045);
+  filter: saturate(1.08) contrast(1.03);
+}
+
+.case-study:hover .cs-overlay {
+  opacity: 0.92;
+}
+
+.case-study:hover .cs-visual::after {
+  content: "";
+  position: absolute;
+  inset: -18%;
+  background: radial-gradient(circle at 68% 26%, rgba(255,166,0,0.20) 0%, rgba(255,166,0,0.10) 18%, transparent 42%);
+  z-index: 1;
+  pointer-events: none;
+  animation: takeawayGlow 1.8s ease-out forwards;
+}
+
+@keyframes takeawayGlow {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.65;
+    transform: scale(1.04);
+  }
+}
+
+@media (max-width: 900px) {
+  .cs-visual {
+    height: 300px;
+  }
+
+  .cs-content {
+    padding: 22px;
+    max-width: 100%;
+  }
+
+  .cs-content .cs-title {
+    font-size: 30px;
+  }
+
+  .cs-content .cs-meta {
+    font-size: 10px;
+  }
+}
+</style>
+</head>
+<body>
+<script>
+(function(){var l=localStorage.getItem('lang');if(l&&l==='fr'){document.addEventListener('DOMContentLoaded',function(){setLang('fr');});}})();
+</script>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">AB<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#hero" class="active" data-en="Home" data-fr="Accueil">Home</a></li>
+      <li><a href="#work" data-en="Work" data-fr="Projets">Work</a></li>
+      <li><a href="#tools-page" data-en="Tools" data-fr="Outils">Tools</a></li>
+      <li><a href="#about" data-en="About" data-fr="À propos">About</a></li>
+      <li><a href="#certifications" data-en="Certifications" data-fr="Certifications">Certifications</a></li>
+      <li><a href="#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-right">
+      <div class="lang-sw">
+        <a href="#" id="lang-en" onclick="setLang('en');return false;" class="lang-active">EN</a><span>/</span><a href="#" id="lang-fr" onclick="setLang('fr');return false;">FR</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="#hero" onclick="closeMenu()" data-en="Home" data-fr="Accueil">Home</a></li>
+    <li><a href="#work" onclick="closeMenu()" data-en="Work" data-fr="Projets">Work</a></li>
+    <li><a href="#tools-page" onclick="closeMenu()" data-en="Tools" data-fr="Outils">Tools</a></li>
+    <li><a href="#about" onclick="closeMenu()" data-en="About" data-fr="À propos">About</a></li>
+    <li><a href="#certifications" onclick="closeMenu()" data-en="Certifications" data-fr="Certifications">Certifications</a></li>
+    <li><a href="#contact" onclick="closeMenu()" data-en="Contact" data-fr="Contact">Contact</a></li>
+  </ul>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+
+    <div class="hero-left">
+      <div class="eyebrow">
+        <div class="eyebrow-line"></div>
+        <span class="eyebrow-text" data-en="Brand &amp; Communication Strategist" data-fr="Stratégiste Communication &amp; Marque">Brand &amp; Communication Strategist</span>
+      </div>
+      <h1 class="hero-name">Amine</h1>
+      <span class="hero-name-it">Brahimi.</span>
+      <p class="hero-role">
+        Brand Strategy
+        <span>&middot;</span> Communication 360°
+        <span>&middot;</span> AI-Integrated Practice
+      </p>
+      <p class="hero-tagline" id="hero-tagline-en">
+        Where political intelligence meets <em>brand strategy</em> &mdash;<br>in French and English.
+      </p>
+      <p class="hero-tagline" id="hero-tagline-fr" style="display:none;">
+        Là où l&rsquo;intelligence politique rencontre la <em>stratégie de marque</em> &mdash;<br>en français et en anglais.
+      </p>
+      <div class="kpis">
+        <div class="kpi"><span class="kpi-val">+15&ndash;20%</span><span class="kpi-lbl" data-en="CTR uplift — JustEat BE" data-fr="Hausse CTR — JustEat BE">CTR uplift<br>JustEat BE</span></div>
+        <div class="kpi"><span class="kpi-val">+8%</span><span class="kpi-lbl" data-en="Engagement — Allo Momo MA" data-fr="Engagement — Allo Momo MA">Engagement<br>Allo Momo MA</span></div>
+        <div class="kpi"><span class="kpi-val">6 yrs</span><span class="kpi-lbl" data-en="FR · BE · MA experience" data-fr="FR · BE · MA expérience">FR &middot; BE &middot; MA<br>experience</span></div>
+
+      </div>
+      <div class="hero-ctas">
+        <button class="btn-primary" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">
+          <span data-en="See my work" data-fr="Voir mes projets">See my work</span>
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7h9M8 3.5l3.5 3.5L8 10.5"/></svg>
+        </button>
+        <button class="btn-secondary" onclick="window.location.href='mailto:amiinebrahiimii@gmail.com'">
+          <span data-en="Get in touch" data-fr="Me contacter">Get in touch</span>
+        </button>
+      </div>
+      <div class="avail">
+        <div class="avail-dot"></div>
+        <span data-en="Available · Full-time &amp; freelance · France" data-fr="Disponible · CDI &amp; freelance · France">Available &middot; Full-time &amp; freelance &middot; France</span>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="profile-wrap">
+        <div class="profile-photo-wrap">
+        <img src="data:image/jpeg;base64,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" alt="Amine Brahimi" class="profile-photo">
+        <div class="corner c-tl"></div>
+        <div class="corner c-tr"></div>
+        <div class="corner c-bl"></div>
+        <div class="corner c-br"></div>
+        <div class="hero-chip">
+          <div class="chip-dot"></div>
+          <div class="chip-text" data-en="Open to work · France" data-fr="Disponible · France">Open to work &middot; France</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ SPEC STRIP ══ -->
+<div class="spec-strip">
+  <div class="spec-inner">
+    <div class="spec-row">
+      <span class="spec-label" data-en="Core" data-fr="Cœur">Core</span>
+      <span class="spec-tag hi">Communication 360&deg;</span>
+      <span class="spec-tag hi">SEO &amp; Content Strategy</span>
+      <span class="spec-tag hi">Digital Campaigns</span>
+      <span class="spec-tag hi">AI-Augmented Practice</span>
+    </div>
+    <div class="spec-row">
+      <span class="spec-label" style="opacity:.5;" data-en="Also" data-fr="Aussi">Also</span>
+      <span class="spec-tag secondary">Political Communication</span>
+      <span class="spec-tag secondary">Prompt Engineering</span>
+      <span class="spec-tag secondary">Copywriting EN &middot; FR</span>
+      <span class="spec-tag secondary">Brand Messaging</span>
+      <span class="spec-tag secondary">Performance Analysis</span>
+      <span class="spec-tag secondary">HubSpot &middot; Ahrefs &middot; GA4</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ WORK ══ -->
+<section class="work-section" id="work">
+  <div class="work-inner">
+    <div class="work-header">
+      <div>
+        <div class="section-lbl"><div class="sl-line"></div><span class="sl-text" data-en="Selected work" data-fr="Travaux sélectionnés">Selected work</span></div>
+        <h2 class="work-title" data-en="Campaigns &amp; strategies" data-fr="Campagnes &amp; stratégies">Campaigns &amp; strategies</h2>
+      </div>
+    </div>
+
+<!-- PROJECT : Takeaway — Crave It Campaign -->
+<div class="case-study">
+  <div class="cs-visual takeaway-bg">
+    <div class="cs-overlay"></div>
+    <div class="cs-content">
+      <div class="cs-meta">
+        TAKEAWAY.COM · PAN-EUROPEAN · 4 MARKETS<br>
+        2022–2024
+      </div>
+      <h2 class="cs-title">Crave It. Own It. Now.</h2>
+    </div>
+  </div>
+  <div class="cs-header">
+    <div class="cs-brand-pill">Takeaway.com &middot; Pan-European &middot; 4 Markets</div>
+    <div class="cs-meta">
+      <span>2022&ndash;2024</span>
+      <span data-en="· Brand Strategy · Integrated Campaign · Paid Media · CRM" data-fr="· Stratégie de marque · Campagne intégrée · Médias payants · CRM">&middot; Brand Strategy &middot; Integrated Campaign &middot; Paid Media &middot; CRM</span>
+    </div>
+    <h3 class="cs-title">Crave It. Own It. Now. &mdash; <em><span data-en="Pan-European Campaign" data-fr="Campagne Pan-Européenne">Pan-European Campaign</span></em></h3>
+    <p class="cs-subtitle" data-en="A campaign concept to reposition Takeaway built around a behavioural insight: craving is immediate, emotional, and often impulsive." data-fr="Un concept de campagne pour repositionner Takeaway, ancré dans un insight comportemental : l'envie est immédiate, émotionnelle et souvent impulsive.">A campaign concept to reposition Takeaway built around a behavioural insight: craving is immediate, emotional, and often impulsive.</p>
+    <div class="cs-kpis">
+      <div class="cs-kpi"><span class="cs-kpi-val">~3&times;</span><span class="cs-kpi-lbl">Paid social ROAS</span></div>
+      <div class="cs-kpi"><span class="cs-kpi-val">+8&ndash;12pp</span><span class="cs-kpi-lbl">Repeat orders</span></div>
+      <div class="cs-kpi"><span class="cs-kpi-val">↓ CPA</span><span class="cs-kpi-lbl">Via CRM &amp; retention</span></div>
+      <div class="cs-kpi"><span class="cs-kpi-val">4 Markets</span><span class="cs-kpi-lbl">FR · BE · DE · NL</span></div>
+    </div>
+  </div>
+  <div class="cs-body">
+    <div class="lang-tog">
+      <button class="lt on" onclick="tog(this,'c0','en')">EN</button>
+      <button class="lt" onclick="tog(this,'c0','fr')">FR</button>
+    </div>
+    <div id="c0-en" class="cs-lang on">
+      <div class="cs-grid">
+        <div class="cs-block"><div class="cs-blabel">Brief</div><div class="cs-btext">Reposition Takeaway.com beyond transactional delivery — across FR, BE, DE and NL simultaneously — by building a brand narrative anchored in the emotional truth of craving, not convenience.</div></div>
+        <div class="cs-block"><div class="cs-blabel">My role</div><div class="cs-btext">Led campaign concept and strategic messaging framework. Defined the behavioural insight (craving is impulsive, not rational) and translated it into integrated creative direction across paid social, CRM, and OOH.</div></div>
+        <div class="cs-block"><div class="cs-blabel">Approach</div><div class="cs-btext">Shifted brand voice from functional (&ldquo;fast delivery&rdquo;) to emotional (&ldquo;own your craving&rdquo;). Integrated CRM retention flows to convert first-time cravers into repeat customers, reducing CPA through loyalty loops rather than acquisition spend.</div></div>
+        <div class="cs-block result"><div class="cs-blabel">Result</div><div class="cs-btext"><strong>~3&times; paid social ROAS</strong> vs. previous brand campaign baseline. <strong>+8&ndash;12pp repeat order rate</strong> in markets where CRM retention flows were activated. CPA reduction driven by retention, not acquisition — a more sustainable growth model across 4 markets.</div></div>
+      </div>
+    </div>
+    <div id="c0-fr" class="cs-lang">
+      <div class="cs-grid">
+        <div class="cs-block"><div class="cs-blabel">Brief</div><div class="cs-btext">Repositionner Takeaway.com au-delà de la livraison transactionnelle — sur FR, BE, DE et NL simultanément — en construisant un récit de marque ancré dans la vérité émotionnelle de l&rsquo;envie, pas de la commodité.</div></div>
+        <div class="cs-block"><div class="cs-blabel">Mon rôle</div><div class="cs-btext">Pilotage du concept de campagne et du cadre de messages stratégiques. Définition de l&rsquo;insight comportemental (l&rsquo;envie est impulsive, pas rationnelle) et traduction en direction créative intégrée : social payant, CRM, OOH.</div></div>
+        <div class="cs-block"><div class="cs-blabel">Approche</div><div class="cs-btext">Déplacement de la voix de marque du fonctionnel (&ldquo;livraison rapide&rdquo;) à l&rsquo;émotionnel (&ldquo;possède ton envie&rdquo;). Intégration de flux CRM de rétention pour convertir les primo-utilisateurs en clients récurrents — réduction du CPA par la fidélisation plutôt que l&rsquo;acquisition.</div></div>
+        <div class="cs-block result"><div class="cs-blabel">Résultat</div><div class="cs-btext"><strong>~3&times; ROAS social payant</strong> vs. référence campagne marque précédente. <strong>+8&ndash;12pp taux de commandes répétées</strong> sur les marchés avec flows CRM activés. Réduction du CPA portée par la rétention — modèle de croissance plus durable sur 4 marchés.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- PROJECT : JustEat Faim de Loup -->
+    <div class="case-study">
+      <div class="cs-header">
+        <div class="cs-brand-pill">JustEat Takeaway &middot; Brussels, Belgium</div>
+        <div class="cs-meta"><span>2022&ndash;2024</span><span data-en="· Campaign Strategy · Copywriting · Social Media" data-fr="· Stratégie de campagne · Rédaction · Réseaux sociaux">&middot; Campaign Strategy &middot; Copywriting &middot; Social Media</span></div>
+        <h3 class="cs-title">Une faim de loup &mdash; <em><span data-en="Social Media Campaign" data-fr="Campagne Réseaux Sociaux">Social Media Campaign</span></em></h3>
+        <p class="cs-subtitle" data-en="Hyper-local campaign repositioning JustEat as a high-speed logistical solution, leveraging consumer psychology to remove wait-time anxiety and drive orders." data-fr="Campagne hyper-locale repositionnant JustEat comme une solution logistique ultra-rapide, exploitant la psychologie du consommateur pour éliminer l'anxiété d'attente et augmenter les commandes.">Hyper-local campaign repositioning JustEat as a high-speed logistical solution, leveraging consumer psychology to remove wait-time anxiety and drive orders.</p>
+        <div class="cs-kpis">
+          <div class="cs-kpi"><span class="cs-kpi-val">+15&ndash;20%</span><span class="cs-kpi-lbl">CTR uplift</span></div>
+          <div class="cs-kpi"><span class="cs-kpi-val">Brussels</span><span class="cs-kpi-lbl">Market</span></div>
+          <div class="cs-kpi"><span class="cs-kpi-val">20+</span><span class="cs-kpi-lbl">Assets/month</span></div>
+        </div>
+      </div>
+      <div class="cs-img-wrap">
+<img src="takeaway-bg.png" alt="Campaign visual — JustEat Crave It" class="cs-img" loading="lazy">
+      </div>
+      <div class="cs-body">
+        <div class="lang-tog">
+          <button class="lt on" onclick="tog(this,'c1','en')">EN</button>
+          <button class="lt" onclick="tog(this,'c1','fr')">FR</button>
+        </div>
+        <div id="c1-en" class="cs-lang on">
+          <div class="cs-grid">
+            <div class="cs-block"><div class="cs-blabel">Brief</div><div class="cs-btext">Drive more orders in Brussels by reducing the #1 drop-off trigger: wait-time anxiety. Users abandoned the app before ordering due to uncertainty about delivery time.</div></div>
+            <div class="cs-block"><div class="cs-blabel">My role</div><div class="cs-btext">Led the full creative and content strategy &mdash; concept to copywriting, visual direction and social deployment. Coordinated designers and reported on performance weekly via GA4.</div></div>
+            <div class="cs-block"><div class="cs-blabel">Approach</div><div class="cs-btext">Used the French idiom <em>faim de loup</em> (&ldquo;wolf&rsquo;s hunger&rdquo;) to activate intense-hunger psychology. Reframed the live tracking screen as the hero &mdash; 20-minute delivery promise removes the anxiety. Urgency and proximity over product features.</div></div>
+            <div class="cs-block result"><div class="cs-blabel">Result</div><div class="cs-btext"><strong>+15&ndash;20% CTR uplift</strong> vs. prior Brussels campaign baseline &mdash; tracked via GA4 funnel analysis. Delivery-window promise measurably reduced checkout drop-off and increased first-time orders. <strong>20+ assets/month</strong> sustained across web, social and email throughout the campaign run.</div></div>
+          </div>
+        </div>
+        <div id="c1-fr" class="cs-lang">
+          <div class="cs-grid">
+            <div class="cs-block"><div class="cs-blabel">Brief</div><div class="cs-btext">Augmenter les commandes &agrave; Bruxelles en r&eacute;duisant le premier frein&nbsp;: l&rsquo;anxi&eacute;t&eacute; li&eacute;e au temps d&rsquo;attente. Les utilisateurs abandonnaient l&rsquo;app avant de commander.</div></div>
+            <div class="cs-block"><div class="cs-blabel">Mon r&ocirc;le</div><div class="cs-btext">Pilotage de la strat&eacute;gie cr&eacute;ative de A &agrave; Z &mdash; brief, r&eacute;daction, direction visuelle et d&eacute;ploiement social. Coordination design et reporting hebdomadaire via GA4.</div></div>
+            <div class="cs-block"><div class="cs-blabel">Approche</div><div class="cs-btext">Utilisation de l&rsquo;idiome <em>faim de loup</em> pour activer la psychologie de faim intense. L&rsquo;&eacute;cran de suivi temps r&eacute;el positionn&eacute; comme h&eacute;ros &mdash; promesse de 20 minutes. Urgence et proximit&eacute; plut&ocirc;t que fonctionnalit&eacute;s produit.</div></div>
+            <div class="cs-block result"><div class="cs-blabel">R&eacute;sultat</div><div class="cs-btext"><strong>+15&ndash;20% de CTR</strong> vs. r&eacute;f&eacute;rence campagne Bruxelles pr&eacute;c&eacute;dente &mdash; suivi par analyse du funnel GA4. La promesse de fen&ecirc;tre de livraison a r&eacute;duit le taux d&rsquo;abandon au checkout et augment&eacute; les premi&egrave;res commandes. <strong>20+ assets/mois</strong> maintenus sur web, social et email tout au long de la campagne.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- PROJECT : JustEat Drive -->
+    <div class="case-study">
+      <div class="cs-header">
+        <div class="cs-brand-pill">JustEat Takeaway &middot; Employer Branding &middot; Belgium</div>
+        <div class="cs-meta"><span>2022&ndash;2024</span><span data-en="· Employer Branding · Social Media · Gen Z Targeting" data-fr="· Employer Branding · Réseaux sociaux · Ciblage Gen Z">&middot; Employer Branding &middot; Social Media &middot; Gen Z Targeting</span></div>
+        <h3 class="cs-title">Drive for JustEat &mdash; <em><span data-en="Employer Branding Campaign" data-fr="Campagne Employer Branding">Employer Branding Campaign</span></em></h3>
+        <p class="cs-subtitle" data-en="Repositioning delivery work as brand ambassadorship to recruit couriers from Gen Z and student audiences across Belgium." data-fr="Rebranding du travail de livreur en ambassadeur de marque pour recruter des coursiers parmi la Gen Z et les étudiants en Belgique.">Repositioning delivery work as brand ambassadorship to recruit couriers from Gen Z and student audiences across Belgium.</p>
+        <div class="cs-kpis">
+          <div class="cs-kpi"><span class="cs-kpi-val">Gen Z</span><span class="cs-kpi-lbl">Target</span></div>
+          <div class="cs-kpi"><span class="cs-kpi-val">B2C/B2E</span><span class="cs-kpi-lbl">Dual audience</span></div>
+          <div class="cs-kpi"><span class="cs-kpi-val">Supply</span><span class="cs-kpi-lbl">Objective</span></div>
+        </div>
+      </div>
+      <div class="cs-img-wrap">
+<img src="justeat-drive-4k.png" alt="Drive for Just Eat campaign" class="campaign-img">
+      </div>
+      <div class="cs-body">
+        <div class="lang-tog">
+          <button class="lt on" onclick="tog(this,'c2','en')">EN</button>
+          <button class="lt" onclick="tog(this,'c2','fr')">FR</button>
+        </div>
+        <div id="c2-en" class="cs-lang on">
+          <div class="cs-grid">
+            <div class="cs-block"><div class="cs-blabel">Brief</div><div class="cs-btext">Recruit a high volume of new couriers in Belgium by targeting students, Gen Z and freelancers who prioritise flexibility and lifestyle over traditional employment.</div></div>
+            <div class="cs-block"><div class="cs-blabel">My role</div><div class="cs-btext">Developed the campaign concept, wrote all copy, directed the split-screen visual format. Managed social distribution and monitored CTR and application conversion throughout.</div></div>
+            <div class="cs-block"><div class="cs-blabel">Approach</div><div class="cs-btext">Rebranded &ldquo;delivery work&rdquo; as &ldquo;brand ambassadorship.&rdquo; Lifestyle narrative: freedom, vibes, community. Split-screen &mdash; premium food &plus; smiling courier &mdash; communicates the courier as the hero who brings the joy.</div></div>
+            <div class="cs-block result"><div class="cs-blabel">Result</div><div class="cs-btext"><strong>+40% application volume</strong> from the 18&ndash;26 demographic vs. prior recruitment cycle. Courier supply shortfall resolved within 6 weeks of campaign launch. <strong>&ldquo;Flexible hours. Great vibes.&rdquo;</strong> adopted as the standing brand voice for all subsequent JustEat Belgium recruitment communications &mdash; a tagline that outlived the campaign.</div></div>
+          </div>
+        </div>
+        <div id="c2-fr" class="cs-lang">
+          <div class="cs-grid">
+            <div class="cs-block"><div class="cs-blabel">Brief</div><div class="cs-btext">Recruter un volume &eacute;lev&eacute; de nouveaux livreurs en Belgique en ciblant &eacute;tudiants, Gen Z et freelances &mdash; une cible qui privil&eacute;gie flexibilit&eacute; et lifestyle &agrave; l&rsquo;emploi traditionnel.</div></div>
+            <div class="cs-block"><div class="cs-blabel">Mon r&ocirc;le</div><div class="cs-btext">D&eacute;veloppement du concept, r&eacute;daction, direction du split-screen. Gestion de la diffusion sociale et suivi du CTR et taux de conversion des candidatures.</div></div>
+            <div class="cs-block"><div class="cs-blabel">Approche</div><div class="cs-btext">Rebranding du &ldquo;travail de livraison&rdquo; en &ldquo;ambassadeur de marque.&rdquo; Narrative lifestyle&nbsp;: libert&eacute;, ambiance, communaut&eacute;. Split-screen &mdash; nourriture premium &plus; livreur souriant &mdash; le livreur est le h&eacute;ros.</div></div>
+            <div class="cs-block result"><div class="cs-blabel">R&eacute;sultat</div><div class="cs-btext"><strong>+40% de volume de candidatures</strong> chez les 18&ndash;26 ans vs. cycle de recrutement précédent. Pénurie de livreurs résolue en 6 semaines après lancement. <strong>&ldquo;Flexible hours. Great vibes.&rdquo;</strong> adopté comme voix de marque de référence pour l&rsquo;ensemble des recrutements JustEat Belgique &mdash; un tagline qui a survécu à la campagne.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT : Allo Momo -->
+    <div class="case-study">
+      <div class="cs-header">
+        <div class="cs-brand-pill">Allo Momo &middot; Oujda, Morocco</div>
+        <div class="cs-meta"><span>2023</span><span data-en="· Social Media · Localised Copywriting · Localisation" data-fr="· Réseaux sociaux · Rédaction localisée · Localisation">&middot; Social Media &middot; Localised Copywriting &middot; Localisation</span></div>
+        <h3 class="cs-title">Allo Momo &mdash; <em><span data-en="Localised Social Campaign" data-fr="Campagne Sociale Localisée">Localised Social Campaign</span></em></h3>
+        <p class="cs-subtitle" data-en="Localised campaign using dialect copywriting and social proof to build trust and drive conversions for a Moroccan food delivery service." data-fr="Campagne localisée utilisant le copywriting en dialecte local et la preuve sociale pour construire la confiance et augmenter les conversions pour un service de livraison marocain.">Localised campaign using dialect copywriting and social proof to build trust and drive conversions for a Moroccan food delivery service.</p>
+        <div class="cs-kpis">
+          <div class="cs-kpi"><span class="cs-kpi-val">+8%</span><span class="cs-kpi-lbl">Engagement</span></div>
+          <div class="cs-kpi"><span class="cs-kpi-val">+6%</span><span class="cs-kpi-lbl">CTR growth</span></div>
+          <div class="cs-kpi"><span class="cs-kpi-val">Darija</span><span class="cs-kpi-lbl">Language</span></div>
+        </div>
+      </div>
+      <div class="cs-img-wrap">
+<img src="justeat-drive-4k.png" alt="Campaign visual — JustEat Employer Brand" class="cs-img" loading="lazy">
+      </div>
+      <div class="cs-body">
+        <div class="lang-tog">
+          <button class="lt on" onclick="tog(this,'c3','en')">EN</button>
+          <button class="lt" onclick="tog(this,'c3','fr')">FR</button>
+        </div>
+        <div id="c3-en" class="cs-lang on">
+          <div class="cs-grid">
+            <div class="cs-block"><div class="cs-blabel">Brief</div><div class="cs-btext">Increase brand awareness and orders for Allo Momo in Oujda, Morocco. In this market, trust, attention and clarity are the primary conversion drivers on social media.</div></div>
+            <div class="cs-block"><div class="cs-blabel">My role</div><div class="cs-btext">Full social content strategy &mdash; concept, localised copywriting, visual direction and layout. Identified client reviews as the central trust mechanism.</div></div>
+            <div class="cs-block"><div class="cs-blabel">Approach</div><div class="cs-btext">Localised dialect for immediate emotional proximity. Tagline: <em>&#x634;&#x647;&#x627;&#x62F;&#x627;&#x62A;&#x60C; &#x646;&#x639;&#x62A;&#x632; &#x628;&#x647;&#x627;</em> + <em>Hta haja mab3ida 3lik</em>. Minimal design for instant scroll readability.</div></div>
+            <div class="cs-block result"><div class="cs-blabel">Result</div><div class="cs-btext"><strong>+8% engagement rate</strong> and <strong>+6% CTR</strong> vs. the prior 30-day period. Review-led content format adopted as the brand&rsquo;s primary social template, replacing promotional posts that had consistently underperformed. Trust-signal approach proved particularly effective in a market where peer validation outperforms brand messaging.</div></div>
+          </div>
+        </div>
+        <div id="c3-fr" class="cs-lang">
+          <div class="cs-grid">
+            <div class="cs-block"><div class="cs-blabel">Brief</div><div class="cs-btext">Augmenter la notori&eacute;t&eacute; et les commandes d&rsquo;Allo Momo &agrave; Oujda. Dans ce march&eacute;, confiance, attention et clart&eacute; sont les premiers leviers de conversion sur les r&eacute;seaux sociaux.</div></div>
+            <div class="cs-block"><div class="cs-blabel">Mon r&ocirc;le</div><div class="cs-btext">Strat&eacute;gie de contenu social compl&egrave;te &mdash; concept, r&eacute;daction en Darija, direction visuelle. S&eacute;lection des avis clients comme m&eacute;canisme central de confiance.</div></div>
+            <div class="cs-block"><div class="cs-blabel">Approche</div><div class="cs-btext">Dialecte marocain (Darija) pour proximit&eacute; &eacute;motionnelle imm&eacute;diate. Tagline&nbsp;: <em>&#x634;&#x647;&#x627;&#x62F;&#x627;&#x62A;&#x60C; &#x646;&#x639;&#x62A;&#x632; &#x628;&#x647;&#x627;</em> + <em>Hta haja mab3ida 3lik</em>. Design &eacute;pur&eacute; pour lisibilit&eacute; instantan&eacute;e.</div></div>
+            <div class="cs-block result"><div class="cs-blabel">R&eacute;sultat</div><div class="cs-btext"><strong>+8% d&rsquo;engagement</strong> et <strong>+6% de CTR</strong> vs. les 30 jours pr&eacute;c&eacute;dents. Format avis adopt&eacute; comme mod&egrave;le social principal, rempla&ccedil;ant les posts promotionnels qui sous-performaient syst&eacute;matiquement. L&rsquo;approche signaux de confiance s&rsquo;est av&eacute;r&eacute;e particuli&egrave;rement efficace dans un march&eacute; o&ugrave; la validation par les pairs surpasse la communication de marque.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT : Aji Tabni -->
+    <div class="case-study">
+      <div class="cs-header">
+        <div class="cs-brand-pill">Aji Tabni &middot; Morocco &mdash; via Motivenco</div>
+        <div class="cs-meta"><span>2024</span><span data-en="· Product Launch · 360° Digital Strategy · SEO · Website Creation" data-fr="· Lancement produit · Stratégie digitale 360° · SEO · Création de site">&middot; Product Launch &middot; 360&deg; Digital Strategy &middot; SEO &middot; Website Creation</span></div>
+        <h3 class="cs-title">Aji Tabni &mdash; <em><span data-en="Platform Launch Campaign" data-fr="Campagne de Lancement">Platform Launch Campaign</span></em></h3>
+        <p class="cs-subtitle" data-en="End-to-end digital launch for a smart platform connecting homeowners with qualified construction and renovation professionals in Morocco." data-fr="Lancement digital complet d'une plateforme intelligente mettant en relation particuliers et professionnels qualifiés du bâtiment et de la rénovation au Maroc.">End-to-end digital launch for a smart platform connecting homeowners with qualified construction and renovation professionals in Morocco.</p>
+        <div class="cs-kpis">
+          <div class="cs-kpi"><span class="cs-kpi-val">Launch</span><span class="cs-kpi-lbl">Campaign</span></div>
+          <div class="cs-kpi"><span class="cs-kpi-val">360&deg;</span><span class="cs-kpi-lbl">Strategy</span></div>
+          <div class="cs-kpi"><span class="cs-kpi-val">SEO+</span><span class="cs-kpi-lbl">Site built</span></div>
+        </div>
+      </div>
+      <div class="cs-img-wrap">
+<div style="height:340px;background:var(--bg2);border:0.5px solid var(--border2);border-radius:var(--r);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;">
+  <span style="font-family:var(--serif);font-size:32px;font-weight:500;color:var(--accent);letter-spacing:-0.02em;">Allo Momo</span>
+  <span style="font-family:var(--mono);font-size:10px;color:var(--text3);letter-spacing:0.12em;text-transform:uppercase;">Oujda, Morocco · 2023</span>
+</div>
+      </div>
+      <div class="cs-body">
+        <div class="lang-tog">
+          <button class="lt on" onclick="tog(this,'c4','en')">EN</button>
+          <button class="lt" onclick="tog(this,'c4','fr')">FR</button>
+        </div>
+        <div id="c4-en" class="cs-lang on">
+          <div class="cs-grid">
+            <div class="cs-block"><div class="cs-blabel">Brief</div><div class="cs-btext">Create a full digital launch campaign for Aji Tabni &mdash; a new Moroccan platform connecting homeowners with construction professionals. A sector historically built on word-of-mouth with no digital infrastructure.</div></div>
+            <div class="cs-block"><div class="cs-blabel">My role</div><div class="cs-btext">Led the full 360&deg; campaign at Motivenco &mdash; concept, copywriting, visual direction, SEO-optimised website creation and social media launch. Also managed competitor analysis and keyword strategy.</div></div>
+            <div class="cs-block"><div class="cs-blabel">Approach</div><div class="cs-btext">Central concept: <em>&ldquo;Technology simplifies construction.&rdquo;</em> Problem &rarr; Platform &rarr; Solution structure. Visuals contrast renovation complexity with the simplicity of one tap. Tagline: <em>Vos travaux commencent par un simple clic.</em></div></div>
+            <div class="cs-block result"><div class="cs-blabel">Result</div><div class="cs-btext"><strong>Platform live within 3 weeks</strong> of brief. SEO-optimised landing page ranked on page 1 for primary keywords within 45 days of launch. Social presence built from zero to active community with consistent daily content. The &ldquo;one tap&rdquo; positioning directly addressed the market&rsquo;s core friction &mdash; an industry where trust had previously required months of word-of-mouth.</div></div>
+          </div>
+        </div>
+        <div id="c4-fr" class="cs-lang">
+          <div class="cs-grid">
+            <div class="cs-block"><div class="cs-blabel">Brief</div><div class="cs-btext">Cr&eacute;er une campagne digitale de lancement pour Aji Tabni &mdash; nouvelle plateforme marocaine mettant en relation particuliers et professionnels du b&acirc;timent. Secteur historiquement bas&eacute; sur le bouche-&agrave;-oreille.</div></div>
+            <div class="cs-block"><div class="cs-blabel">Mon r&ocirc;le</div><div class="cs-btext">Pilotage de la campagne 360&deg; chez Motivenco &mdash; concept, r&eacute;daction, direction visuelle, cr&eacute;ation du site SEO et lancement r&eacute;seaux sociaux. Analyse concurrentielle et strat&eacute;gie mots-cl&eacute;s.</div></div>
+            <div class="cs-block"><div class="cs-blabel">Approche</div><div class="cs-btext">Concept&nbsp;: <em>&ldquo;La technologie simplifie la construction.&rdquo;</em> Structure Probl&egrave;me &rarr; Plateforme &rarr; Solution. Visuels contrastant complexit&eacute; des travaux et simplicit&eacute; d&rsquo;un tap. Tagline&nbsp;: <em>Vos travaux commencent par un simple clic.</em></div></div>
+            <div class="cs-block result"><div class="cs-blabel">R&eacute;sultat</div><div class="cs-btext"><strong>Plateforme live en 3 semaines</strong> après brief. Page d&rsquo;atterrissage SEO en page 1 sur les mots-cl&eacute;s principaux en 45 jours. Pr&eacute;sence sociale construite de z&eacute;ro avec contenu quotidien et communaut&eacute; active. Le positionnement &ldquo;un tap&rdquo; a r&eacute;pondu directement au frein principal du march&eacute; &mdash; un secteur o&ugrave; la confiance n&eacute;cessitait historiquement des mois de bouche-&agrave;-oreille.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ TOOLS & PLATFORMS ══ -->
+<section class="tools-page" id="tools-page">
+  <div class="tools-page-inner">
+    <div class="tools-page-header">
+      <div class="section-lbl"><div class="sl-line"></div><span class="sl-text" data-en="Toolkit" data-fr="Outils">Toolkit</span></div>
+      <h2 class="tools-page-title" data-en="Tools &amp; Platforms" data-fr="Outils &amp; Plateformes">Tools &amp; Platforms</h2>
+      <p class="tools-page-sub" data-en="The full stack I use across strategy, creation, analytics and communication — built up across 6+ years of international projects." data-fr="L'ensemble des outils que j'utilise en stratégie, création, analyse et communication — développé sur plus de 6 ans de projets internationaux.">The full stack I use across strategy, creation, analytics and communication — built up across 6+ years of international projects.</p>
+    </div>
+
+    <!-- Digital Marketing & SEO -->
+    <div class="tools-category">
+      <div class="tools-cat-label"><span data-en="Digital Marketing &amp; SEO" data-fr="Marketing Digital &amp; SEO">Digital Marketing &amp; SEO</span></div>
+      <div class="tools-logo-grid">
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.164 7.93V5.586a2.274 2.274 0 0 0 1.308-2.047v-.067A2.274 2.274 0 0 0 17.2 1.2h-.067a2.274 2.274 0 0 0-2.274 2.274v.067a2.274 2.274 0 0 0 1.308 2.047V7.93a6.449 6.449 0 0 0-3.056 1.342L5.57 4.043a2.54 2.54 0 0 0 .088-.656A2.55 2.55 0 1 0 3.108 5.93l7.3 5.142a6.46 6.46 0 0 0 .035 6.78l-2.205 2.205a2.07 2.07 0 0 0-.603-.094 2.092 2.092 0 1 0 2.092 2.092 2.07 2.07 0 0 0-.094-.603l2.178-2.178a6.463 6.463 0 1 0 6.353-11.344zm-1.031 9.9a3.587 3.587 0 1 1 3.587-3.587 3.591 3.591 0 0 1-3.587 3.587z"/></svg>
+          HubSpot
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L3 19h18L12 2zm0 4.2L18.3 17H5.7L12 6.2z"/></svg>
+          Ahrefs
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11 2v4H7v2h4v2H5v2h6v2H3v2h8v2H5v2h14v-2h-6v-2h8v-2h-8v-2h6v-2h-6V8h4V6h-4V2h-2z"/>
+          SEMrush
+        </span>
+
+        <!-- Moz — custom fallback (not in Simple Icons) -->
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M2 20V4h3.2L9.5 13 13.8 4H17v16h-2.5V9l-3 7H11L8 9v11H2zm13.5 0V4h6v2h-3.5v4.5H22v2h-4v5H22v2h-6.5z"/></svg>
+          Moz
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.03 3.3h-14a1.74 1.74 0 0 0-1.74 1.74v14c0 .96.78 1.74 1.74 1.74h14c.96 0 1.74-.78 1.74-1.74v-14c0-.96-.78-1.74-1.74-1.74zm-10.5 13.5H7V9.75h1.53v7.05zm3.75 0h-1.53V7.5H12.28v9.3zm3.75 0H14.5v-4.5h1.53v4.5z"/></svg>
+          Google Analytics 4
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          Search Console
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+          Keyword Planner
+        </span>
+
+        <!-- Sprinklr — custom fallback (not in Simple Icons) -->
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 17.5c-4.14 0-7.5-3.36-7.5-7.5S7.86 4.5 12 4.5s7.5 3.36 7.5 7.5-3.36 7.5-7.5 7.5zm0-12.5c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zm0 7.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 9.5 12 9.5s2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Sprinklr
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+          Brevo
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M21.469 6.825c.61 1.234.96 2.632.96 4.175 0 3.476-1.889 6.518-4.7 8.175l2.906-8.399c.543-1.358.725-2.445.725-3.414 0-.351-.023-.678-.065-.98l.174.443zM12 2.25c5.379 0 9.75 4.371 9.75 9.75 0 5.38-4.371 9.75-9.75 9.75-5.38 0-9.75-4.37-9.75-9.75 0-5.379 4.37-9.75 9.75-9.75M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-2.48 16.086l-3.336-9.17c.556-.03 1.057-.09 1.057-.09.496-.06.439-.785-.056-.756 0 0-1.49.12-2.452.12-.18 0-.39-.003-.614-.009C5.716 4.673 8.695 3 12 3c2.458 0 4.698.94 6.38 2.474-.041-.003-.08-.008-.123-.008-1.494 0-2.552 1.3-2.552 2.695 0 1.249.722 2.305 1.492 3.553.578.998 1.251 2.283 1.251 4.137 0 1.282-.493 2.769-1.134 4.838L15.64 22.7A9.75 9.75 0 0 1 12 23.25a9.74 9.74 0 0 1-4.166-.932l2.185-6.232h-.499zm-4.577.39L1.62 11.04a9.72 9.72 0 0 1-.12-1.54c0-3.565 2.013-6.668 4.977-8.25l3.446 9.445-4.5 5.78z"/></svg>
+          WordPress
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M10.76 8.069a.999.999 0 0 0-.86.487L8.25 11.53 6.6 8.556a1 1 0 0 0-.87-.487H3a1 1 0 0 0 0 2h2.03l2.34 4.024L5.03 17.6H3a1 1 0 0 0 0 2h2.73a.999.999 0 0 0 .87-.487l1.65-2.965 1.65 2.965a1 1 0 0 0 .87.487H13.8a1 1 0 0 0 0-2h-2.03l-2.34-4.063 2.34-4.024H13.8a1 1 0 0 0 0-2h-3.04zm5.48 0a1 1 0 0 0-1 1v9.531a1 1 0 0 0 2 0V9.069a1 1 0 0 0-1-1zm3.76 0a1 1 0 0 0-1 1v9.531a1 1 0 0 0 2 0V9.069a1 1 0 0 0-1-1z"/></svg>
+          Wix
+        </span>
+
+      </div>
+    </div>
+
+    <!-- Design & Media Production -->
+    <div class="tools-category">
+      <div class="tools-cat-label">Design &amp; Media Production</div>
+      <div class="tools-logo-grid">
+
+        <span class="tool-pill">
+          <svg class="si-color" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="4" fill="#001E36"/><path fill="#31A8FF" d="M7.2 8.4h2.8c1.2 0 2.1.3 2.7.9.6.6.9 1.4.9 2.4 0 .6-.1 1.2-.4 1.7-.3.5-.7.9-1.2 1.1-.5.3-1.2.4-2 .4H8.5v2.7H7.2V8.4zm2.6 5.4c.7 0 1.3-.2 1.6-.5.3-.3.5-.8.5-1.5s-.2-1.2-.5-1.5c-.3-.3-.9-.5-1.6-.5H8.5V13.8h1.3zm6.7-1.5c-.5 0-.9.1-1.2.4-.3.3-.4.7-.4 1.2v3.8h-1.2v-4c0-.5 0-1-.1-1.5h1.1l.1.8c.2-.3.5-.6.8-.7.3-.2.7-.3 1.1-.3.1 0 .2 0 .3.01v1.1c-.2-.03-.4-.04-.5-.04zM19.8 15.2c-.3.4-.7.7-1.2.9-.5.2-1 .3-1.6.3-.5 0-.9-.1-1.3-.3-.4-.2-.7-.4-.9-.8-.2-.3-.3-.7-.3-1.1h1.2c0 .4.1.7.4.9.3.2.6.3 1 .3.4 0 .7-.1 1-.2.3-.2.4-.4.4-.7 0-.3-.1-.5-.3-.6-.2-.2-.6-.3-1.1-.4-.6-.2-1.1-.4-1.4-.7-.3-.3-.5-.7-.5-1.2 0-.4.1-.8.4-1.1.3-.3.6-.5 1-.7.4-.2.9-.2 1.4-.2.5 0 .9.1 1.3.3.4.2.7.4.9.7.2.3.3.6.3 1h-1.1c0-.3-.1-.5-.4-.7-.3-.2-.6-.3-1-.3-.4 0-.7.1-.9.3-.2.2-.3.4-.3.7 0 .2.1.4.3.6.2.1.5.3.9.4.7.2 1.2.4 1.6.7.4.3.5.8.5 1.3 0 .3-.1.6-.3.9z"/></svg>
+          Photoshop
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-color" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="4" fill="#49021F"/><path fill="#FF3366" d="M8.5 7.2h1.3v9.8H8.5V7.2zm5.5 0h2c1.1 0 2 .2 2.7.7.7.4 1.2 1 1.5 1.8.3.7.5 1.6.5 2.5v.3c0 .9-.2 1.7-.5 2.4-.3.7-.8 1.3-1.5 1.7-.7.4-1.5.6-2.5.6H14V7.2zm1.3 8.5h.7c.7 0 1.3-.1 1.7-.4.5-.3.8-.7 1-1.3.2-.5.3-1.1.3-1.8s-.1-1.3-.3-1.8c-.2-.5-.5-.9-1-1.2-.4-.3-1-.4-1.7-.4h-.7v6.9z"/></svg>
+          InDesign
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117zm-3.853 0H5.765c-1.665 0-3.019-1.355-3.019-3.019s1.354-3.02 3.019-3.02h3.117zm0-7.51H5.765C3.29.49 1.276 2.504 1.276 4.98s2.014 4.491 4.49 4.491h3.117V.981zm0 12.01H5.765c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h3.117v8.98zm-4.49-3.019c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117v-6.038zm7.607 3.019c0-2.476 2.014-4.49 4.49-4.49s4.49 2.014 4.49 4.49-2.014 4.49-4.49 4.49-4.49-2.014-4.49-4.49z"/></svg>
+          Figma
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 1.5L1.5 19.5h21L12 1.5zm0 3.6l7.8 13.1H4.2L12 5.1z"/></svg>
+          Affinity Designer
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 4.5c4.142 0 7.5 3.358 7.5 7.5s-3.358 7.5-7.5 7.5S4.5 16.142 4.5 12 7.858 4.5 12 4.5z"/></svg>
+          Canva
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-color" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="4" fill="#00005B"/><path fill="#9999FF" d="M11.3 14.2H7.8l-.9 2.7H5.2l3.5-9.8h1.8l3.5 9.8h-1.7l-.9-2.7zm-3.1-1.3h2.7L9.55 8.85 8.2 12.9zm8.5-4.5V9h2v1.3h-2v3.5c0 .4.1.6.2.8.1.2.4.3.7.3.2 0 .4 0 .6-.1l.1 1.1c-.3.1-.7.2-1.1.2-.6 0-1.1-.2-1.4-.5-.3-.4-.5-.9-.5-1.6V10.3h-1.2V9h1.2V7.2l1.4-.6z"/></svg>
+          After Effects
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M9.64 7.64c.23-.5.36-1.05.36-1.64 0-2.21-1.79-4-4-4S2 3.79 2 6s1.79 4 4 4c.59 0 1.14-.13 1.64-.36L10 12l-2.36 2.36C7.14 14.13 6.59 14 6 14c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4c0-.59-.13-1.14-.36-1.64L12 14l7 7h3v-1L9.64 7.64zM6 8c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm0 12c-1.1 0-2-.89-2-2s.9-2 2-2 2 .89 2 2-.9 2-2 2zm6-7.5c-.28 0-.5-.22-.5-.5s.22-.5.5-.5.5.22.5.5-.22.5-.5.5zM19 3l-6 6 2 2 7-7V3z"/></svg>
+          CapCut
+        </span>
+
+        <!-- Logic Pro — custom fallback (Apple product, not in Simple Icons) -->
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="6" width="3.5" height="12" rx="1.75"/><rect x="7" y="10" width="3.5" height="8" rx="1.75"/><rect x="12" y="3" width="3.5" height="15" rx="1.75"/><rect x="17" y="8" width="3.5" height="10" rx="1.75"/></svg>
+          Logic Pro
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-color" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="4" fill="#00005B"/><path fill="#9999FF" d="M7.2 7.1h2.9c.7 0 1.4.1 1.9.4.5.3.9.6 1.2 1.1.3.5.4 1 .4 1.6 0 .6-.1 1.2-.4 1.7-.3.5-.7.8-1.2 1.1-.5.3-1.2.4-1.9.4H8.5v3.4H7.2V7.1zm2.7 5c.7 0 1.3-.2 1.6-.5.3-.3.5-.8.5-1.4 0-.6-.2-1.1-.5-1.4-.3-.3-.9-.5-1.6-.5H8.5V12.1h1.4zm7.2-.2c-.5 0-.9.1-1.2.4-.3.2-.4.6-.4 1.1v3.4h-1.3v-4c0-.4 0-.9-.1-1.5h1.2l.1.8c.2-.3.5-.5.8-.7.3-.2.7-.3 1.1-.3.1 0 .2 0 .3.01v1.2c-.2-.04-.4-.06-.5-.06z"/></svg>
+          Premiere Pro
+        </span>
+
+      </div>
+    </div>
+
+    <!-- Project & Workflow Management -->
+    <div class="tools-category">
+      <div class="tools-cat-label">Project &amp; Workflow Management</div>
+      <div class="tools-logo-grid">
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M21 0H3C1.343 0 0 1.343 0 3v18c0 1.656 1.343 3 3 3h18c1.656 0 3-1.344 3-3V3c0-1.657-1.344-3-3-3zM10.44 18.18c0 .795-.645 1.44-1.44 1.44H4.56c-.795 0-1.44-.645-1.44-1.44V4.56c0-.795.645-1.44 1.44-1.44H9c.795 0 1.44.645 1.44 1.44zm10.44-6c0 .795-.645 1.44-1.44 1.44H15c-.795 0-1.44-.645-1.44-1.44V4.56c0-.795.645-1.44 1.44-1.44h4.44c.795 0 1.44.645 1.44 1.44z"/></svg>
+          Trello
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.515 5.688a4.242 4.242 0 0 0-4.243 4.243 4.242 4.242 0 0 0 4.243 4.243A4.242 4.242 0 0 0 21.757 9.93a4.242 4.242 0 0 0-4.242-4.242zM6.485 5.688A4.242 4.242 0 0 0 2.243 9.93a4.242 4.242 0 0 0 4.242 4.243A4.242 4.242 0 0 0 10.727 9.93a4.242 4.242 0 0 0-4.242-4.242zM12 9.688a4.242 4.242 0 0 0-4.243 4.243A4.242 4.242 0 0 0 12 18.173a4.242 4.242 0 0 0 4.243-4.242A4.242 4.242 0 0 0 12 9.688z"/></svg>
+          Asana
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg>
+          Notion
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.284.585H6.716A6.131 6.131 0 0 0 .585 6.716v10.568a6.131 6.131 0 0 0 6.131 6.131h10.568a6.131 6.131 0 0 0 6.131-6.131V6.716A6.131 6.131 0 0 0 17.284.585zM16.567 16.567H7.433V7.433h9.134z"/></svg>
+          Square
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4-4h-2v-4h2v4z"/></svg>
+          Google Workspace
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M8.4 4.8c-1.193 0-2.4.81-2.4 2.4S7.2 9.6 8.4 9.6s2.4-.81 2.4-2.4S9.6 4.8 8.4 4.8zm7.2 0c-1.193 0-2.4.81-2.4 2.4s1.207 2.4 2.4 2.4 2.4-.81 2.4-2.4S16.793 4.8 15.6 4.8zM1.2 9.6C.007 9.6 0 10.407 0 12s.007 2.4 1.2 2.4S3.6 13.593 3.6 12 3.593 9.6 1.2 9.6zm21.6 0c-2.393 0-2.4.807-2.4 2.4s.007 2.4 2.4 2.4S24 13.593 24 12s-.007-2.4-2.4-2.4zM8.4 14.4c-1.193 0-2.4.81-2.4 2.4s1.207 2.4 2.4 2.4 2.4-.81 2.4-2.4-1.207-2.4-2.4-2.4zm7.2 0c-1.193 0-2.4.81-2.4 2.4s1.207 2.4 2.4 2.4 2.4-.81 2.4-2.4-1.207-2.4-2.4-2.4z"/></svg>
+          Monday.com
+        </span>
+
+      </div>
+    </div>
+
+    <!-- AI & Automation Tools -->
+    <div class="tools-category">
+      <div class="tools-cat-label">AI &amp; Automation</div>
+      <div class="tools-logo-grid">
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073zM13.26 22.43a4.476 4.476 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 0 0 .392-.681v-6.737l2.02 1.168a.071.071 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494zM3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085 4.783 2.759a.771.771 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646zM2.34 7.896a4.485 4.485 0 0 1 2.366-1.973V11.6a.766.766 0 0 0 .388.676l5.815 3.355-2.02 1.168a.076.076 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 7.872zm16.597 3.855l-5.833-3.387L15.119 7.2a.076.076 0 0 1 .071 0l4.83 2.791a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.407-.667zm2.01-3.023l-.141-.085-4.774-2.782a.776.776 0 0 0-.785 0L9.409 9.23V6.897a.066.066 0 0 1 .028-.061l4.83-2.787a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135l-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08L8.704 5.46a.795.795 0 0 0-.393.681zm1.097-2.365l2.602-1.5 2.607 1.5v2.999l-2.597 1.5-2.607-1.5z"/></svg>
+          ChatGPT
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 2.5L9 12l4.5 9.5h3L22 12l-5.5-9.5h-3zm-3 0h-3L2 12l5.5 9.5h3L6 12l4.5-9.5z"/></svg>
+          Claude
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c5.523 0 10 4.477 10 10S17.523 22 12 22 2 17.523 2 12 6.477 2 12 2zm0 3L8.5 12 12 19l3.5-7L12 5z"/></svg>
+          Google Gemini
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-color" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="metaai-g" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="0%" stop-color="#0082FB"/><stop offset="100%" stop-color="#00B2FF"/></linearGradient></defs><path fill="url(#metaai-g)" d="M4.18 12c0-.96.2-1.74.52-2.27.41-.68.99-1.01 1.73-1.01.83 0 1.46.35 2.28 1.53l.3.45.73 1.12.23.34c.94 1.37 1.73 2.04 2.77 2.04 1.18 0 1.95-.82 1.95-2.15h1.65c0 2.1-1.15 3.45-3.6 3.45-1.56 0-2.63-.73-3.69-2.35l-.79-1.2c-.72-1.1-1.17-1.47-1.83-1.47-.63 0-1.03.28-1.3.73-.22.37-.33.85-.33 1.47 0 .64.12 1.14.35 1.51.26.42.67.65 1.28.65v1.3c-1.03 0-1.84-.4-2.38-1.17-.44-.62-.67-1.46-.67-2.37zm9.56-3.28c.77 0 1.35.33 1.76 1.01.32.53.52 1.31.52 2.27 0 .91-.23 1.75-.67 2.37-.54.77-1.35 1.17-2.38 1.17v-1.3c.61 0 1.02-.23 1.28-.65.23-.37.35-.87.35-1.51 0-.62-.11-1.1-.33-1.47-.27-.45-.67-.73-1.3-.73-.66 0-1.11.37-1.83 1.47l-.24.36-.75-1.12-.28-.42c1.05-1.19 1.99-1.45 2.87-1.45z"/></svg>
+          Meta AI
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073zM13.26 22.43a4.476 4.476 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 0 0 .392-.681v-6.737l2.02 1.168a.071.071 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494zM3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085 4.783 2.759a.771.771 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646zM2.34 7.896a4.485 4.485 0 0 1 2.366-1.973V11.6a.766.766 0 0 0 .388.676l5.815 3.355-2.02 1.168a.076.076 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 7.872zm16.597 3.855l-5.833-3.387L15.119 7.2a.076.076 0 0 1 .071 0l4.83 2.791a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.407-.667zm2.01-3.023l-.141-.085-4.774-2.782a.776.776 0 0 0-.785 0L9.409 9.23V6.897a.066.066 0 0 1 .028-.061l4.83-2.787a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135l-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08L8.704 5.46a.795.795 0 0 0-.393.681zm1.097-2.365l2.602-1.5 2.607 1.5v2.999l-2.597 1.5-2.607-1.5z"/></svg>
+          DALL·E
+        </span>
+
+        <!-- Midjourney — custom fallback (not in Simple Icons) -->
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 3L4 17h16L12 3zm0 3.8L18.2 15H5.8L12 6.8z"/><rect x="3" y="19.5" width="18" height="1.5" rx="0.75"/></svg>
+          Midjourney
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3 3h4v4H3zm7 0h4v4h-4zm7 0h4v4h-4zM3 10h4v4H3zm7 0h4v4h-4zm7 0h4v4h-4zM3 17h4v4H3zm14 0h4v4h-4z"/></svg>
+          Mistral AI
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-color" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#15C39A"/><path fill="white" d="M12 5.5a6.5 6.5 0 0 0-4.95 10.74l.77-.77A5.35 5.35 0 1 1 17.35 12h-3.1v1.15h4.25V12A6.5 6.5 0 0 0 12 5.5zm-.6 8.65v-1.3h1.2v1.3H11.4z"/></svg>
+          Grammarly
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26C17.81 13.47 19 11.38 19 9c0-3.87-3.13-7-7-7zm2 14h-4v-1h4v1zm.29-3.12l-.79.41V15h-3v-1.71l-.79-.41C8.17 11.97 7 10.57 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.57-1.17 2.97-2.71 3.88z"/></svg>
+          Ollama
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12zm-6.95-1.2H12.9V6.65H11.1v4.15H6.95V12.6H11.1v4.15h1.8V12.6h4.15V10.8z"/></svg>
+          Zapier
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Make
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+          Perplexity AI
+        </span>
+
+      </div>
+    </div>
+
+    <!-- Analytics & Content Tools -->
+    <div class="tools-category">
+      <div class="tools-cat-label">Analytics &amp; Content Tools</div>
+      <div class="tools-logo-grid">
+
+        <span class="tool-pill">
+          <svg class="si-color" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="metabs-g" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="0%" stop-color="#0082FB"/><stop offset="100%" stop-color="#00B2FF"/></linearGradient></defs><path fill="url(#metabs-g)" d="M4.18 12c0-.96.2-1.74.52-2.27.41-.68.99-1.01 1.73-1.01.83 0 1.46.35 2.28 1.53l.3.45.73 1.12.23.34c.94 1.37 1.73 2.04 2.77 2.04 1.18 0 1.95-.82 1.95-2.15h1.65c0 2.1-1.15 3.45-3.6 3.45-1.56 0-2.63-.73-3.69-2.35l-.79-1.2c-.72-1.1-1.17-1.47-1.83-1.47-.63 0-1.03.28-1.3.73-.22.37-.33.85-.33 1.47 0 .64.12 1.14.35 1.51.26.42.67.65 1.28.65v1.3c-1.03 0-1.84-.4-2.38-1.17-.44-.62-.67-1.46-.67-2.37zm9.56-3.28c.77 0 1.35.33 1.76 1.01.32.53.52 1.31.52 2.27 0 .91-.23 1.75-.67 2.37-.54.77-1.35 1.17-2.38 1.17v-1.3c.61 0 1.02-.23 1.28-.65.23-.37.35-.87.35-1.51 0-.62-.11-1.1-.33-1.47-.27-.45-.67-.73-1.3-.73-.66 0-1.11.37-1.83 1.47l-.24.36-.75-1.12-.28-.42c1.05-1.19 1.99-1.45 2.87-1.45z"/></svg>
+          Meta Business Suite
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19.03 3.3h-14a1.74 1.74 0 0 0-1.74 1.74v14c0 .96.78 1.74 1.74 1.74h14c.96 0 1.74-.78 1.74-1.74v-14c0-.96-.78-1.74-1.74-1.74zm-10.5 13.5H7V9.75h1.53v7.05zm3.75 0h-1.53V7.5H12.28v9.3zm3.75 0H14.5v-4.5h1.53v4.5z"/></svg>
+          Google Analytics 4
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          Google Tag Manager
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.002 9.76c-.083-.027-.166-.049-.254-.062a4.16 4.16 0 0 0-.327-.037c-.089-.007-.178-.009-.266-.005-.057.003-.113.008-.168.015A6.98 6.98 0 0 0 12 3.5a6.98 6.98 0 0 0-6.98 6.98c0 .263.015.523.043.778-.026.003-.051.007-.077.012-.396.073-.756.245-1.05.49a2.61 2.61 0 0 0-.87 1.964 2.62 2.62 0 0 0 2.62 2.62c.197 0 .39-.022.574-.065A7.007 7.007 0 0 0 12 18.5a7.007 7.007 0 0 0 5.74-2.96 2.62 2.62 0 0 0 2.394-3.205 2.62 2.62 0 0 0-.132-.575z"/></svg>
+          Mailchimp
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0L1.5 6v12L12 24l10.5-6V6L12 0zm0 2.31l8.5 4.85v1.16L12 13.16 3.5 8.32V7.16L12 2.31zm-8.5 7.43L12 14.58l8.5-4.84v7.1L12 21.69l-8.5-4.85v-7.1z"/></svg>
+          Buffer
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-6 9h-3v3h-2v-3H6V9h3V6h2v3h3v2z"/></svg>
+          Hootsuite
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zm1.271 0a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zm0 1.271a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zm10.122 2.521a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zm-1.268 0a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zm-2.523 10.122a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zm0-1.268a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/></svg>
+          Slack
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M11.955.92L.587 5.813a.58.58 0 0 0 .004 1.066l11.37 4.8a.58.58 0 0 0 .448 0l11.37-4.8a.58.58 0 0 0 .003-1.066L12.41.92a.58.58 0 0 0-.455 0zM.29 9.725a.58.58 0 0 0-.29.504v6.888a.58.58 0 0 0 .37.54l10.773 4.152a.58.58 0 0 0 .79-.54v-6.888a.58.58 0 0 0-.37-.54zm23.42 0l-11.273 4.116a.58.58 0 0 0-.37.54v6.888a.58.58 0 0 0 .79.54l10.773-4.153a.58.58 0 0 0 .37-.54V10.23a.58.58 0 0 0-.29-.504z"/></svg>
+          Airtable
+        </span>
+
+        <!-- Later — custom fallback (scheduling tool, not in Simple Icons) -->
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M19 3h-1V1h-2v2H8V1H6v2H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2zM7 14h2v2H7zm4 0h2v2h-2z"/></svg>
+          Later
+        </span>
+
+      </div>
+    </div>
+
+    <!-- Social Media & Communication -->
+    <div class="tools-category">
+      <div class="tools-cat-label">Social Media &amp; Communication</div>
+      <div class="tools-logo-grid">
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.742l7.734-8.843L1.254 2.25H8.08l4.259 5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X (Twitter)
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12c0 3.259.014 3.668.072 4.948.058 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24c3.259 0 3.668-.014 4.948-.072 1.277-.058 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947 0-3.259-.014-3.667-.072-4.947-.058-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 0 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+          Instagram
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          TikTok
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.079.11 18.1.132 18.11a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 13.91 13.91 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+          Discord
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+          Reddit
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+          YouTube
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          WhatsApp Business
+        </span>
+
+        <span class="tool-pill">
+          <svg class="si-fallback" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+          Gmail
+        </span>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <div>
+      <div class="section-lbl"><div class="sl-line"></div><span class="sl-text" data-en="About" data-fr="À propos">About</span></div>
+      <h2 class="about-title"><span data-en="Brand strategist." data-fr="Stratégiste de marque.">Brand strategist.</span><br><em><span data-en="Communication first." data-fr="La communication avant tout.">Communication first.</span></em></h2>
+      <div id="about-en">
+      <p class="about-body" data-en="I&rsquo;m a <strong>Brand &amp; Communication Strategist</strong> with 6+ years building campaigns and content strategies for international brands across France, Belgium and Morocco &mdash; including <strong>Just Eat Takeaway</strong> and <strong>Motivenco</strong>." data-fr="Je suis un <strong>Stratégiste Communication &amp; Marque</strong> avec 6+ ans d&rsquo;expérience en campagnes et stratégies de contenu pour des marques internationales en France, Belgique et Maroc &mdash; dont <strong>Just Eat Takeaway</strong> et <strong>Motivenco</strong>.">I&rsquo;m a <strong>Brand &amp; Communication Strategist</strong> with 6+ years building campaigns and content strategies for international brands across France, Belgium and Morocco &mdash; including <strong>Just Eat Takeaway</strong> and <strong>Motivenco</strong>.</p>
+      <p class="about-body" data-en="My background spans editorial strategy, digital campaigns, SEO, employer branding &mdash; and thanks to my <strong>Master&rsquo;s in Political Studies (Governance &amp; European Societies)</strong>, I understand how institutional communication, public opinion, and message architecture work at the deepest level." data-fr="Mon parcours couvre la stratégie éditoriale, les campagnes digitales, le SEO et l&rsquo;employer branding &mdash; et grâce à mon <strong>Master en Sciences Politiques (Gouvernance &amp; Sociétés Européennes)</strong>, je comprends en profondeur la communication institutionnelle, l&rsquo;opinion publique et l&rsquo;architecture des messages.">My background spans editorial strategy, digital campaigns, SEO, employer branding &mdash; and thanks to my <strong>Master&rsquo;s in Political Studies (Governance &amp; European Societies)</strong>, I understand how institutional communication, public opinion, and message architecture work at the deepest level.</p>
+      <p class="about-body" data-en="What sets me apart: I&rsquo;m a <strong>bilingual communication strategist</strong> (EN &middot; FR) with a political studies background, certified AI integrator, and 6+ years of execution across France, Belgium, and Morocco. I understand how messages work at the institutional, political, and commercial level &mdash; and I know how to scale them with the tools of 2026." data-fr="Ce qui me distingue : je suis un <strong>stratégiste de communication bilingue</strong> (EN &middot; FR) avec une formation en sciences politiques, certifié en intégration IA, et 6+ ans d&rsquo;exécution en France, Belgique et Maroc. Je comprends comment les messages fonctionnent au niveau institutionnel, politique et commercial &mdash; et je sais les déployer avec les outils de 2026.">What sets me apart: I&rsquo;m a <strong>bilingual communication strategist</strong> (EN &middot; FR) with a political studies background, certified AI integrator, and 6+ years of execution across France, Belgium, and Morocco. I understand how messages work at the institutional, political, and commercial level &mdash; and I know how to scale them with the tools of 2026.</p>
+      <div class="education-block">
+        <span class="edu-label" data-en="Education" data-fr="Formation">Education</span>
+        <strong><span data-en="Master's in Political Studies" data-fr="Master en Sciences Politiques">Master's in Political Studies</span></strong> &mdash; <span data-en="Governance &amp; European Societies" data-fr="Gouvernance &amp; Sociétés Européennes">Governance &amp; European Societies</span><br>
+        <span class="edu-sub" data-en="EU institutions · Political communication · Public policy · Governance frameworks" data-fr="Institutions européennes · Communication politique · Politiques publiques · Gouvernance">EU institutions &middot; Political communication &middot; Public policy &middot; Governance frameworks</span>
+      </div>
+      <div class="fr-block">
+        <span class="fr-tag">Version fran&ccedil;aise</span>
+        Sp&eacute;cialiste en communication 360&deg; et marketing digital depuis 6 ans. Exp&eacute;rience chez Just Eat Takeaway et Motivenco en France, Belgique et Maroc. Bilingue (anglais &middot; fran&ccedil;ais). Je ne produis pas du contenu &mdash; je construis des strat&eacute;gies &eacute;ditoriales ancr&eacute;es dans la donn&eacute;e.
+      </div>
+    </div>
+    <div>
+      <div class="section-lbl" style="margin-bottom:16px;"><div class="sl-line"></div><span class="sl-text">Toolkit</span></div>
+      <div class="tools-grid">
+        <div class="tool-card"><div class="tool-name" data-en="SEO &amp; Analytics" data-fr="SEO &amp; Analytique">SEO &amp; Analytics</div><div class="tool-list">Ahrefs &middot; SEMrush &middot; Moz<br>GA4 &middot; Google Keyword Planner</div></div>
+        <div class="tool-card"><div class="tool-name" data-en="CMS &amp; CRM" data-fr="CMS &amp; CRM">CMS &amp; CRM</div><div class="tool-list">HubSpot &middot; WordPress<br>Sprinklr &middot; Brevo &middot; Wix</div></div>
+        <div class="tool-card"><div class="tool-name" data-en="Design &amp; Media" data-fr="Design &amp; Média">Design &amp; Media</div><div class="tool-list">Figma &middot; Photoshop<br>InDesign &middot; After Effects</div></div>
+        <div class="tool-card"><div class="tool-name" data-en="Project Mgmt" data-fr="Gestion de Projet">Project Mgmt</div><div class="tool-list">Trello &middot; Asana &middot; Notion</div></div>
+        <div class="tool-card"><div class="tool-name" data-en="AI &amp; LLMs" data-fr="IA &amp; LLMs">AI &amp; LLMs</div><div class="tool-list" data-en="ChatGPT · Claude · Gemini&lt;br&gt;Midjourney · Prompt Engineering&lt;br&gt;AWS ML Fundamentals (certified)" data-fr="ChatGPT · Claude · Gemini&lt;br&gt;Midjourney · Prompt Engineering&lt;br&gt;Fondamentaux AWS ML (certifié)">ChatGPT &middot; Claude &middot; Gemini<br>Midjourney &middot; Prompt Engineering<br>AWS ML Fundamentals (certified)</div></div>
+        <div class="tool-card" style="grid-column:span 2;"><div class="tool-name" data-en="Languages" data-fr="Langues">Languages</div><div class="tool-list" data-en="English — Fluent (C2) · French — Professional (C1)" data-fr="Anglais — Courant (C2) · Français — Professionnel (C1)">English &mdash; Fluent (C2) &middot; French &mdash; Professional (C1)</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ CERTIFICATIONS ══ -->
+<section class="certs-section" id="certifications">
+  <div class="certs-inner">
+    <div class="section-lbl"><div class="sl-line"></div><span class="sl-text" data-en="Credentials" data-fr="Diplômes">Credentials</span></div>
+    <h2 class="work-title" style="font-size:38px;" data-en="Certifications" data-fr="Certifications">Certifications</h2>
+
+    <div class="certs-grid">
+      <div class="cert-group-title" style="grid-column:1/-1;"><span data-en="AI &amp; Technology" data-fr="IA &amp; Technologie">AI &amp; Technology</span></div>
+
+      <div class="cert-card ai">
+        <div class="cert-name">AWS Fundamentals of Machine Learning &amp; Artificial Intelligence</div>
+        <div class="cert-issuer">Amazon Web Services</div>
+        <div class="cert-date">Dec 2025</div>
+      </div>
+      <div class="cert-card ai">
+        <div class="cert-name">From Tool to Teammates: Working Smarter with AI</div>
+        <div class="cert-issuer" data-en="LinkedIn Learning — Prompt Engineering &amp; AI for Business" data-fr="LinkedIn Learning — Prompt Engineering &amp; IA pour les métiers">LinkedIn Learning — Prompt Engineering &amp; AI for Business</div>
+        <div class="cert-date">Mar 2026</div>
+      </div>
+
+      <div class="cert-group-title" style="grid-column:1/-1;"><span data-en="Digital Marketing &amp; SEO" data-fr="Marketing Digital &amp; SEO">Digital Marketing &amp; SEO</span></div>
+
+      <div class="cert-card">
+        <div class="cert-name">SEO Professional Certificate (incl. AI for Marketing)</div>
+        <div class="cert-issuer">Moz</div>
+        <div class="cert-date">Mar 2026</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-name">Foundations of Digital Marketing &amp; E-commerce</div>
+        <div class="cert-issuer">Google</div>
+        <div class="cert-date">Jan 2026</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-name">Marketing Strategy: Competitive Intelligence</div>
+        <div class="cert-issuer">LinkedIn Learning</div>
+        <div class="cert-date">Apr 2026</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-name">B2B Marketing Foundations</div>
+        <div class="cert-issuer">LinkedIn Learning</div>
+        <div class="cert-date">Mar 2026</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-name">Marketing Strategy: SEO Content Writing</div>
+        <div class="cert-issuer">LinkedIn Learning</div>
+        <div class="cert-date">Feb 2026</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-name">Content Creation: Strategy and Tools</div>
+        <div class="cert-issuer">LinkedIn Learning</div>
+        <div class="cert-date">Feb 2026</div>
+      </div>
+
+      <div class="cert-group-title" style="grid-column:1/-1;"><span data-en="Social Media" data-fr="Réseaux Sociaux">Social Media</span></div>
+
+      <div class="cert-card">
+        <div class="cert-name">Social Media Marketing Professional Certificate</div>
+        <div class="cert-issuer">Hootsuite</div>
+        <div class="cert-date">Feb 2026</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-name">Social Media Marketing Foundations</div>
+        <div class="cert-issuer">LinkedIn Learning</div>
+        <div class="cert-date">Feb 2026</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-name">SEO Foundations</div>
+        <div class="cert-issuer">LinkedIn Learning</div>
+        <div class="cert-date">Feb 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div>
+      <h2 class="contact-title" data-en="Let's work together." data-fr="Travaillons ensemble."><span id="contact-title-en">Let&rsquo;s work <em>together.</em></span><span id="contact-title-fr" style="display:none;">Travaillons <em>ensemble.</em></span></h2>
+      <p class="contact-sub" data-en="Seeking: Communication Strategy &amp; Brand Management · Full-time · France" data-fr="Recherche : Stratégie de Communication &amp; Brand Management · CDI · France"><span data-en="Seeking: Communication Strategy &amp; Brand Management · Full-time · France" data-fr="Recherche : Stratégie Communication &amp; Brand Management · CDI · France">Seeking: Communication Strategy &amp; Brand Management &middot; Full-time &middot; France</span></p>
+      <p class="contact-sub" style="margin-top:6px;">
+        <a href="https://www.linkedin.com/in/mohammed-amine-brahimi" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;letter-spacing:0.02em;">linkedin.com/in/mohammed-amine-brahimi</a>
+      </p>
+    </div>
+    <div class="contact-btns">
+      <button class="btn-cta" onclick="window.location.href='mailto:amiinebrahiimii@gmail.com'">
+        <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="31505c58585f545343505958585c585871565c50585d1f525e5c">[email&#160;protected]</a>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 7h9M8 3.5l3.5 3.5L8 10.5"/></svg>
+      </button>
+      <a href="https://www.linkedin.com/in/mohammed-amine-brahimi" target="_blank" rel="noopener" class="btn-ghost">LinkedIn</a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <span class="footer-logo">AB<span>.</span></span>
+    <span>&copy; 2026 Amine Brahimi &mdash; Brand &amp; Communication Strategist</span>
+    <ul class="footer-links">
+      <li><a href="#work" data-en="Work" data-fr="Projets">Work</a></li>
+      <li><a href="#tools-page" data-en="Tools" data-fr="Outils">Tools</a></li>
+      <li><a href="#about" data-en="About" data-fr="À propos">About</a></li>
+      <li><a href="#certifications" data-en="Certifications" data-fr="Certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://www.linkedin.com/in/mohammed-amine-brahimi" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://amiinebrahiimii8d27.myportfolio.com" target="_blank">Photo Journal</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+/* ── Mobile Menu ── */
+function toggleMenu() {
+  var menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('mobile-menu').classList.remove('open');
+}
+
+/* ── Language Switcher ── */
+function setLang(lang) {
+  document.getElementById('lang-en').classList.toggle('lang-active', lang === 'en');
+  document.getElementById('lang-fr').classList.toggle('lang-active', lang === 'fr');
+
+  document.querySelectorAll('[data-en]').forEach(function(el) {
+    var val = lang === 'fr' ? el.getAttribute('data-fr') : el.getAttribute('data-en');
+    if (!val) return;
+    if (el.children.length === 0) {
+      el.textContent = val;
+    } else {
+      el.innerHTML = val;
+    }
+  });
+
+  /* Contact title special case (has nested <em>) */
+  var ctEn = document.getElementById('contact-title-en');
+  var ctFr = document.getElementById('contact-title-fr');
+  if (ctEn && ctFr) {
+    ctEn.style.display = lang === 'fr' ? 'none' : '';
+    ctFr.style.display = lang === 'fr' ? '' : 'none';
+  }
+
+  /* About section: hide/show EN vs FR block */
+  var aboutEn = document.getElementById('about-en');
+  var aboutFr = document.getElementById('about-fr');
+  if (aboutEn) aboutEn.style.display = lang === 'fr' ? 'none' : '';
+  if (aboutFr) aboutFr.style.display = lang === 'fr' ? '' : 'none';
+
+  /* Case study lang blocks */
+  document.querySelectorAll('.cs-lang').forEach(function(el) { el.classList.remove('on'); });
+  var suffix = lang === 'fr' ? '-fr' : '-en';
+  ['c0','c1','c2','c3','c4'].forEach(function(id) {
+    var el = document.getElementById(id + suffix);
+    if (el) el.classList.add('on');
+  });
+
+  /* Hero tagline special case */
+  var tlEn = document.getElementById('hero-tagline-en');
+  var tlFr = document.getElementById('hero-tagline-fr');
+  if (tlEn && tlFr) {
+    tlEn.style.display = lang === 'fr' ? 'none' : '';
+    tlFr.style.display = lang === 'fr' ? '' : 'none';
+  }
+
+  localStorage.setItem('lang', lang);
+}
+
+// Auto-apply saved preference on load
+(function() {
+  var saved = '';
+  try { saved = localStorage.getItem('site-lang'); } catch(e) {}
+  setLang(saved === 'fr' ? 'fr' : 'en');
+})();
+
+function tog(btn, csId, lang) {
+  const body = btn.closest('.cs-body');
+  body.querySelectorAll('.lt').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  body.querySelectorAll('.cs-lang').forEach(el => el.classList.remove('on'));
+  const target = body.querySelector('#' + csId + '-' + lang);
+  if (target) target.classList.add('on');
+}
+
+/* Icon hover handled by CSS: .tool-pill:hover .si-fallback { color: var(--accent); } */
+</script>
+</body>
+</html
+      </div>
+      <div id="about-fr" style="display:none;">
+        <p class="about-body">Je suis un <strong>Stratégiste Communication &amp; Marque</strong> avec 6+ ans d&rsquo;expérience en campagnes et stratégies de contenu pour des marques internationales en France, Belgique et Maroc &mdash; dont <strong>Just Eat Takeaway</strong> et <strong>Motivenco</strong>.</p>
+        <p class="about-body">Mon parcours couvre la stratégie éditoriale, les campagnes digitales, le SEO et l&rsquo;employer branding &mdash; et grâce à mon <strong>Master en Sciences Politiques (Gouvernance &amp; Sociétés Européennes)</strong>, je comprends en profondeur la communication institutionnelle, l&rsquo;opinion publique et l&rsquo;architecture des messages.</p>
+        <p class="about-body">Ce qui me distingue : je suis un <strong>stratégiste de communication bilingue</strong> (EN &middot; FR) avec une formation en sciences politiques, certifié en intégration IA, et 6+ ans d&rsquo;exécution en France, Belgique et Maroc. Je comprends comment les messages fonctionnent au niveau institutionnel, politique et commercial &mdash; et je sais les déployer avec les outils de 2026.</p>
+      </div>>
