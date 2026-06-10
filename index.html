@@ -1723,6 +1723,59 @@ footer {
 
 <!-- ══ TOOLS & PLATFORMS ══ -->
 <section class="tools-page" id="tools-page">
+  <!-- ===== PERSPECTIVE / WRITING ===== -->
+<section id="perspective" class="persp">
+  <style>
+    .persp{background:#15140F;color:#ECE6D8;padding:84px 24px;border-top:1px solid #332F24;}
+    .persp-inner{max-width:1040px;margin:0 auto;}
+    .persp-eyebrow{font-family:"Spline Sans Mono",ui-monospace,monospace;font-size:12px;
+      letter-spacing:.18em;text-transform:uppercase;color:#C8A24B;margin:0 0 28px;}
+    .persp-card{display:grid;grid-template-columns:300px 1fr;gap:0;text-decoration:none;
+      color:inherit;border:1px solid #332F24;background:#1B1912;overflow:hidden;
+      transition:border-color .25s,transform .25s;}
+    .persp-card:hover{border-color:#C8A24B;transform:translateY(-2px);}
+    .persp-card:focus-visible{outline:2px solid #C8A24B;outline-offset:3px;}
+    .persp-thumb{background:#100F0B;display:flex;flex-direction:column;align-items:center;
+      justify-content:center;gap:6px;padding:40px 20px;border-right:1px solid #332F24;}
+    .persp-strike{font-family:"Spline Sans Mono",ui-monospace,monospace;font-size:26px;
+      color:#7C7464;text-decoration:line-through;text-decoration-thickness:3px;
+      text-decoration-color:#C9694A;letter-spacing:.04em;}
+    .persp-keep{font-family:"Fraunces",Georgia,serif;font-size:46px;font-weight:600;color:#C8A24B;line-height:1;}
+    .persp-body{padding:34px 36px;}
+    .persp-meta{font-family:"Spline Sans Mono",ui-monospace,monospace;font-size:11.5px;
+      letter-spacing:.14em;text-transform:uppercase;color:#9A9181;margin:0 0 12px;}
+    .persp-title{font-family:"Fraunces",Georgia,serif;font-weight:500;font-size:30px;
+      line-height:1.1;margin:0 0 12px;color:#ECE6D8;}
+    .persp-desc{font-family:"Inter",system-ui,sans-serif;font-size:16px;line-height:1.6;
+      color:#C7C1B3;margin:0 0 20px;max-width:46ch;}
+    .persp-cta{font-family:"Spline Sans Mono",ui-monospace,monospace;font-size:13px;
+      letter-spacing:.06em;color:#C8A24B;}
+    @media (max-width:640px){
+      .persp{padding:60px 20px;}
+      .persp-card{grid-template-columns:1fr;}
+      .persp-thumb{border-right:none;border-bottom:1px solid #332F24;flex-direction:row;padding:30px;}
+      .persp-keep{font-size:38px;}
+    }
+    @media (prefers-reduced-motion:reduce){.persp-card{transition:none;}}
+  </style>
+
+  <div class="persp-inner">
+    <p class="persp-eyebrow">Perspective · Writing</p>
+    <a class="persp-card" href="still-just-seo.html">
+      <div class="persp-thumb">
+        <span class="persp-strike">GEO</span>
+        <span class="persp-strike">AEO</span>
+        <span class="persp-keep">SEO.</span>
+      </div>
+      <div class="persp-body">
+        <p class="persp-meta">Generative AI &amp; Search · 2026</p>
+        <h3 class="persp-title">Still Just SEO</h3>
+        <p class="persp-desc">A close read of Google's official guidance on generative AI search, and why GEO and AEO are mostly noise.</p>
+        <span class="persp-cta">Read the piece &rarr;</span>
+      </div>
+    </a>
+  </div>
+</section>
   <div class="tools-page-inner">
     <div class="tools-page-header">
       <div class="section-lbl"><div class="sl-line"></div><span class="sl-text" data-en="Toolkit" data-fr="Outils">Toolkit</span></div>
@@ -2212,6 +2265,7 @@ footer {
     <span>&copy; 2026 Amine Brahimi &mdash; Brand &amp; Communication Strategist</span>
     <ul class="footer-links">
       <li><a href="#work" data-en="Work" data-fr="Projets">Work</a></li>
+      <li><a href="#perspective" data-en="Perspective" data-fr="Perspective">Perspective</a></li>
       <li><a href="#tools-page" data-en="Tools" data-fr="Outils">Tools</a></li>
       <li><a href="#about" data-en="About" data-fr="À propos">About</a></li>
       <li><a href="#certifications" data-en="Certifications" data-fr="Certifications">Certifications</a></li>
