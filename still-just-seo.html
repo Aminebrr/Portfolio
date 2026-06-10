@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Still Just SEO · Amine Brahimi</title>
+<meta name="description" content="A close read of Google's official guidance on optimizing for generative AI features in Google Search, and why GEO and AEO are mostly noise." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#15140F;
+    --ink-2:#1F1D15;
+    --line:#332F24;
+    --paper:#ECE6D8;
+    --muted:#9A9181;
+    --gold:#C8A24B;
+    --terra:#C9694A;
+    --maxw:760px;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:"Inter",system-ui,sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--gold);color:var(--ink);}
+  a{color:var(--gold);text-underline-offset:3px;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+
+  .bar{
+    border-bottom:1px solid var(--line);
+    position:sticky;top:0;z-index:5;
+    background:color-mix(in srgb, var(--ink) 88%, transparent);
+    backdrop-filter:blur(8px);
+  }
+  .bar .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;}
+  .brand{font-family:"Fraunces",serif;font-weight:600;font-size:20px;letter-spacing:.01em;color:var(--paper);text-decoration:none;}
+  .brand span{color:var(--gold);}
+  .langtoggle{display:flex;gap:2px;font-family:"Spline Sans Mono",monospace;font-size:12px;}
+  .langtoggle button{
+    background:none;border:1px solid var(--line);color:var(--muted);
+    padding:6px 11px;cursor:pointer;letter-spacing:.08em;font:inherit;
+    transition:color .2s,border-color .2s,background .2s;
+  }
+  .langtoggle button:first-child{border-right:none;}
+  .langtoggle button[aria-pressed="true"]{color:var(--ink);background:var(--gold);border-color:var(--gold);}
+  .langtoggle button:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
+
+  header.hero{padding:78px 0 46px;border-bottom:1px solid var(--line);}
+  .eyebrow{
+    font-family:"Spline Sans Mono",monospace;font-size:12px;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--gold);margin:0 0 26px;
+  }
+  h1{
+    font-family:"Fraunces",serif;font-weight:500;
+    font-size:clamp(46px,9vw,78px);line-height:.98;letter-spacing:-.02em;
+    margin:0;color:var(--paper);
+  }
+  h1 .dot{color:var(--gold);}
+  .standfirst{
+    font-size:clamp(19px,2.6vw,22px);line-height:1.5;color:var(--paper);
+    margin:28px 0 0;max-width:40ch;
+  }
+  .standfirst em{font-family:"Fraunces",serif;font-style:italic;font-weight:400;color:var(--gold);}
+
+  .stats{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:var(--line);border:1px solid var(--line);
+    margin:54px 0 0;
+  }
+  .stat{background:var(--ink);padding:24px 20px;}
+  .stat .n{font-family:"Fraunces",serif;font-size:46px;font-weight:500;color:var(--gold);line-height:1;}
+  .stat .l{font-size:13.5px;color:var(--muted);margin-top:10px;line-height:1.4;}
+
+  main{padding:60px 0 30px;}
+  section{margin:0 0 52px;}
+  .kicker{
+    font-family:"Spline Sans Mono",monospace;font-size:12px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--muted);margin:0 0 14px;
+  }
+  h2{
+    font-family:"Fraunces",serif;font-weight:500;font-size:clamp(26px,4.4vw,33px);
+    line-height:1.12;letter-spacing:-.01em;margin:0 0 18px;color:var(--paper);
+  }
+  h2 em{font-style:italic;color:var(--gold);}
+  p{margin:0 0 18px;color:#DAD4C6;}
+  p strong{color:var(--paper);font-weight:600;}
+
+  ul.ignore{list-style:none;margin:8px 0 0;padding:0;}
+  ul.ignore li{
+    padding:15px 0;border-top:1px solid var(--line);
+    display:flex;gap:14px;align-items:baseline;
+  }
+  ul.ignore li:last-child{border-bottom:1px solid var(--line);}
+  .strike{
+    font-family:"Spline Sans Mono",monospace;font-size:14.5px;
+    color:var(--terra);text-decoration:line-through;text-decoration-thickness:2px;
+    flex:0 0 auto;min-width:0;
+  }
+  ul.ignore .ex{color:var(--muted);font-size:15.5px;}
+
+  ul.moves{margin:8px 0 0;padding:0 0 0 1.1em;}
+  ul.moves li{margin:0 0 12px;color:#DAD4C6;}
+  ul.moves li b{color:var(--paper);font-weight:600;}
+
+  .applied{
+    border-left:2px solid var(--gold);padding:6px 0 6px 22px;margin:30px 0;
+  }
+  .applied .stat-inline{font-family:"Fraunces",serif;color:var(--gold);font-style:italic;}
+
+  .caveat{
+    font-size:15px;color:var(--muted);border:1px solid var(--line);
+    padding:18px 20px;border-radius:2px;margin-top:8px;
+  }
+
+  footer{border-top:1px solid var(--line);padding:34px 0 80px;}
+  .source{font-family:"Spline Sans Mono",monospace;font-size:13px;color:var(--muted);line-height:1.6;}
+  .source a{word-break:break-word;}
+  .backlink{display:inline-block;margin-top:22px;font-family:"Spline Sans Mono",monospace;font-size:13px;letter-spacing:.06em;}
+
+  [lang-block="fr"]{display:none;}
+  body[data-lang="fr"] [lang-block="en"]{display:none;}
+  body[data-lang="fr"] [lang-block="fr"]{display:block;}
+
+  @media (max-width:560px){
+    .stats{grid-template-columns:1fr;}
+    ul.ignore li{flex-direction:column;gap:5px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important;}
+  }
+</style>
+</head>
+<body data-lang="en">
+
+  <div class="bar">
+    <div class="wrap">
+      <a class="brand" href="https://aminebrr.github.io/Portfolio">AB<span>.</span></a>
+      <div class="langtoggle" role="group" aria-label="Language">
+        <button id="btn-en" aria-pressed="true" onclick="setLang('en')">EN</button>
+        <button id="btn-fr" aria-pressed="false" onclick="setLang('fr')">FR</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ EN ============ -->
+  <div lang-block="en">
+    <header class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Perspective · Generative AI &amp; Search · June 2026</p>
+        <h1>Still Just<br>SEO<span class="dot">.</span></h1>
+        <p class="standfirst">The market is full of new acronyms such as GEO and AEO. Google's own guidance, however, is clear: when it comes to Search, <em>this remains SEO.</em></p>
+
+        <div class="stats">
+          <div class="stat"><div class="n">3</div><div class="l">"hacks" Google tells you to ignore</div></div>
+          <div class="stat"><div class="n">0</div><div class="l">new files, schemas or markup required</div></div>
+          <div class="stat"><div class="n">1</div><div class="l">principle that actually decides visibility</div></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section>
+        <p class="kicker">The context</p>
+        <h2>The acronym economy</h2>
+        <p>Over the past year, the market has filled with new labels: GEO (generative engine optimization), AEO (answer engine optimization), and a wide range of "AI-ready" checklists. Most of them promise a secret layer of optimization that sits on top of Search. In order to test this claim against the source itself, I read Google's official guidance on optimizing for the generative AI features of Google Search, namely AI Overviews and AI Mode.</p>
+      </section>
+
+      <section>
+        <p class="kicker">Google's position</p>
+        <h2>What Google <em>actually</em> says</h2>
+        <p>Google's position is almost anticlimactic. Its generative AI features rely on the same core ranking and quality systems as the rest of Search, which means there is no separate engine to game. From Google's perspective, optimizing for AI search is, quite simply, optimizing for Search, and it therefore remains SEO.</p>
+        <p>The mechanics behind the AI answers, namely retrieval from the existing index and "fan-out" queries that generate related searches, reward precisely what classic SEO has always rewarded: content that is genuinely useful and easy to find.</p>
+      </section>
+
+      <section>
+        <p class="kicker">The ignore list</p>
+        <h2>Five things you can cross off</h2>
+        <p>Google explicitly names a number of tactics that are not necessary for Search:</p>
+        <ul class="ignore">
+          <li><span class="strike">llms.txt</span><span class="ex">No special machine-readable or "AI" file is required for a page to appear.</span></li>
+          <li><span class="strike">chunking</span><span class="ex">There is no need to break pages into small pieces, as full pages are read correctly.</span></li>
+          <li><span class="strike">AI rewriting</span><span class="ex">Writing specifically for machines is unnecessary, since meaning and synonyms are understood.</span></li>
+          <li><span class="strike">fake mentions</span><span class="ex">Manufactured mentions are not the lever they are presented to be.</span></li>
+          <li><span class="strike">schema overkill</span><span class="ex">Structured data supports rich results, but is not required for AI search.</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <p class="kicker">What matters</p>
+        <h2>What actually determines visibility</h2>
+        <p>A single line in the guidance carries most of the weight: would a visitor find this content satisfying? Everything else follows from that question.</p>
+        <ul class="moves">
+          <li><b>Non-commodity content.</b> A genuine point of view, or first-hand experience, is worth far more than a summary of what already exists online. A generic "7 tips" article is commodity content, whereas a specific, lived account is not.</li>
+          <li><b>Clear structure and semantic HTML.</b> The same markup that helps readers also helps screen readers and crawlers.</li>
+          <li><b>Solid technical foundations.</b> The site should be indexable, fast, sound on mobile, and free of unnecessary duplication.</li>
+          <li><b>Relevant images and video.</b> They create additional surfaces on which the site can appear.</li>
+        </ul>
+      </section>
+
+      <section>
+        <p class="kicker">How I apply it</p>
+        <h2>Putting this into practice</h2>
+        <div class="applied">
+          <p>During the <strong>Aji Tabni</strong> platform launch, I positioned a brand new domain on <span class="stat-inline">the first page of results for its primary keywords within 45 days</span>. This was achieved not through any particular trick, but through clear structure and content built around the real intent of users.</p>
+        </div>
+        <p>The generative AI guidance does not change this approach; it confirms it. My reading for clients in 2026 is straightforward. The acronym economy can be ignored. Investment should go into distinctive content and clean technical foundations. And "AI optimization" for Google should be treated as the SEO discipline that it already is.</p>
+        <p class="caveat">Scope note: this concerns <strong>Google Search</strong> specifically. Visibility inside standalone assistants such as ChatGPT or Perplexity relies on partly different mechanics, and is a separate question.</p>
+      </section>
+    </main>
+
+    <footer class="wrap">
+      <p class="source">Source: Google Search Central, "Optimizing your website for generative AI features on Google Search", updated June 2026.<br><a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" target="_blank" rel="noopener">developers.google.com/search/docs/fundamentals/ai-optimization-guide</a></p>
+      <a class="backlink" href="https://aminebrr.github.io/Portfolio">&larr; Back to work</a>
+    </footer>
+  </div>
+
+  <!-- ============ FR ============ -->
+  <div lang-block="fr">
+    <header class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Perspective · IA générative &amp; Search · Juin 2026</p>
+        <h1>Toujours<br>du SEO<span class="dot">.</span></h1>
+        <p class="standfirst">Le marché regorge de nouveaux acronymes tels que le GEO et l'AEO. La documentation officielle de Google est pourtant claire : en matière de Search, <em>il s'agit toujours de SEO.</em></p>
+
+        <div class="stats">
+          <div class="stat"><div class="n">3</div><div class="l">« hacks » que Google dit d'ignorer</div></div>
+          <div class="stat"><div class="n">0</div><div class="l">fichier, schéma ou markup à créer</div></div>
+          <div class="stat"><div class="n">1</div><div class="l">principe qui décide vraiment de la visibilité</div></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section>
+        <p class="kicker">Le contexte</p>
+        <h2>L'économie des acronymes</h2>
+        <p>Depuis un an, le marché s'est rempli de nouvelles étiquettes : le GEO (generative engine optimization), l'AEO (answer engine optimization), ainsi qu'une multitude de checklists « AI-ready ». La plupart promettent une couche secrète d'optimisation qui se superposerait au Search. Afin de confronter cette idée à la source elle-même, j'ai lu la documentation officielle de Google consacrée à l'optimisation pour les fonctionnalités d'IA générative de Google Search, à savoir les AI Overviews et l'AI Mode.</p>
+      </section>
+
+      <section>
+        <p class="kicker">La position de Google</p>
+        <h2>Ce que dit <em>vraiment</em> Google</h2>
+        <p>La position de Google est presque anticlimatique. Ses fonctionnalités d'IA générative reposent sur les mêmes systèmes de classement et de qualité que le reste du Search, ce qui signifie qu'il n'existe aucun moteur distinct à contourner. Du point de vue de Google, optimiser pour la recherche IA revient tout simplement à optimiser pour le Search, et il s'agit donc toujours de SEO.</p>
+        <p>Les mécaniques qui sous-tendent les réponses IA, à savoir la récupération depuis l'index existant et les requêtes « fan-out » qui génèrent des recherches connexes, récompensent précisément ce que le SEO classique a toujours récompensé : un contenu réellement utile et facile à trouver.</p>
+      </section>
+
+      <section>
+        <p class="kicker">La liste à ignorer</p>
+        <h2>Cinq éléments à rayer</h2>
+        <p>Google nomme explicitement plusieurs tactiques qui ne sont pas nécessaires pour le Search :</p>
+        <ul class="ignore">
+          <li><span class="strike">llms.txt</span><span class="ex">Aucun fichier « IA » spécial n'est requis pour qu'une page apparaisse.</span></li>
+          <li><span class="strike">chunking</span><span class="ex">Inutile de découper les pages en petits morceaux, car les pages entières sont correctement lues.</span></li>
+          <li><span class="strike">réécriture IA</span><span class="ex">Écrire spécialement pour les machines est superflu, le sens et les synonymes étant compris.</span></li>
+          <li><span class="strike">fausses mentions</span><span class="ex">Les mentions fabriquées ne sont pas le levier que l'on présente.</span></li>
+          <li><span class="strike">excès de schema</span><span class="ex">Les données structurées favorisent les rich results, mais ne sont pas requises pour l'IA.</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <p class="kicker">Ce qui compte</p>
+        <h2>Ce qui détermine vraiment la visibilité</h2>
+        <p>Une seule phrase de la documentation porte l'essentiel : le visiteur trouverait-il ce contenu satisfaisant ? Tout le reste découle de cette question.</p>
+        <ul class="moves">
+          <li><b>Contenu non-commodity.</b> Un véritable point de vue, ou une expérience de première main, vaut bien plus qu'un résumé de ce qui existe déjà en ligne. Un article générique « 7 conseils » est un contenu de commodité, tandis qu'un récit précis et vécu ne l'est pas.</li>
+          <li><b>Structure claire et HTML sémantique.</b> Le même balisage qui aide les lecteurs aide également les lecteurs d'écran et les robots.</li>
+          <li><b>Fondations techniques solides.</b> Le site doit être indexable, rapide, fiable sur mobile et exempt de duplication inutile.</li>
+          <li><b>Images et vidéos pertinentes.</b> Elles créent des surfaces supplémentaires sur lesquelles le site peut apparaître.</li>
+        </ul>
+      </section>
+
+      <section>
+        <p class="kicker">Comment je l'applique</p>
+        <h2>Mettre cela en pratique</h2>
+        <div class="applied">
+          <p>Lors du lancement de la plateforme <strong>Aji Tabni</strong>, j'ai positionné un domaine entièrement nouveau sur <span class="stat-inline">la première page de résultats pour ses mots-clés principaux en 45 jours</span>. Ce résultat n'a pas reposé sur une astuce particulière, mais sur une structure claire et un contenu construit autour de l'intention réelle des utilisateurs.</p>
+        </div>
+        <p>La documentation sur l'IA ne change pas cette approche ; elle la confirme. Ma lecture pour les clients en 2026 est simple. L'économie des acronymes peut être ignorée. L'investissement doit porter sur un contenu distinctif et des fondations techniques propres. Et l'« optimisation IA » pour Google doit être traitée comme la discipline SEO qu'elle est déjà.</p>
+        <p class="caveat">Note de périmètre : ceci concerne <strong>Google Search</strong> spécifiquement. La visibilité dans les assistants autonomes tels que ChatGPT ou Perplexity repose sur des mécaniques en partie différentes, et constitue une autre question.</p>
+      </section>
+    </main>
+
+    <footer class="wrap">
+      <p class="source">Source : Google Search Central, « Optimizing your website for generative AI features on Google Search », mis à jour en juin 2026.<br><a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" target="_blank" rel="noopener">developers.google.com/search/docs/fundamentals/ai-optimization-guide</a></p>
+      <a class="backlink" href="https://aminebrr.github.io/Portfolio">&larr; Retour aux projets</a>
+    </footer>
+  </div>
+
+<script>
+  function setLang(l){
+    document.body.setAttribute('data-lang', l);
+    document.documentElement.setAttribute('lang', l === 'fr' ? 'fr' : 'en');
+    document.getElementById('btn-en').setAttribute('aria-pressed', l === 'en');
+    document.getElementById('btn-fr').setAttribute('aria-pressed', l === 'fr');
+  }
+</script>
+</body>
+</html>
