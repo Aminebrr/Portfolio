@@ -957,49 +957,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   letter-spacing: 0.01em;
 }
 
-/* ─── EXPERIENCE ─────────────────────────── */
-.exp-block { margin-top: 24px; }
-.exp-list { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-direction: column; gap: 0; }
-.exp-item {
-  display: grid;
-  grid-template-columns: 136px 1fr;
-  gap: 4px 20px;
-  padding: 15px 0;
-  border-top: 1px solid rgba(240,237,232,0.10);
-}
-.exp-item:first-child { border-top: none; padding-top: 4px; }
-.exp-when {
-  font-family: var(--mono);
-  font-size: 11.5px;
-  color: var(--accent2);
-  letter-spacing: 0.04em;
-  padding-top: 2px;
-  font-variant-numeric: tabular-nums;
-}
-.exp-role {
-  font-size: 15px;
-  font-weight: 500;
-  color: #F0EDE8;
-  line-height: 1.35;
-  margin: 0 0 3px;
-}
-.exp-org {
-  font-size: 13px;
-  color: rgba(240,237,232,0.62);
-  margin: 0 0 6px;
-}
-.exp-desc {
-  font-size: 13px;
-  color: rgba(240,237,232,0.55);
-  line-height: 1.6;
-  margin: 0;
-  max-width: 56ch;
-}
-@media (max-width: 600px) {
-  .exp-item { grid-template-columns: 1fr; gap: 3px; }
-  .exp-when { padding-top: 0; }
-}
-
 /* ─── CAMPAIGN GALLERY ───────────────────── */
 .cs-gallery {
   display: grid;
@@ -1565,7 +1522,6 @@ footer {
     <li><a href="#perspective" onclick="closeMenu()" data-en="Perspective" data-fr="Perspective">Perspective</a></li>
     <li><a href="#tools-page" onclick="closeMenu()" data-en="Tools" data-fr="Outils">Tools</a></li>
     <li><a href="#about" onclick="closeMenu()" data-en="About" data-fr="À propos">About</a></li>
-    <li><a href="#experience" onclick="closeMenu()" data-en="Experience" data-fr="Expérience">Experience</a></li>
     <li><a href="#certifications" onclick="closeMenu()" data-en="Certifications" data-fr="Certifications">Certifications</a></li>
     <li><a href="#contact" onclick="closeMenu()" data-en="Contact" data-fr="Contact">Contact</a></li>
   </ul>
@@ -2457,60 +2413,6 @@ footer {
         </div>
       </div>
 
-      <!-- ══ EXPERIENCE ══  Sourced from CV, Sept 2026. Bilingual: sits OUTSIDE
-           #about-en / #about-fr so it never disappears in French. -->
-      <div class="exp-block" id="experience">
-        <span class="edu-label" data-en="Experience" data-fr="Expérience">Experience</span>
-        <ul class="exp-list">
-
-          <li class="exp-item">
-            <span class="exp-when" data-en="Since Oct 2024" data-fr="Depuis oct. 2024">Since Oct 2024</span>
-            <div>
-              <p class="exp-role" data-en="Marketing &amp; Communication Consultant" data-fr="Consultant marketing et communication">Marketing &amp; Communication Consultant</p>
-              <p class="exp-org" data-en="Motivenco and independent clients · Remote" data-fr="Motivenco et clients indépendants · À distance">Motivenco and independent clients &middot; Remote</p>
-              <p class="exp-desc" data-en="Digital content and communication for Motivenco, a communication agency in Morocco, now on a project basis. Six client accounts in parallel, each with its own editorial calendar, budget and deadlines. Monthly KPI reporting per client, and influence campaigns run from brief through to results. Since January 2026 I also work with independent clients: start-ups, small businesses and individuals. I shoot and edit the photo and video myself." data-fr="Contenu digital et communication pour Motivenco, agence de communication au Maroc, désormais en mode projet. Six comptes clients en parallèle, chacun avec son calendrier éditorial, son budget et ses échéances. Reporting mensuel des KPI par client, et campagnes d&rsquo;influence menées du brief jusqu&rsquo;aux résultats. Depuis janvier 2026, également des clients indépendants : start-ups, petites entreprises et particuliers. Photos et vidéos réalisées par mes soins, de la prise de vue au montage.">Digital content and communication for Motivenco, a communication agency in Morocco, now on a project basis. Six client accounts in parallel, each with its own editorial calendar, budget and deadlines. Monthly KPI reporting per client, and influence campaigns run from brief through to results. Since January 2026 I also work with independent clients: start-ups, small businesses and individuals. I shoot and edit the photo and video myself.</p>
-            </div>
-          </li>
-
-          <li class="exp-item">
-            <span class="exp-when" data-en="Oct 2024 – Apr 2025" data-fr="Oct. 2024 – avr. 2025">Oct 2024 – Apr 2025</span>
-            <div>
-              <p class="exp-role" data-en="Communication &amp; Digital Projects Intern" data-fr="Stagiaire communication et projets digitaux">Communication &amp; Digital Projects Intern</p>
-              <p class="exp-org">Michelin &middot; Clermont-Ferrand, <span data-en="France" data-fr="France">France</span></p>
-              <p class="exp-desc" data-en="Internal communication for innovation and corporate projects, from planning through production to rollout. Articles, newsletters, presentations, visuals and short videos in French and English. Internal events, workshops and project launches. Intranet and SharePoint content, with engagement and performance tracking. Employer branding through employee portraits. AI tools built into research and content production, with accuracy checks and brand-guideline compliance." data-fr="Communication interne des projets innovation et corporate, de la planification à la production et au déploiement des contenus. Articles, newsletters, présentations, visuels et vidéos courtes, en français et en anglais. Événements internes, ateliers et lancements de projets. Contenus intranet et SharePoint, avec suivi de l&rsquo;engagement et des indicateurs de performance. Marque employeur : portraits de collaborateurs. Outils d&rsquo;IA intégrés à la recherche et à la production de contenus, avec vérification de l&rsquo;exactitude et respect de la charte.">Internal communication for innovation and corporate projects, from planning through production to rollout. Articles, newsletters, presentations, visuals and short videos in French and English. Internal events, workshops and project launches. Intranet and SharePoint content, with engagement and performance tracking. Employer branding through employee portraits. AI tools built into research and content production, with accuracy checks and brand-guideline compliance.</p>
-            </div>
-          </li>
-
-          <li class="exp-item">
-            <span class="exp-when" data-en="Oct 2021 – Jul 2024" data-fr="Oct. 2021 – juil. 2024">Oct 2021 – Jul 2024</span>
-            <div>
-              <p class="exp-role" data-en="Communication &amp; PR Coordinator" data-fr="Coordinateur communication et RP">Communication &amp; PR Coordinator</p>
-              <p class="exp-org" data-en="Just Eat Takeaway.com · Brussels, Belgium" data-fr="Just Eat Takeaway.com · Bruxelles, Belgique">Just Eat Takeaway.com &middot; Brussels, Belgium</p>
-              <p class="exp-desc" data-en="Promoted internally in October 2021 from hub operations coordinator. Daily coordination with agencies, media partners and internal teams, checking deliverables against the brief. Corporate trade shows and events, with newsletters, social posts and printed materials to match. Display and e-mail campaigns for Belgium and other European markets, with click-through up 15 to 20 percent. French and English adaptation of head-office web pages and banners, kept inside the brand tone and guidelines." data-fr="Promotion interne en octobre 2021, après le poste de coordinateur des opérations. Coordination quotidienne avec les agences, partenaires médias et équipes internes, avec contrôle des livrables selon le brief. Salons et événements corporate, avec newsletters, publications réseaux sociaux et supports imprimés associés. Campagnes display et e-mailing pour la Belgique et d&rsquo;autres marchés européens : taux de clic en hausse de 15 à 20 %. Déclinaison en français et en anglais des pages web et bannières du siège, dans le respect du ton et de la charte de marque.">Promoted internally in October 2021 from hub operations coordinator. Daily coordination with agencies, media partners and internal teams, checking deliverables against the brief. Corporate trade shows and events, with newsletters, social posts and printed materials to match. Display and e-mail campaigns for Belgium and other European markets, with click-through up 15 to 20 percent. French and English adaptation of head-office web pages and banners, kept inside the brand tone and guidelines.</p>
-            </div>
-          </li>
-
-          <li class="exp-item">
-            <span class="exp-when" data-en="Dec 2020 – Oct 2021" data-fr="Déc. 2020 – oct. 2021">Dec 2020 – Oct 2021</span>
-            <div>
-              <p class="exp-role" data-en="Hub Operations Coordinator" data-fr="Coordinateur des opérations du hub">Hub Operations Coordinator</p>
-              <p class="exp-org" data-en="Just Eat Takeaway.com · Brussels, Belgium" data-fr="Just Eat Takeaway.com · Bruxelles, Belgique">Just Eat Takeaway.com &middot; Brussels, Belgium</p>
-              <p class="exp-desc" data-en="Internal communication with couriers at the Brussels site. Trained around 300 couriers and ran the monthly review meetings." data-fr="Communication interne du site auprès des livreurs : formation d&rsquo;environ 300 livreurs et animation des bilans mensuels.">Internal communication with couriers at the Brussels site. Trained around 300 couriers and ran the monthly review meetings.</p>
-            </div>
-          </li>
-
-          <li class="exp-item">
-            <span class="exp-when" data-en="Feb 2018 – Jun 2020" data-fr="Févr. 2018 – juin 2020">Feb 2018 – Jun 2020</span>
-            <div>
-              <p class="exp-role" data-en="Communication Assistant" data-fr="Assistant communication">Communication Assistant</p>
-              <p class="exp-org" data-en="Distradiv · Morocco" data-fr="Distradiv · Maroc">Distradiv &middot; Morocco</p>
-              <p class="exp-desc" data-en="Social media, promotional materials and community management. Organic engagement up 8 percent." data-fr="Réseaux sociaux, supports promotionnels et animation de communauté : engagement organique en hausse de 8 %.">Social media, promotional materials and community management. Organic engagement up 8 percent.</p>
-            </div>
-          </li>
-
-        </ul>
-      </div>
-
       <!-- Education: outside the language blocks (it used to vanish in French) -->
       <div class="education-block">
         <span class="edu-label" data-en="Education" data-fr="Formation">Education</span>
@@ -2629,10 +2531,7 @@ footer {
       </button>
       <a href="https://www.linkedin.com/in/mohammed-amine-brahimi" target="_blank" rel="noopener" class="btn-ghost">LinkedIn</a>
 
-      <!-- No CV download by design: tailored CVs go out with applications.
-           The on-page Experience section (#experience) carries employers,
-           titles, dates and scope for anyone browsing. -->
-      <a href="#experience" class="btn-ghost" data-en="Experience" data-fr="Expérience">Experience</a>
+      <!-- No CV download by design: tailored CVs go out with applications. -->
     </div>
   </div>
 </section>
@@ -2647,7 +2546,6 @@ footer {
       <li><a href="#perspective" data-en="Perspective" data-fr="Perspective">Perspective</a></li>
       <li><a href="#tools-page" data-en="Tools" data-fr="Outils">Tools</a></li>
       <li><a href="#about" data-en="About" data-fr="À propos">About</a></li>
-      <li><a href="#experience" data-en="Experience" data-fr="Expérience">Experience</a></li>
       <li><a href="#certifications" data-en="Certifications" data-fr="Certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="https://www.linkedin.com/in/mohammed-amine-brahimi" target="_blank" rel="noopener">LinkedIn</a></li>
