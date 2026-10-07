@@ -5,12 +5,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Amine Brahimi — Communication &amp; Marketing</title>
-<meta content="Amine Brahimi — Communication &amp; digital marketing across brand, content, campaigns, social media and SEO. Experience with Just Eat Takeaway.com, Michelin and Motivenco." name="description"/>
+<meta content="Amine Brahimi — Communication &amp; digital marketing across brand, content, campaigns, social media and SEO. Experience with Just Eat Takeaway.com and Motivenco." name="description"/>
 <meta content="Amine Brahimi" name="author"/>
 <link href="https://aminebrr.github.io/Portfolio/" rel="canonical"/>
 <meta content="Amine Brahimi" property="og:site_name"/>
 <meta content="Amine Brahimi — Communication &amp; Marketing" property="og:title"/>
-<meta content="Communication and digital marketing across France, Belgium and Morocco. In-house at Just Eat Takeaway.com and Michelin, agency side at Motivenco." property="og:description"/>
+<meta content="Communication and digital marketing across France, Belgium and Morocco. In-house at Just Eat Takeaway.com, agency side at Motivenco." property="og:description"/>
 <meta content="profile" property="og:type"/>
 <meta content="https://aminebrr.github.io/Portfolio/" property="og:url"/>
 <meta content="en_GB" property="og:locale"/>
@@ -36,7 +36,7 @@
   "email": "mailto:amiinebrahiimii@gmail.com",
   "url": "https://aminebrr.github.io/Portfolio/",
   "image": "https://aminebrr.github.io/Portfolio/og-image.jpg",
-  "description": "Communication and marketing across France, Belgium and Morocco, in French, English and Arabic. In-house at Just Eat Takeaway.com and Michelin, agency side at Motivenco.",
+  "description": "Communication and marketing across France, Belgium and Morocco, in French, English and Arabic. In-house at Just Eat Takeaway.com, agency side at Motivenco.",
   "knowsLanguage": [
     { "@type": "Language", "name": "French" },
     { "@type": "Language", "name": "English" },
@@ -47,7 +47,6 @@
     "Communication 360",
     "CRM and retention marketing",
     "Lifecycle marketing",
-    "Political communication",
     "Institutional communication",
     "SEO and content strategy",
     "Employer branding",
@@ -1239,7 +1238,7 @@ footer {
 .footer-logo { font-family: var(--serif);
   font-weight: 400; font-size: 16px; color: rgba(255,255,255,0.4); }
 .footer-logo span { color: var(--accent); }
-.footer-links { display: flex; gap: 20px; list-style: none; }
+.footer-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 20px; list-style: none; }
 .footer-links a { color: rgba(255,255,255,0.25); transition: color .2s; }
 .footer-links a:hover { color: var(--accent); }
 
@@ -1551,6 +1550,30 @@ footer {
 @media(max-width:900px){
   .concept-note{font-size:11.5px}
 }
+/* ─── BLOG ───────────────────────────────── */
+.blog-section { padding: 100px 40px; background: var(--bg); border-bottom: 0.5px solid var(--border); }
+.blog-inner { max-width: var(--max); margin: 0 auto; }
+.blog-lead { font-size: 15px; color: var(--text2); max-width: 60ch; margin: 10px 0 36px; }
+.blog-list { display: grid; gap: 20px; }
+.blog-card { display: grid; grid-template-columns: 260px 1fr; background: var(--bg2); border: 0.5px solid var(--border2); border-radius: 16px; overflow: hidden; transition: border-color .25s, box-shadow .25s, transform .25s; }
+@media (hover: hover) { .blog-card:hover { border-color: rgba(200,132,42,0.4); box-shadow: 0 8px 32px rgba(30,28,25,0.08); transform: translateY(-2px); } }
+.blog-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.blog-thumb { background: var(--bg-dark); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 36px 20px; }
+.blog-strike { font-family: var(--mono); font-size: 22px; color: #8A8478; text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: #C9694A; letter-spacing: .04em; }
+.blog-keep { font-family: var(--serif); font-size: 44px; color: var(--accent2); line-height: 1; }
+.blog-body { padding: 30px 32px; }
+.blog-meta { font-family: var(--mono); font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--text3); margin-bottom: 10px; }
+.blog-title { font-family: var(--serif); font-weight: 400; font-size: 30px; line-height: 1.1; color: var(--text1); margin-bottom: 10px; }
+.blog-desc { font-size: 15px; color: var(--text2); max-width: 52ch; margin-bottom: 18px; }
+.blog-cta { font-family: var(--mono); font-size: 12.5px; letter-spacing: .06em; color: var(--accent); }
+@media (max-width: 900px) {
+  .blog-section { padding: 60px 16px; }
+  .blog-card { grid-template-columns: 1fr; }
+  .blog-thumb { flex-direction: row; padding: 24px 16px; }
+  .blog-keep { font-size: 36px; }
+  .blog-body { padding: 22px 20px; }
+}
+@media (prefers-reduced-motion: reduce) { .blog-card { transition: none; } }
 </style>
 </head>
 <body>
@@ -1565,7 +1588,7 @@ footer {
 <ul class="nav-links">
 <li><a class="active" data-en="Home" data-fr="Accueil" href="#hero">Home</a></li>
 <li><a data-en="Work" data-fr="Projets" href="#work">Work</a></li>
-<li><a data-en="Perspective" data-fr="Perspective" href="#perspective">Perspective</a></li>
+<li><a data-en="Blog" data-fr="Blog" href="#blog">Blog</a></li>
 <li><a data-en="Tools" data-fr="Outils" href="#tools-page">Tools</a></li>
 <li><a data-en="About" data-fr="À propos" href="#about">About</a></li>
 <li><a data-en="Contact" data-fr="Contact" href="#contact">Contact</a></li>
@@ -1584,7 +1607,7 @@ footer {
 <ul>
 <li><a data-en="Home" data-fr="Accueil" href="#hero" onclick="closeMenu()">Home</a></li>
 <li><a data-en="Work" data-fr="Projets" href="#work" onclick="closeMenu()">Work</a></li>
-<li><a data-en="Perspective" data-fr="Perspective" href="#perspective" onclick="closeMenu()">Perspective</a></li>
+<li><a data-en="Blog" data-fr="Blog" href="#blog" onclick="closeMenu()">Blog</a></li>
 <li><a data-en="Tools" data-fr="Outils" href="#tools-page" onclick="closeMenu()">Tools</a></li>
 <li><a data-en="About" data-fr="À propos" href="#about" onclick="closeMenu()">About</a></li>
 <li><a data-en="Experience" data-fr="Expérience" href="#experience" onclick="closeMenu()">Experience</a></li>
@@ -1609,10 +1632,10 @@ footer {
         <span>·</span> Institutional Communication
       </p>
 <p class="hero-tagline" id="hero-tagline-en">
-        Where political intelligence meets <em>brand strategy</em>.<br/>In French, English and Arabic.
+        Campaigns, content and <em>communication</em><br/>in English, French and Arabic.
       </p>
 <p class="hero-tagline" id="hero-tagline-fr" style="display:none;">
-        Là où l’intelligence politique rencontre la <em>stratégie de marque</em>.<br/>En français, en anglais et en arabe.
+        Campagnes, contenus et <em>communication</em><br/>en anglais, en français et en arabe.
       </p>
 <div class="kpis">
 <div class="kpi"><span class="kpi-val">+15–20%</span><span class="kpi-lbl" data-en="Click-through rate&lt;br&gt;Just Eat display &amp; email" data-fr="Taux de clic&lt;br&gt;Just Eat display &amp; e-mailing">Click-through rate<br/>Just Eat display &amp; email</span></div>
@@ -1662,8 +1685,8 @@ footer {
 </div>
 <div class="spec-row">
 <span class="spec-label" data-en="Also" data-fr="Aussi" style="opacity:.5;">Also</span>
-<span class="spec-tag secondary">Political Communication</span>
-<span class="spec-tag secondary">Prompt Engineering</span>
+<span class="spec-tag secondary">Employer Branding</span>
+<span class="spec-tag secondary">Internal Communication</span>
 <span class="spec-tag secondary">Copywriting EN · FR</span>
 <span class="spec-tag secondary">Brand Messaging</span>
 <span class="spec-tag secondary">Performance Analysis</span>
@@ -1681,12 +1704,12 @@ footer {
 </div>
 </div><div class="case-study">
 <div class="cs-header">
-<div class="cs-brand-pill">JustEat Takeaway · Brussels, Belgium</div>
+<div class="cs-brand-pill">Just Eat Takeaway.com · Brussels, Belgium</div>
 <div class="cs-meta"><span>2022–2024</span><span data-en="· Campaign Strategy · Copywriting · Social Media" data-fr="· Stratégie de campagne · Rédaction · Réseaux sociaux">· Campaign Strategy · Copywriting · Social Media</span></div>
-<span class="cs-badge client" data-en="Just Eat Takeaway · in-house" data-fr="Just Eat Takeaway · en interne">Self-initiated strategic concept</span>
+<span class="cs-badge client" data-en="Just Eat Takeaway.com · in-house" data-fr="Just Eat Takeaway.com · en interne">Just Eat Takeaway.com · in-house</span>
 <h3 class="cs-title">Une faim de loup — <em><span data-en="Social Media Campaign" data-fr="Campagne Réseaux Sociaux">Social Media Campaign</span></em></h3>
 <p class="cs-subtitle" data-en="A Brussels-only campaign that repositioned JustEat around speed, using wait-time anxiety as the thing to solve rather than the thing to hide." data-fr="Campagne hyper-locale repositionnant JustEat comme une solution logistique ultra-rapide, exploitant la psychologie du consommateur pour éliminer l'anxiété d'attente et augmenter les commandes.">A Brussels-only campaign that repositioned JustEat around speed, using wait-time anxiety as the thing to solve rather than the thing to hide.</p>
-<p class="concept-note">Self-initiated strategic exercise based on brand and market analysis. Performance figures are scenario models, not measured campaign results.</p></div>
+</div>
 <div class="cs-img-wrap">
 <img alt='JustEat "Une faim de loup" campaign visual: the live delivery-tracking screen positioned as the hero, with a 20-minute delivery promise.' class="cs-img" height="1113" loading="lazy" src="img/justeat-faimloup.jpg" width="1600"/>
 </div>
@@ -1700,7 +1723,7 @@ footer {
 <div class="cs-block"><div class="cs-blabel">Brief</div><div class="cs-btext">Drive more orders in Brussels by reducing the #1 drop-off trigger: wait-time anxiety. Users abandoned the app before ordering due to uncertainty about delivery time.</div></div>
 <div class="cs-block"><div class="cs-blabel">My role</div><div class="cs-btext">Communication &amp; PR Coordinator on the Belgian market. I briefed the creative agency, checked every deliverable against the brief and the budget, adapted head-office pages and banners into French, and ran the display and e-mail campaigns behind this push.</div></div>
 <div class="cs-block"><div class="cs-blabel">Approach</div><div class="cs-btext">Used the French idiom <em>faim de loup</em> (“wolf’s hunger”) to activate intense-hunger psychology. Made the live tracking screen the hero. A 20-minute delivery promise removes the anxiety. Urgency and proximity over product features.</div></div>
-<div class="cs-block result"><div class="cs-blabel">Result</div><div class="cs-btext"><strong>+15–20% CTR uplift</strong> against the prior Brussels campaign baseline, tracked in GA4 funnel analysis. Delivery-window promise measurably reduced checkout drop-off and increased first-time orders. <strong>20+ assets/month</strong> sustained across web, social and email throughout the campaign run.</div></div>
+<div class="cs-block result"><div class="cs-blabel">Result</div><div class="cs-btext"><strong>+15–20% click-through rate</strong> on the display and e-mail campaigns, compared with the previous Brussels campaigns. <strong>20+ assets a month</strong> produced and adapted across web, social and e-mail during the run.</div></div>
 </div>
 </div>
 <div class="cs-lang" id="c1-fr">
@@ -1708,18 +1731,18 @@ footer {
 <div class="cs-block"><div class="cs-blabel">Brief</div><div class="cs-btext">Augmenter les commandes à Bruxelles en réduisant le premier frein : l’anxiété liée au temps d’attente. Les utilisateurs abandonnaient l’app avant de commander.</div></div>
 <div class="cs-block"><div class="cs-blabel">Mon rôle</div><div class="cs-btext">Coordinateur communication et RP sur le marché belge. Brief de l’agence créative, contrôle des livrables selon le brief et le budget, déclinaison en français des pages et bannières du siège, et pilotage des campagnes display et e-mailing derrière cette opération.</div></div>
 <div class="cs-block"><div class="cs-blabel">Approche</div><div class="cs-btext">Utilisation de l’idiome <em>faim de loup</em> pour activer la psychologie de faim intense. L’écran de suivi temps réel devient le héros, avec une promesse de 20 minutes. Urgence et proximité plutôt que fonctionnalités produit.</div></div>
-<div class="cs-block result"><div class="cs-blabel">Résultat</div><div class="cs-btext"><strong>+15–20% de CTR</strong> par rapport à la campagne Bruxelles précédente, suivi dans le funnel GA4. La promesse de fenêtre de livraison a réduit le taux d’abandon au checkout et augmenté les premières commandes. <strong>20+ assets/mois</strong> maintenus sur web, social et email tout au long de la campagne.</div></div>
+<div class="cs-block result"><div class="cs-blabel">Résultat</div><div class="cs-btext"><strong>Taux de clic en hausse de 15 à 20 %</strong> sur les campagnes display et e-mailing, par rapport aux campagnes bruxelloises précédentes. <strong>Plus de 20 supports par mois</strong> produits et déclinés sur le web, les réseaux sociaux et l’e-mailing pendant la campagne.</div></div>
 </div>
 </div>
 </div>
 </div><div class="case-study">
 <div class="cs-header">
-<div class="cs-brand-pill">JustEat Takeaway · Employer Branding · Belgium</div>
+<div class="cs-brand-pill">Just Eat Takeaway.com · Employer Branding · Belgium</div>
 <div class="cs-meta"><span>2022–2024</span><span data-en="· Employer Branding · Social Media · Gen Z Targeting" data-fr="· Employer Branding · Réseaux sociaux · Ciblage Gen Z">· Employer Branding · Social Media · Gen Z Targeting</span></div>
-<span class="cs-badge client" data-en="Just Eat Takeaway · in-house" data-fr="Just Eat Takeaway · en interne">Self-initiated strategic concept</span>
+<span class="cs-badge client" data-en="Just Eat Takeaway.com · in-house" data-fr="Just Eat Takeaway.com · en interne">Just Eat Takeaway.com · in-house</span>
 <h3 class="cs-title">Drive for JustEat — <em><span data-en="Employer Branding Campaign" data-fr="Campagne Employer Branding">Employer Branding Campaign</span></em></h3>
 <p class="cs-subtitle" data-en="Recruiting couriers across Belgium by selling the job as brand ambassadorship instead of delivery work." data-fr="Rebranding du travail de livreur en ambassadeur de marque pour recruter des coursiers parmi la Gen Z et les étudiants en Belgique.">Recruiting couriers across Belgium by selling the job as brand ambassadorship instead of delivery work.</p>
-<p class="concept-note">Self-initiated strategic exercise based on brand and market analysis. Performance figures are scenario models, not measured campaign results.</p></div>
+</div>
 <div class="cs-img-wrap">
 <img alt='JustEat courier recruitment campaign: split-screen visual pairing premium food with a smiling courier, under the line "Flexible hours. Great vibes."' class="cs-img" height="835" loading="lazy" src="img/justeat-drive.jpg" width="1600"/>
 </div>
@@ -1733,7 +1756,7 @@ footer {
 <div class="cs-block"><div class="cs-blabel">Brief</div><div class="cs-btext">Recruit a high volume of new couriers in Belgium by targeting students, Gen Z and freelancers who want flexibility more than a traditional job.</div></div>
 <div class="cs-block"><div class="cs-blabel">My role</div><div class="cs-btext">Coordinated the campaign from the Brussels side: agency and media-partner briefing, copy in French and English, and the social distribution. I tracked click-through and application conversion through the run.</div></div>
 <div class="cs-block"><div class="cs-blabel">Approach</div><div class="cs-btext">Rebranded “delivery work” as “brand ambassadorship.” Lifestyle narrative: freedom, vibes, community. A split screen puts premium food next to a smiling courier, so the courier reads as the person who brings the good part.</div></div>
-<div class="cs-block result"><div class="cs-blabel">Result</div><div class="cs-btext"><strong>+40% application volume</strong> from the 18–26 demographic vs. prior recruitment cycle. Courier supply shortfall resolved within 6 weeks of campaign launch. <strong>“Flexible hours. Great vibes.”</strong> became the standing brand voice for JustEat Belgium recruitment. The tagline outlived the campaign.</div></div>
+<div class="cs-block result"><div class="cs-blabel">Delivered</div><div class="cs-btext">Recruitment visuals and copy in French and English, built around the line <strong>“Flexible hours. Great vibes.”</strong>, briefed to the agency and media partners and distributed on social channels across Belgium.</div></div>
 </div>
 </div>
 <div class="cs-lang" id="c2-fr">
@@ -1741,7 +1764,7 @@ footer {
 <div class="cs-block"><div class="cs-blabel">Brief</div><div class="cs-btext">Recruter un volume élevé de nouveaux livreurs en Belgique en ciblant étudiants, Gen Z et freelances, qui veulent de la flexibilité plus qu’un emploi classique.</div></div>
 <div class="cs-block"><div class="cs-blabel">Mon rôle</div><div class="cs-btext">Coordination de la campagne côté Bruxelles : brief agence et partenaires médias, rédaction en français et en anglais, diffusion sociale. Suivi du taux de clic et de la conversion des candidatures.</div></div>
 <div class="cs-block"><div class="cs-blabel">Approche</div><div class="cs-btext">Rebranding du “travail de livraison” en “ambassadeur de marque.” Narrative lifestyle : liberté, ambiance, communauté. Split-screen : nourriture premium d’un côté, livreur souriant de l’autre. C’est le livreur qui apporte le bon moment.</div></div>
-<div class="cs-block result"><div class="cs-blabel">Résultat</div><div class="cs-btext"><strong>+40% de volume de candidatures</strong> chez les 18–26 ans vs. cycle de recrutement précédent. Pénurie de livreurs résolue en 6 semaines après lancement. <strong>“Flexible hours. Great vibes.”</strong> est devenu la voix de marque des recrutements JustEat Belgique. Le tagline a survécu à la campagne.</div></div>
+<div class="cs-block result"><div class="cs-blabel">Livré</div><div class="cs-btext">Visuels et textes de recrutement en français et en anglais, construits autour de la signature <strong>“Flexible hours. Great vibes.”</strong>, briefés à l’agence et aux partenaires médias, puis diffusés sur les réseaux sociaux en Belgique.</div></div>
 </div>
 </div>
 </div>
@@ -1750,23 +1773,23 @@ footer {
 <div class="cs-overlay"></div>
 <div class="cs-content">
 <div class="cs-meta">
-        TAKEAWAY.COM · PAN-EUROPEAN · 4 MARKETS<br/>
-        2022–2024
+        TAKEAWAY.COM · 4 MARKETS<br/>
+        CONCEPT PROJECT
       </div>
 <h2 class="cs-title">Crave It. Own It. Now.</h2>
 </div>
 </div>
 <div class="cs-header">
-<div class="cs-brand-pill">Takeaway.com · Pan-European · 4 Markets</div>
+<div class="cs-brand-pill">Takeaway.com · Concept · 4 markets</div>
 <div class="cs-meta">
-<span>2022–2024</span>
+<span data-en="Concept" data-fr="Concept">Concept</span>
 <span data-en="· Brand Strategy · Integrated Campaign · Paid Media · CRM" data-fr="· Stratégie de marque · Campagne intégrée · Médias payants · CRM">· Brand Strategy · Integrated Campaign · Paid Media · CRM</span>
 </div>
-<span class="cs-badge concept" data-en="Concept project · self-initiated" data-fr="Projet concept · auto-initié">Self-initiated strategic concept</span>
+<span class="cs-badge concept" data-en="Concept project · self-initiated" data-fr="Projet concept · auto-initié">Concept project · self-initiated</span>
 <h3 class="cs-title">Crave It. Own It. Now. — <em><span data-en="Pan-European Campaign" data-fr="Campagne Pan-Européenne">Pan-European Campaign</span></em></h3>
 <p class="cs-subtitle" data-en="A campaign built on one observation about how people order food: craving is immediate, emotional and usually impulsive." data-fr="Un concept de campagne pour repositionner Takeaway, ancré dans un insight comportemental : l'envie est immédiate, émotionnelle et souvent impulsive.">A campaign built on one observation about how people order food: craving is immediate, emotional and usually impulsive.</p>
 <p class="cs-note" data-en="A self-initiated strategy exercise, not client work. I built it on a brand I knew well from the inside, to show how I frame a brief, find the insight and structure an integrated plan. Any figures inside are modelled scenarios based on platform benchmarks, not measured results." data-fr="Un exercice de stratégie auto-initié, pas une mission client. Je l'ai construit sur une marque que je connaissais de l'intérieur, pour montrer comment je cadre un brief, trouve l'insight et structure un plan intégré. Les chiffres qu'il contient sont des scénarios modélisés à partir de références plateformes, pas des résultats mesurés.">A self-initiated strategy exercise, not client work. I built it on a brand I knew well from the inside, to show how I frame a brief, find the insight and structure an integrated plan. Any figures inside are modelled scenarios based on platform benchmarks, not measured results.</p>
-<p class="concept-note">Self-initiated strategic exercise based on brand and market analysis. Performance figures are scenario models, not measured campaign results.</p></div>
+</div>
 <div class="cs-img-wrap">
 <svg class="cs-img" style="width:100%;display:block;" viewbox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
 <defs>
@@ -1824,7 +1847,7 @@ footer {
 <path d="M762,260 Q756,236 763,214 Q769,194 762,174" fill="none" opacity="0.6" stroke="url(#ciSteam)" stroke-linecap="round" stroke-width="3.5"></path>
 <path d="M800,268 Q806,244 799,224 Q793,206 800,186" fill="none" opacity="0.45" stroke="url(#ciSteam)" stroke-linecap="round" stroke-width="2.5"></path>
 <!-- Eyebrow -->
-<text fill="#C8842A" font-family="'DM Mono','Courier New',monospace" font-size="12" font-weight="400" letter-spacing="4" opacity="0.85" x="88" y="148">TAKEAWAY.COM  ·  PAN-EUROPEAN  ·  2022–2024</text>
+<text fill="#C8842A" font-family="'DM Mono','Courier New',monospace" font-size="12" font-weight="400" letter-spacing="4" opacity="0.85" x="88" y="148">TAKEAWAY.COM  ·  CONCEPT  ·  4 MARKETS</text>
 <line opacity="0.4" stroke="#C8842A" stroke-width="0.8" x1="88" x2="340" y1="162" y2="162"></line>
 <!-- Accent bar -->
 <rect fill="#FF6600" height="300" opacity="0.7" rx="1" width="3" x="68" y="170"></rect>
@@ -1858,7 +1881,7 @@ footer {
 <div class="cs-block"><div class="cs-blabel">Brief</div><div class="cs-btext">Reposition Takeaway.com beyond transactional delivery, across FR, BE, DE and NL at once, by building a brand story anchored in craving rather than convenience.</div></div>
 <div class="cs-block"><div class="cs-blabel">My role</div><div class="cs-btext">Led campaign concept and strategic messaging framework. Defined the behavioural insight (craving is impulsive, not rational) and translated it into integrated creative direction across paid social, CRM, and OOH.</div></div>
 <div class="cs-block"><div class="cs-blabel">Approach</div><div class="cs-btext">Shifted brand voice from functional (“fast delivery”) to emotional (“own your craving”). Integrated CRM retention flows to convert first-time cravers into repeat customers, reducing CPA through loyalty loops rather than acquisition spend.</div></div>
-<div class="cs-block result"><div class="cs-blabel">Result</div><div class="cs-btext"><strong>~3× paid social ROAS</strong> vs. previous brand campaign baseline. <strong>+8–12pp repeat order rate</strong> in markets where CRM retention flows were activated. CPA fell because of retention rather than acquisition, which is a more durable model across four markets.</div></div>
+<div class="cs-block result"><div class="cs-blabel">Modelled outcome (not measured)</div><div class="cs-btext"><strong>~3× paid social ROAS</strong> vs. previous brand campaign baseline. <strong>+8–12pp repeat order rate</strong> in markets where CRM retention flows were activated. In this scenario, CPA falls through retention rather than acquisition, a more durable model across four markets.</div></div>
 </div>
 </div>
 <div class="cs-lang" id="c0-fr">
@@ -1866,7 +1889,7 @@ footer {
 <div class="cs-block"><div class="cs-blabel">Brief</div><div class="cs-btext">Repositionner Takeaway.com au-delà de la livraison transactionnelle, sur FR, BE, DE et NL en simultané, autour d’un récit de marque ancré dans l’envie plutôt que dans la commodité.</div></div>
 <div class="cs-block"><div class="cs-blabel">Mon rôle</div><div class="cs-btext">Pilotage du concept de campagne et du cadre de messages stratégiques. Définition de l’insight comportemental (l’envie est impulsive, pas rationnelle) et traduction en direction créative intégrée : social payant, CRM, OOH.</div></div>
 <div class="cs-block"><div class="cs-blabel">Approche</div><div class="cs-btext">Déplacement de la voix de marque du fonctionnel (“livraison rapide”) à l’émotionnel (“possède ton envie”). Mise en place de flux CRM de rétention pour convertir les primo-utilisateurs en clients récurrents, ce qui a réduit le CPA par la fidélisation plutôt que par l’acquisition.</div></div>
-<div class="cs-block result"><div class="cs-blabel">Résultat</div><div class="cs-btext"><strong>~3× ROAS social payant</strong> vs. référence campagne marque précédente. <strong>+8–12pp taux de commandes répétées</strong> sur les marchés avec flows CRM activés. Le CPA a baissé grâce à la rétention plutôt qu’à l’acquisition, un modèle plus durable sur quatre marchés.</div></div>
+<div class="cs-block result"><div class="cs-blabel">Résultat modélisé (non mesuré)</div><div class="cs-btext"><strong>~3× ROAS social payant</strong> vs. référence campagne marque précédente. <strong>+8–12pp taux de commandes répétées</strong> sur les marchés avec flows CRM activés. Dans ce scénario, le CPA baisse grâce à la rétention plutôt qu’à l’acquisition, un modèle plus durable sur quatre marchés.</div></div>
 </div>
 </div>
 </div>
@@ -1883,7 +1906,7 @@ footer {
 <span>2026</span>
 <span data-en="· Political Communication · Campaign Strategy · Regulated Environment · Darija &amp; Arabic" data-fr="· Communication politique · Stratégie de campagne · Environnement réglementé · Darija &amp; arabe">· Political Communication · Campaign Strategy · Regulated Environment · Darija &amp; Arabic</span>
 </div>
-<span class="cs-badge client" data-en="Agency work · Motivenco · ongoing" data-fr="Mission agence · Motivenco · en cours">Agency work · Motivenco · ongoing</span>
+<span class="cs-badge client" data-en="Agency work · Motivenco · 2026" data-fr="Mission agence · Motivenco · 2026">Agency work · Motivenco · 2026</span>
 <h3 class="cs-title" data-en="Legislative and regional elections — &lt;em&gt;Morocco 2026&lt;/em&gt;" data-fr="Élections législatives et régionales — &lt;em&gt;Maroc 2026&lt;/em&gt;">Legislative and regional elections — <em>Morocco 2026</em></h3>
 <p class="cs-subtitle" data-en="Political communication for a party campaign in the Oriental region, inside Morocco's new legal framework for digital campaigning." data-fr="Communication politique pour une campagne de parti dans la région de l'Oriental, dans le cadre du nouveau dispositif légal marocain encadrant la campagne numérique.">Political communication for a party campaign in the Oriental region, inside Morocco’s new legal framework for digital campaigning.</p>
 <div class="cs-kpis">
@@ -1908,7 +1931,7 @@ footer {
 </div>
 <div class="cs-block result">
 <div class="cs-blabel" data-en="Status" data-fr="Statut">Status</div>
-<div class="cs-btext" data-en="Live. The vote is on 23 September 2026, so there are no results to report yet. This entry describes scope and method only." data-fr="En cours. Le scrutin a lieu le 23 septembre 2026 : aucun résultat à rapporter à ce stade. Cette fiche décrit uniquement le périmètre et la méthode.">Live. The vote is on 23 September 2026, so there are no results to report yet. This entry describes scope and method only.</div>
+<div class="cs-btext" data-en="The vote took place on 23 September 2026. This entry covers scope and method only; campaign results belong to the party and are not published here." data-fr="Le scrutin a eu lieu le 23 septembre 2026. Cette fiche décrit uniquement le périmètre et la méthode ; les résultats de campagne appartiennent au parti et ne sont pas publiés ici.">The vote took place on 23 September 2026. This entry covers scope and method only; campaign results belong to the party and are not published here.</div>
 </div>
 </div>
 <div class="cs-gallery">
@@ -1941,6 +1964,29 @@ footer {
 
 </div>
 </section>
+<!-- ══ BLOG ══ -->
+<section class="blog-section" id="blog">
+<div class="blog-inner">
+<div class="section-lbl"><div class="sl-line"></div><span class="sl-text" data-en="Blog" data-fr="Blog">Blog</span></div>
+<h2 class="work-title" data-en="Writing" data-fr="Articles">Writing</h2>
+<p class="blog-lead" data-en="Notes on search, content and communication, written in my own words and sourced to primary documents." data-fr="Des articles sur la recherche, le contenu et la communication, écrits avec mes mots et sourcés aux documents d’origine.">Notes on search, content and communication, written in my own words and sourced to primary documents.</p>
+<div class="blog-list">
+<a class="blog-card" href="still-just-seo.html">
+<div aria-hidden="true" class="blog-thumb">
+<span class="blog-strike">GEO</span>
+<span class="blog-strike">AEO</span>
+<span class="blog-keep">SEO.</span>
+</div>
+<div class="blog-body">
+<p class="blog-meta" data-en="Generative AI &amp; Search · Updated Sept 2026 · EN / FR" data-fr="IA générative &amp; recherche · Mis à jour sept. 2026 · EN / FR">Generative AI &amp; Search · Updated Sept 2026 · EN / FR</p>
+<h3 class="blog-title" data-en="Still Just SEO" data-fr="Toujours rien que du SEO">Still Just SEO</h3>
+<p class="blog-desc" data-en="A close read of Google’s official guidance on generative AI search, and why GEO and AEO are mostly noise." data-fr="Une lecture du guide officiel de Google sur l’IA générative dans la recherche, et pourquoi le GEO et l’AEO sont surtout du bruit.">A close read of Google’s official guidance on generative AI search, and why GEO and AEO are mostly noise.</p>
+<span class="blog-cta" data-en="Read the article →" data-fr="Lire l’article →">Read the article →</span>
+</div>
+</a>
+</div>
+</div>
+</section>
 <!-- ══ TOOLS & PLATFORMS ══ -->
 <section class="tools-page" id="tools-page"><div class="tools-page-inner"><div class="section-lbl"><div class="sl-line"></div><span class="sl-text" data-en="Toolkit" data-fr="Outils">Toolkit</span></div><h2 class="tools-page-title" data-en="Tools I use" data-fr="Outils utilisés">Tools I use</h2><p class="tools-page-sub" data-en="A focused working toolkit across digital marketing, SEO, content, creative production and project coordination." data-fr="Un ensemble d’outils ciblé pour le marketing digital, le SEO, le contenu, la création et la coordination de projets.">A focused working toolkit across digital marketing, SEO, content, creative production and project coordination.</p><div class="tools-category"><div class="tools-cat-label" data-en="Digital marketing &amp; SEO" data-fr="Marketing digital &amp; SEO">Digital marketing &amp; SEO</div><div class="tools-logo-grid"><span class="tool-pill">GA4</span><span class="tool-pill">Google Search Console</span><span class="tool-pill">Google Keyword Planner</span><span class="tool-pill">HubSpot</span><span class="tool-pill">Ahrefs</span><span class="tool-pill">SEMrush</span><span class="tool-pill">Moz</span><span class="tool-pill">WordPress</span><span class="tool-pill">Meta Business Suite</span><span class="tool-pill">Brevo</span></div></div><div class="tools-category"><div class="tools-cat-label" data-en="Creative production" data-fr="Production créative">Creative production</div><div class="tools-logo-grid"><span class="tool-pill">Adobe Photoshop</span><span class="tool-pill">Adobe InDesign</span><span class="tool-pill">Figma</span><span class="tool-pill">Canva</span><span class="tool-pill">After Effects</span><span class="tool-pill">Premiere Pro</span></div></div><div class="tools-category"><div class="tools-cat-label" data-en="Project coordination" data-fr="Coordination de projets">Project coordination</div><div class="tools-logo-grid"><span class="tool-pill">Trello</span><span class="tool-pill">Asana</span><span class="tool-pill">Notion</span><span class="tool-pill">Google Workspace</span><span class="tool-pill">Microsoft Office</span></div></div></div></section>
 <!-- ══ ABOUT ══ -->
@@ -1950,14 +1996,14 @@ footer {
 <div class="section-lbl"><div class="sl-line"></div><span class="sl-text" data-en="About" data-fr="À propos">About</span></div>
 <h2 class="about-title"><span data-en="Seven years." data-fr="Sept ans.">Seven years.</span><br/><em><span data-en="Three countries." data-fr="Trois pays.">Three countries.</span></em></h2>
 <div id="about-en">
-<p class="about-body">Seven years across communication, marketing and digital projects in France, Belgium and Morocco. In house at Just Eat Takeaway.com and Michelin, agency side at Motivenco, and independent since 2024.</p>
-<p class="about-body">I work on two sides. The commercial one covers brand positioning, integrated campaigns, and <strong>CRM and retention</strong>. That last part is the growth model behind the Takeaway campaign, where repeat orders rose 8 to 12 points because we built loyalty loops instead of buying more acquisition. The institutional side comes from my <strong>Master’s in Political Studies (Governance &amp; European Societies)</strong> at UCLouvain, where I studied public opinion, policy, and how institutions actually talk.</p>
+<p class="about-body">Seven years across communication, marketing and digital projects in France, Belgium and Morocco. In house at Just Eat Takeaway.com, agency side at Motivenco, and independent since 2024.</p>
+<p class="about-body">I work on two sides. The commercial one covers brand positioning, integrated campaigns, and <strong>CRM and retention</strong>. The institutional side comes from my <strong>Master’s in Political Studies, European Governance and Societies</strong> at Sciences Po and UCLouvain, where I studied public opinion, policy, and how institutions actually talk.</p>
 <p class="about-body">I work across campaign coordination, content, digital communication and brand projects — from brief and messaging through production, distribution and performance tracking.</p>
 </div>
 <div id="about-fr" style="display:none;">
-<p class="about-body">Sept ans en communication et marketing digital, en France, en Belgique et au Maroc. En interne chez Just Eat Takeaway.com et Michelin, en agence chez Motivenco, et indépendant depuis 2024.</p>
-<p class="about-body">Je travaille sur deux terrains. Le commercial couvre le positionnement de marque, les campagnes intégrées et le <strong>CRM et la fidélisation</strong>. C’est le modèle de croissance derrière la campagne Takeaway, où les commandes répétées ont progressé de 8 à 12 points parce que nous avons construit des boucles de fidélisation au lieu d’acheter plus d’acquisition. L’institutionnel vient de mon <strong>Master en Sciences Politiques (Gouvernance &amp; Sociétés Européennes)</strong> à l’UCLouvain, où j’ai étudié l’opinion publique, les politiques publiques et la façon dont les institutions parlent vraiment.</p>
-<p class="about-body">La plupart des profils font l’un ou l’autre. Je fais les deux, en trois langues, sur quatre marchés européens et en Afrique du Nord. Un funnel social payant le lundi, une maison de messages institutionnelle le mardi.</p>
+<p class="about-body">Sept ans en communication et marketing digital, en France, en Belgique et au Maroc. En interne chez Just Eat Takeaway.com, en agence chez Motivenco, et indépendant depuis 2024.</p>
+<p class="about-body">Je travaille sur deux terrains. Le commercial couvre le positionnement de marque, les campagnes intégrées et le <strong>CRM et la fidélisation</strong>. L’institutionnel vient de mon <strong>Master en études politiques, finalité European Governance and Societies</strong>, à Sciences Po et à l’UCLouvain, où j’ai étudié l’opinion publique, les politiques publiques et la façon dont les institutions parlent vraiment.</p>
+<p class="about-body">Je travaille sur la coordination de campagnes, le contenu, la communication digitale et les projets de marque, du brief et des messages jusqu’à la production, la diffusion et le suivi des performances.</p>
 </div>
 <!-- Two practice tracks -->
 <div class="lanes">
@@ -1968,7 +2014,7 @@ footer {
 </div>
 <div class="lane">
 <span class="lane-label" data-en="Track 02" data-fr="Axe 02">Track 02</span>
-<p class="lane-title" data-en="Institutional &amp; political communication" data-fr="Communication institutionnelle &amp; politique">Institutional &amp; political communication</p>
+<p class="lane-title" data-en="Institutional &amp; public communication" data-fr="Communication institutionnelle &amp; publique">Institutional &amp; public communication</p>
 <p class="lane-desc" data-en="Message architecture, public opinion, stakeholder and advocacy communication. Built on EU governance and public policy at UCLouvain." data-fr="Architecture des messages, opinion publique, communication de plaidoyer et parties prenantes. Construite sur la gouvernance européenne et les politiques publiques à l’UCLouvain.">Message architecture, public opinion, stakeholder and advocacy communication. Built on EU governance and public policy at UCLouvain.</p>
 </div>
 </div>
@@ -1983,14 +2029,6 @@ footer {
 <p class="exp-role" data-en="Marketing &amp; Communication Consultant" data-fr="Consultant marketing et communication">Marketing &amp; Communication Consultant</p>
 <p class="exp-org" data-en="Motivenco and independent clients · Remote" data-fr="Motivenco et clients indépendants · À distance">Motivenco and independent clients · Remote</p>
 <p class="exp-desc" data-en="Digital content and communication for Motivenco, a communication agency in Morocco, now on a project basis. Six client accounts in parallel, each with its own editorial calendar, budget and deadlines. Monthly KPI reporting per client, and influence campaigns run from brief through to results. Since January 2026 I also work with independent clients: start-ups, small businesses and individuals. I shoot and edit the photo and video myself." data-fr="Contenu digital et communication pour Motivenco, agence de communication au Maroc, désormais en mode projet. Six comptes clients en parallèle, chacun avec son calendrier éditorial, son budget et ses échéances. Reporting mensuel des KPI par client, et campagnes d’influence menées du brief jusqu’aux résultats. Depuis janvier 2026, également des clients indépendants : start-ups, petites entreprises et particuliers. Photos et vidéos réalisées par mes soins, de la prise de vue au montage.">Digital content and communication for Motivenco, a communication agency in Morocco, now on a project basis. Six client accounts in parallel, each with its own editorial calendar, budget and deadlines. Monthly KPI reporting per client, and influence campaigns run from brief through to results. Since January 2026 I also work with independent clients: start-ups, small businesses and individuals. I shoot and edit the photo and video myself.</p>
-</div>
-</li>
-<li class="exp-item">
-<span class="exp-when" data-en="Oct 2024 – Apr 2025" data-fr="Oct. 2024 – avr. 2025">Oct 2024 – Apr 2025</span>
-<div>
-<p class="exp-role" data-en="Communication &amp; Digital Projects Intern" data-fr="Stagiaire communication et projets digitaux">Communication &amp; Digital Projects Intern</p>
-<p class="exp-org">Michelin · Clermont-Ferrand, <span data-en="France" data-fr="France">France</span></p>
-<p class="exp-desc" data-en="Internal communication for innovation and corporate projects, from planning through production to rollout. Articles, newsletters, presentations, visuals and short videos in French and English. Internal events, workshops and project launches. Intranet and SharePoint content, with engagement and performance tracking. Employer branding through employee portraits. AI tools built into research and content production, with accuracy checks and brand-guideline compliance." data-fr="Communication interne des projets innovation et corporate, de la planification à la production et au déploiement des contenus. Articles, newsletters, présentations, visuels et vidéos courtes, en français et en anglais. Événements internes, ateliers et lancements de projets. Contenus intranet et SharePoint, avec suivi de l’engagement et des indicateurs de performance. Marque employeur : portraits de collaborateurs. Outils d’IA intégrés à la recherche et à la production de contenus, avec vérification de l’exactitude et respect de la charte.">Internal communication for innovation and corporate projects, from planning through production to rollout. Articles, newsletters, presentations, visuals and short videos in French and English. Internal events, workshops and project launches. Intranet and SharePoint content, with engagement and performance tracking. Employer branding through employee portraits. AI tools built into research and content production, with accuracy checks and brand-guideline compliance.</p>
 </div>
 </li>
 <li class="exp-item">
@@ -2023,13 +2061,13 @@ footer {
 <div class="education-block">
 <span class="edu-label" data-en="Education" data-fr="Formation">Education</span>
 <strong><span data-en="Master LLCER, Media &amp; Cultural Mediation" data-fr="Master LLCER, Médias et médiation culturelle">Master LLCER, Media &amp; Cultural Mediation</span></strong><br/>
-<span class="edu-sub" data-en="Université Clermont Auvergne, France · 2024–2025 · Taught in English · Placement at Michelin" data-fr="Université Clermont Auvergne, France · 2024–2025 · Enseigné en anglais · Stage chez Michelin">Université Clermont Auvergne, France · 2024–2025 · Taught in English · Placement at Michelin</span>
+<span class="edu-sub" data-en="Université Clermont Auvergne, France · 2024–2025 · Taught in English" data-fr="Université Clermont Auvergne, France · 2024–2025 · Enseigné en anglais">Université Clermont Auvergne, France · 2024–2025 · Taught in English</span>
 <br/><br/>
-<strong><span data-en="Master in European Governance" data-fr="Master Gouvernance européenne">Master in European Governance</span></strong><br/>
-<span class="edu-sub" data-en="Sciences Po and UCLouvain, Belgium · 2020–2023 · Taught in English · EU institutions · Public policy" data-fr="Sciences Po et UCLouvain, Belgique · 2020–2023 · Enseigné en anglais · Institutions européennes · Politiques publiques">UCLouvain, Belgium · 2020–2023 · Taught in English · EU institutions · Public policy</span>
+<strong><span data-en="Master in Political Studies — European Governance and Societies" data-fr="Master en études politiques — finalité European Governance and Societies">Master in Political Studies — European Governance and Societies</span></strong><br/>
+<span class="edu-sub" data-en="Sciences Po and UCLouvain, Belgium · 2020–2023 · Taught in English · EU institutions · Public policy" data-fr="Sciences Po et UCLouvain, Belgique · 2020–2023 · Enseigné en anglais · Institutions européennes · Politiques publiques">Sciences Po and UCLouvain, Belgium · 2020–2023 · Taught in English · EU institutions · Public policy</span>
 <br/><br/>
-<strong><span data-en="BA in English Studies" data-fr="Licence en Études Anglophones">BA in English Studies</span></strong><br/>
-<span class="edu-sub" data-en="Université Mohammed 1, Oujda, Morocco · 2014–2017" data-fr="Université Mohammed 1, Oujda, Maroc · 2014–2017">Université Mohammed 1, Oujda, Morocco · 2014–2017</span>
+<strong><span data-en="Licence (Bac+3) in English Studies" data-fr="Licence Fondamentale en Études Anglophones (Bac+3)">Licence (Bac+3) in English Studies</span></strong><br/>
+<span class="edu-sub" data-en="Université Mohammed 1, Oujda, Morocco · 2014–2017 · Taught in English · Same level as a French Licence (LMD, Bac+3)" data-fr="Université Mohammed 1, Oujda, Maroc · 2014–2017 · Enseignée en anglais · Même niveau qu’une Licence française (LMD, Bac+3)">Université Mohammed 1, Oujda, Morocco · 2014–2017 · Taught in English · Same level as a French Licence (LMD, Bac+3)</span>
 </div>
 </div>
 <div>
@@ -2039,8 +2077,8 @@ footer {
 <div class="tool-card"><div class="tool-name" data-en="CMS &amp; CRM" data-fr="CMS &amp; CRM">CMS &amp; CRM</div><div class="tool-list">HubSpot · WordPress<br/>Sprinklr · Brevo · Wix</div></div>
 <div class="tool-card"><div class="tool-name" data-en="Design &amp; Media" data-fr="Design &amp; Média">Design &amp; Media</div><div class="tool-list">Figma · Photoshop<br/>InDesign · After Effects</div></div>
 <div class="tool-card"><div class="tool-name" data-en="Project Mgmt" data-fr="Gestion de Projet">Project Mgmt</div><div class="tool-list">Trello · Asana · Notion</div></div>
-<div class="tool-card"><div class="tool-name" data-en="AI &amp; LLMs" data-fr="IA &amp; LLMs">AI &amp; LLMs</div><div class="tool-list" data-en="ChatGPT · Claude · Gemini&lt;br&gt;Midjourney · Prompt Engineering&lt;br&gt;AWS ML Fundamentals (certified)" data-fr="ChatGPT · Claude · Gemini&lt;br&gt;Midjourney · Prompt Engineering&lt;br&gt;Fondamentaux AWS ML (certifié)">ChatGPT · Claude · Gemini<br/>Midjourney · Prompt Engineering<br/>AWS ML Fundamentals (certified)</div></div>
-<div class="tool-card" style="grid-column:span 2;"><div class="tool-name" data-en="Languages" data-fr="Langues">Languages</div><div class="tool-list" data-en="French — Fluent · English — Native level · Arabic — Mother tongue" data-fr="Français — Courant · Anglais — Niveau natif · Arabe — Langue maternelle">French — Fluent · English — C2 / Professional fluency · Arabic — Mother tongue</div></div>
+<div class="tool-card"><div class="tool-name" data-en="AI &amp; LLMs" data-fr="IA &amp; LLMs">AI &amp; LLMs</div><div class="tool-list" data-en="ChatGPT · Claude · Gemini&lt;br&gt;Midjourney&lt;br&gt;AWS ML Fundamentals (certified)" data-fr="ChatGPT · Claude · Gemini&lt;br&gt;Midjourney&lt;br&gt;Fondamentaux AWS ML (certifié)">ChatGPT · Claude · Gemini<br/>Midjourney<br/>AWS ML Fundamentals (certified)</div></div>
+<div class="tool-card" style="grid-column:span 2;"><div class="tool-name" data-en="Languages" data-fr="Langues">Languages</div><div class="tool-list" data-en="English — Bilingual (C2) · French — Fluent · Arabic — Mother tongue" data-fr="Anglais — Bilingue (C2) · Français — Courant · Arabe — Langue maternelle">English — Bilingual (C2) · French — Fluent · Arabic — Mother tongue</div></div>
 </div>
 </div>
 </div>
@@ -2142,10 +2180,10 @@ footer {
 <footer>
 <div class="footer-inner">
 <span class="footer-logo">AB<span>.</span></span>
-<span data-en="© 2026 Amine Brahimi · Paris" data-fr="© 2026 Amine Brahimi · Paris">© 2026 Amine Brahimi · Paris</span>
+<span data-en="© 2026 Amine Brahimi" data-fr="© 2026 Amine Brahimi">© 2026 Amine Brahimi</span>
 <ul class="footer-links">
 <li><a data-en="Work" data-fr="Projets" href="#work">Work</a></li>
-<li><a data-en="Perspective" data-fr="Perspective" href="#perspective">Perspective</a></li>
+<li><a data-en="Blog" data-fr="Blog" href="#blog">Blog</a></li>
 <li><a data-en="Tools" data-fr="Outils" href="#tools-page">Tools</a></li>
 <li><a data-en="About" data-fr="À propos" href="#about">About</a></li>
 <li><a data-en="Experience" data-fr="Expérience" href="#experience">Experience</a></li>
@@ -2156,7 +2194,7 @@ footer {
 </ul>
 </div>
 </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 /* ── Mobile Menu ── */
 function toggleMenu() {
   var menu = document.getElementById('mobile-menu');

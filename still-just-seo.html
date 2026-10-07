@@ -156,7 +156,7 @@
   <div lang-block="en">
     <header class="hero">
       <div class="wrap">
-        <p class="eyebrow">Perspective · Generative AI &amp; Search · Updated September 2026</p>
+        <p class="eyebrow">Blog · Generative AI &amp; Search · Updated September 2026</p>
         <h1>Still Just<br>SEO<span class="dot">.</span></h1>
         <p class="standfirst">The market is full of new acronyms such as GEO and AEO. Google's own guidance, however, is clear: when it comes to Search, <em>this remains SEO.</em></p>
 
@@ -238,7 +238,7 @@
       Google Search Central Blog, "Introducing Search Generative AI performance reports in Search Console", June 2026, with a note dated August 31, 2026. <a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports" target="_blank" rel="noopener">developers.google.com/search/blog/2026/06/gen-ai-performance-reports</a><br>
       Search Console Help, <a href="https://support.google.com/webmasters/answer/16984139" target="_blank" rel="noopener">Generative AI performance report</a> and <a href="https://support.google.com/webmasters/answer/16908024" target="_blank" rel="noopener">Search generative AI control</a>.<br>
       Search Engine Journal, "Google Search Console AI Reports Rolled Out Worldwide." <a href="https://www.searchenginejournal.com/google-search-console-ai-reports-rolled-out-worldwide/587836/" target="_blank" rel="noopener">searchenginejournal.com</a></p>
-      <a class="backlink" href="https://aminebrr.github.io/Portfolio">&larr; Back to work</a>
+      <a class="backlink" href="https://aminebrr.github.io/Portfolio/#blog">&larr; Back to the blog</a>
     </footer>
   </div>
 
@@ -246,7 +246,7 @@
   <div lang-block="fr">
     <header class="hero">
       <div class="wrap">
-        <p class="eyebrow">Perspective · IA générative &amp; recherche · Mis à jour en septembre 2026</p>
+        <p class="eyebrow">Blog · IA générative &amp; recherche · Mis à jour en septembre 2026</p>
         <h1>Toujours rien que du<br>SEO<span class="dot">.</span></h1>
         <p class="standfirst">Le marché regorge de nouveaux acronymes tels que le GEO et l’AEO. Le guide officiel de Google est pourtant clair&nbsp;: en matière de recherche, <em>il s’agit toujours de SEO.</em></p>
 
@@ -328,7 +328,7 @@
       Google Search Central Blog, «&nbsp;Introducing Search Generative AI performance reports in Search Console&nbsp;», juin 2026, avec une note datée du 31 août 2026. <a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports" target="_blank" rel="noopener">developers.google.com/search/blog/2026/06/gen-ai-performance-reports</a><br>
       Search Console Help, <a href="https://support.google.com/webmasters/answer/16984139" target="_blank" rel="noopener">Generative AI performance report</a> et <a href="https://support.google.com/webmasters/answer/16908024" target="_blank" rel="noopener">Search generative AI control</a>.<br>
       Search Engine Journal, «&nbsp;Google Search Console AI Reports Rolled Out Worldwide&nbsp;». <a href="https://www.searchenginejournal.com/google-search-console-ai-reports-rolled-out-worldwide/587836/" target="_blank" rel="noopener">searchenginejournal.com</a></p>
-      <a class="backlink" href="https://aminebrr.github.io/Portfolio">&larr; Retour aux projets</a>
+      <a class="backlink" href="https://aminebrr.github.io/Portfolio/#blog">&larr; Retour au blog</a>
     </footer>
   </div>
 
@@ -352,7 +352,13 @@
     document.getElementById('meta-description').setAttribute('content', pageMeta[lang].description);
     document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
     document.getElementById('btn-fr').setAttribute('aria-pressed', lang === 'fr');
+    try { localStorage.setItem('site-lang', lang); } catch (e) {}
   }
+  (function(){
+    var saved = null;
+    try { saved = localStorage.getItem('site-lang') || localStorage.getItem('lang'); } catch (e) {}
+    if (saved === 'fr') setLang('fr');
+  })();
 </script>
 </body>
 </html>
