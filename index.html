@@ -25,7 +25,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232A3CFF'/%3E%3Ctext x='50' y='70' font-family='Arial' font-weight='900' font-size='56' text-anchor='middle' fill='%23DBFF4F'%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Fredoka:wdth,wght@75..125,600..700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -243,7 +243,31 @@ details.more summary::-webkit-details-marker{display:none}
 
 /* ---------- contact ---------- */
 .contact{background:var(--blue);color:var(--white);padding:96px 0 80px;border-top:1.5px solid var(--ink)}
-.contact h2{font-size:clamp(72px,14vw,210px);color:var(--lime)}
+.touch-head{display:flex;align-items:center;flex-wrap:wrap;gap:8px 28px}
+.bubble{display:grid;font-family:'Fredoka','Archivo',Arial,sans-serif;font-weight:700;font-stretch:115%;font-size:clamp(62px,10.5vw,164px);line-height:1;letter-spacing:-.01em;margin:0;padding-bottom:.12em}
+.bubble-txt{color:var(--lime)}
+.bubble .word{display:inline-block;white-space:nowrap}
+.bubble .ch{display:inline-block;position:relative;z-index:0;cursor:default;transform-origin:50% 85%;transition:transform .35s cubic-bezier(.34,1.56,.64,1)}
+.bubble .ch::before{content:attr(data-ch);position:absolute;left:0;top:0;z-index:-1;color:#8FB012;opacity:0;transform:translateY(0);transition:opacity .2s ease;pointer-events:none;
+  text-shadow:0 2px 0 #8AAA11,0 4px 0 #84A310,0 6px 0 #7C9A0E,0 8px 0 #74900D,0 10px 0 #6B850B,0 12px 0 #61790A,0 14px 0 #566B08,0 22px 18px rgba(0,0,40,.35),0 34px 44px rgba(0,0,40,.25)}
+.bubble .ch > span{display:inline-block;color:var(--lime)}
+.bubble .ch.pop{transform:translateY(-.14em) scale(1.14) rotate(var(--r,0deg));transition-duration:.45s}
+.bubble .ch.pop::before{opacity:1}
+.bubble .ch.pop > span{color:transparent;background:linear-gradient(180deg,rgba(255,255,255,.65) 0%,rgba(255,255,255,.2) 34%,rgba(255,255,255,0) 50%),radial-gradient(130% 150% at 28% 12%,#F8FFD9 0%,#DBFF4F 36%,#BFE22C 70%,#A3C619 100%);-webkit-background-clip:text;background-clip:text}
+@media (hover:hover){.bubble .ch:hover{transform:translateY(-.14em) scale(1.14) rotate(var(--r,0deg));transition-duration:.45s}.bubble .ch:hover::before{opacity:1}.bubble .ch:hover > span{color:transparent;background:linear-gradient(180deg,rgba(255,255,255,.65) 0%,rgba(255,255,255,.2) 34%,rgba(255,255,255,0) 50%),radial-gradient(130% 150% at 28% 12%,#F8FFD9 0%,#DBFF4F 36%,#BFE22C 70%,#A3C619 100%);-webkit-background-clip:text;background-clip:text}}
+.smiley{width:clamp(84px,11vw,168px);height:auto;flex:none;overflow:visible}
+.sm-body{transform-box:fill-box;transform-origin:50% 50%;animation:smBob 3.6s ease-in-out infinite}
+.sm-ground{transform-box:fill-box;transform-origin:50% 50%;animation:smGround 3.6s ease-in-out infinite}
+.sm-eye{transform-box:fill-box;transform-origin:50% 50%;animation:smBlink 5s infinite}
+.smiley{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.sm-wink{opacity:0;transition:opacity .12s}
+.sm-eye-r{transition:opacity .12s}
+@media (hover:hover){.smiley:hover .sm-eye-r{opacity:0}.smiley:hover .sm-wink{opacity:1}}
+.smiley.wink .sm-eye-r{opacity:0}
+.smiley.wink .sm-wink{opacity:1}
+@keyframes smBob{0%,100%{transform:translateY(0) rotate(-7deg)}50%{transform:translateY(-12px) rotate(7deg)}}
+@keyframes smGround{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(.8);opacity:.6}}
+@keyframes smBlink{0%,94%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
 .contact p{font-size:20px;max-width:44ch;margin-top:28px}
 .mail{display:inline-block;margin-top:24px;font-size:clamp(22px,3.4vw,44px);font-weight:800;text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:8px;overflow-wrap:anywhere}
 .contact .btn{border-color:var(--white)}
@@ -277,7 +301,7 @@ footer ul{display:flex;flex-wrap:wrap;gap:6px 18px;list-style:none}
   .mobile-nav a{display:block;padding:12px 0;font-weight:700;font-size:20px;text-decoration:none;border-bottom:1px solid var(--line)}
   .hero{padding:32px 0 48px}
   .hero-grid{grid-template-columns:1fr;gap:44px}
-  .portrait{max-width:420px;margin-right:12px}
+  .portrait{max-width:420px;margin-right:16px}
   .sticker{width:86px;height:86px;font-size:14px;right:-12px}
   .stats{grid-template-columns:1fr;margin-top:40px}
   .stat,.stat + .stat{padding:18px 0;border-left:0;border-bottom:1.5px solid var(--ink)}
@@ -307,11 +331,72 @@ footer ul{display:flex;flex-wrap:wrap;gap:6px 18px;list-style:none}
   .certs{grid-template-columns:1fr}
   .more-list{grid-template-columns:1fr}
   .contact{padding:64px 0 56px}
+  .touch-head{flex-wrap:nowrap;align-items:flex-end;gap:10px}
+  .bubble{font-size:12.4vw;font-stretch:100%;flex:1;min-width:0}
+  .smiley{width:64px;margin-bottom:10px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .band-track{animation:none}
+  .sm-body,.sm-ground,.sm-eye{animation:none}
+  .bubble .ch{transition:none}
   .btn,.post,.site-media img{transition:none}
+}
+
+/* ---------- hero photo / phone flip ---------- */
+.flip{position:relative;display:grid;justify-items:center;align-items:start;perspective:1600px}
+.flip > *{grid-area:1/1}
+button.portrait{display:block;width:100%;font:inherit;color:inherit;text-align:left;cursor:pointer;transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .35s ease;transform-origin:50% 50%}
+@media (hover:hover){button.portrait:hover{transform:translateY(-4px) rotate(-1deg)}}
+.peek{position:absolute;left:22px;bottom:18px;display:inline-flex;align-items:center;gap:8px;background:var(--lime);color:var(--ink);border:1.5px solid var(--ink);border-radius:999px;padding:8px 14px;font-weight:700;font-size:14px;line-height:1.1}
+.peek .arr{display:inline-block;transition:transform .2s}
+button.portrait:hover .peek .arr,button.portrait:focus-visible .peek .arr{transform:translateX(4px)}
+.t-touch{display:none}
+@media (hover:none){.t-mouse{display:none}.t-touch{display:inline}}
+.phone-stage{position:absolute;top:0;left:50%;width:300px;margin-left:-150px;display:flex;flex-direction:column;align-items:center;gap:14px;opacity:0;visibility:hidden;transform:rotateY(85deg) scale(.92);transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .35s ease,visibility 0s linear .6s}
+.flip.open .phone-stage{position:relative;left:auto;margin-left:0;opacity:1;visibility:visible;transform:none;transition-delay:.12s,.12s,0s}
+.flip.open button.portrait{position:absolute;top:0;opacity:0;visibility:hidden;pointer-events:none;transform:rotateY(-85deg) scale(.92);transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .3s ease,visibility 0s linear .5s}
+.phone{position:relative;width:100%;background:var(--blue);border:1.5px solid var(--ink);border-radius:46px;padding:12px}
+.notch{position:absolute;top:22px;left:50%;width:78px;height:22px;margin-left:-39px;background:var(--ink);border-radius:999px;z-index:3}
+.screen{position:relative;aspect-ratio:9/18.5;border:1.5px solid var(--ink);border-radius:34px;overflow:hidden;background:var(--ink)}
+.track{display:flex;height:100%;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;cursor:grab;touch-action:pan-x pan-y}
+.track::-webkit-scrollbar{display:none}
+.track.dragging{cursor:grabbing;scroll-snap-type:none;scroll-behavior:auto}
+.track:focus-visible{outline:3px solid var(--lime);outline-offset:-3px}
+.slide{flex:0 0 100%;height:100%;scroll-snap-align:start;display:flex;flex-direction:column;background:var(--ink);color:var(--paper);user-select:none;-webkit-user-select:none}
+.s-top{display:flex;justify-content:space-between;padding:52px 18px 10px;font-size:11.5px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--lime)}
+.s-media{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:14px;overflow:hidden}
+.s-media img{max-width:100%;max-height:100%;border-radius:10px;pointer-events:none}
+.s-media.fill{padding:0}
+.s-media.fill img{width:100%;height:100%;object-fit:cover;border-radius:0}
+.s-media.top img{object-position:top}
+.sm-blue{background:var(--blue)}
+.sm-lime{background:var(--lime)}
+.sm-orange{background:var(--orange)}
+.sm-sand{background:#EFE6DC}
+.crave{font-size:58px;line-height:.84;color:var(--ink);font-weight:900;font-stretch:62%;width:100%;padding:0 6px}
+.crave span{display:block}
+.crave span:nth-child(2){color:var(--white)}
+.s-cap{padding:14px 18px 22px;display:flex;flex-direction:column;gap:4px}
+.s-cap h4{font-size:30px;color:var(--paper)}
+.s-cap p{font-size:13px;color:#BDBDB7;line-height:1.35}
+.s-link{align-self:flex-start;margin-top:8px;background:var(--lime);color:var(--ink);font-weight:700;font-size:13px;text-decoration:none;border-radius:999px;padding:7px 13px}
+.phone-ctrl{display:flex;align-items:center;justify-content:space-between;width:100%;gap:10px}
+.pc-btn{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--ink);background:var(--paper);font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.pc-btn:hover{background:var(--ink);color:var(--paper)}
+.pc-btn:disabled{opacity:.35;cursor:default;background:var(--paper);color:var(--ink)}
+.dots{display:flex;gap:6px;justify-content:center;flex:1}
+.dots button{width:10px;height:10px;padding:0;border-radius:999px;border:1.5px solid var(--ink);background:transparent;transition:width .2s,background .2s}
+.dots button[aria-selected="true"]{width:26px;background:var(--ink)}
+.phone-close{background:none;border:0;font-weight:700;font-size:15px;text-decoration:underline;text-underline-offset:4px;padding:6px}
+@media (max-width:800px){
+  .flip{justify-items:start}
+  .phone-stage{width:280px;left:0;margin-left:0}
+  .peek{left:16px;bottom:14px;font-size:13px;padding:7px 12px}
+}
+@media (prefers-reduced-motion:reduce){
+  button.portrait,.phone-stage,.flip.open .phone-stage,.flip.open button.portrait{transition:none}
+  .track{scroll-behavior:auto}
 }
 </style>
 </head>
@@ -356,7 +441,7 @@ footer ul{display:flex;flex-wrap:wrap;gap:6px 18px;list-style:none}
   <div class="wrap">
     <div class="hero-top">
       <span class="pill" data-en="Communication &amp; digital marketing" data-fr="Communication &amp; marketing digital">Communication &amp; digital marketing</span>
-      <span class="pill lime"><span class="dot" aria-hidden="true"></span><span data-en="Open to work in France &amp; Belgium" data-fr="Disponible en France et en Belgique">Open to work in France &amp; Belgium</span></span>
+      <span class="pill lime"><span class="dot" aria-hidden="true"></span><span data-en="Open to work" data-fr="Disponible">Open to work</span></span>
     </div>
     <h1 class="display"><span>Amine</span><span class="blue">Brahimi</span></h1>
     <div class="hero-grid">
@@ -368,9 +453,59 @@ footer ul{display:flex;flex-wrap:wrap;gap:6px 18px;list-style:none}
           <a class="btn" href="mailto:amiinebrahiimii@gmail.com" data-en="Email me" data-fr="M’écrire">Email me</a>
         </div>
       </div>
-      <div class="portrait">
-        <img src="amine-portrait.jpeg" width="1254" height="1254" alt="Portrait of Amine Brahimi" fetchpriority="high">
-        <div class="sticker" aria-hidden="true">EN<br>FR</div>
+      <div class="flip" id="flip">
+        <button type="button" class="portrait" id="portrait-btn" aria-expanded="false" aria-controls="phone-stage" aria-label="Show my work on a phone" data-en-label="Show my work on a phone" data-fr-label="Voir mes projets sur un téléphone">
+          <img src="amine-portrait.jpeg" width="1254" height="1254" alt="Portrait of Amine Brahimi" fetchpriority="high">
+          <span class="sticker" aria-hidden="true">EN<br>FR</span>
+          <span class="peek" aria-hidden="true"><span class="t-mouse" data-en="Click to see my work" data-fr="Cliquez pour voir mes projets">Click to see my work</span><span class="t-touch" data-en="Tap to see my work" data-fr="Touchez pour voir mes projets">Tap to see my work</span><span class="arr">&rarr;</span></span>
+        </button>
+
+        <div class="phone-stage" id="phone-stage" inert>
+          <div class="phone" role="region" aria-roledescription="carousel" aria-label="My work">
+            <span class="notch" aria-hidden="true"></span>
+            <div class="screen">
+              <div class="track" id="track" tabindex="0">
+
+                <div class="slide" role="group" aria-roledescription="slide" aria-label="1 / 5">
+                  <div class="s-top"><span>Amine Brahimi</span><span>1 / 5</span></div>
+                  <div class="s-media sm-blue"><img src="img/phone-faimloup.jpg" width="720" height="636" loading="lazy" alt="Une faim de loup campaign visual for Just Eat" draggable="false"></div>
+                  <div class="s-cap"><h4 class="display">Une faim de loup</h4><p data-en="Just Eat · Brussels · +15–20% click-through" data-fr="Just Eat · Bruxelles · +15 à 20 % de taux de clic">Just Eat · Brussels · +15–20% click-through</p><a class="s-link" href="#p1" data-en="See the project &darr;" data-fr="Voir le projet &darr;">See the project &darr;</a></div>
+                </div>
+
+                <div class="slide" role="group" aria-roledescription="slide" aria-label="2 / 5">
+                  <div class="s-top"><span>Amine Brahimi</span><span>2 / 5</span></div>
+                  <div class="s-media sm-lime fill"><img src="img/phone-drive.jpg" width="502" height="915" loading="lazy" alt="Drive for JustEat courier recruitment poster" draggable="false"></div>
+                  <div class="s-cap"><h4 class="display">Drive for JustEat</h4><p data-en="Just Eat · Employer branding, Belgium" data-fr="Just Eat · Marque employeur, Belgique">Just Eat · Employer branding, Belgium</p><a class="s-link" href="#p2" data-en="See the project &darr;" data-fr="Voir le projet &darr;">See the project &darr;</a></div>
+                </div>
+
+                <div class="slide" role="group" aria-roledescription="slide" aria-label="3 / 5">
+                  <div class="s-top"><span>Amine Brahimi</span><span>3 / 5</span></div>
+                  <div class="s-media sm-orange"><div class="crave display"><span>Crave it.</span><span>Own it.</span><span>Now.</span></div></div>
+                  <div class="s-cap"><h4 class="display">Crave It. Own It. Now.</h4><p data-en="Concept for Takeaway.com" data-fr="Concept pour Takeaway.com">Concept for Takeaway.com</p><a class="s-link" href="#p3" data-en="See the project &darr;" data-fr="Voir le projet &darr;">See the project &darr;</a></div>
+                </div>
+
+                <div class="slide" role="group" aria-roledescription="slide" aria-label="4 / 5">
+                  <div class="s-top"><span>Amine Brahimi</span><span>4 / 5</span></div>
+                  <div class="s-media sm-sand fill"><img src="img/phone-elections.jpg" width="720" height="900" loading="lazy" alt="Election-day poster for the Oujda constituency" draggable="false"></div>
+                  <div class="s-cap"><h4 class="display" data-en="Elections 2026" data-fr="Élections 2026">Elections 2026</h4><p data-en="Freelance · Oujda, Morocco" data-fr="Freelance · Oujda, Maroc">Freelance · Oujda, Morocco</p><a class="s-link" href="#p4" data-en="See the project &darr;" data-fr="Voir le projet &darr;">See the project &darr;</a></div>
+                </div>
+
+                <div class="slide" role="group" aria-roledescription="slide" aria-label="5 / 5">
+                  <div class="s-top"><span>Amine Brahimi</span><span>5 / 5</span></div>
+                  <div class="s-media fill top"><img src="img/phone-etiq.jpg" width="780" height="1450" loading="lazy" alt="Etiq on a phone: does it need an AI label?" draggable="false"></div>
+                  <div class="s-cap"><h4 class="display">Etiq</h4><p data-en="AI label checker for comms teams" data-fr="Vérificateur d’étiquetage IA pour les équipes com">AI label checker for comms teams</p><a class="s-link" href="https://aminebrr.github.io/etiq/" target="_blank" rel="noopener" data-en="Open Etiq &nearr;" data-fr="Ouvrir Etiq &nearr;">Open Etiq &nearr;</a></div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="phone-ctrl">
+            <button type="button" class="pc-btn" id="pc-prev" aria-label="Previous" data-en-label="Previous" data-fr-label="Précédent">&larr;</button>
+            <div class="dots" id="dots" role="tablist" aria-label="Choose a project"></div>
+            <button type="button" class="pc-btn" id="pc-next" aria-label="Next" data-en-label="Next" data-fr-label="Suivant">&rarr;</button>
+          </div>
+          <button type="button" class="phone-close" id="phone-close" data-en="&larr; Back to my photo" data-fr="&larr; Revenir à la photo">&larr; Back to my photo</button>
+        </div>
       </div>
     </div>
     <div class="stats">
@@ -396,7 +531,7 @@ footer ul{display:flex;flex-wrap:wrap;gap:6px 18px;list-style:none}
     </div>
 
     <!-- 01 -->
-    <article class="proj">
+    <article class="proj" id="p1">
       <div class="proj-top">
         <div class="proj-info">
           <div class="proj-num"><span>01</span><span class="badge" data-en="Client work · in-house" data-fr="Mission client · en interne">Client work · in-house</span></div>
@@ -418,7 +553,7 @@ footer ul{display:flex;flex-wrap:wrap;gap:6px 18px;list-style:none}
     </article>
 
     <!-- 02 -->
-    <article class="proj">
+    <article class="proj" id="p2">
       <div class="proj-top">
         <div class="proj-info">
           <div class="proj-num"><span>02</span><span class="badge" data-en="Client work · in-house" data-fr="Mission client · en interne">Client work · in-house</span></div>
@@ -440,7 +575,7 @@ footer ul{display:flex;flex-wrap:wrap;gap:6px 18px;list-style:none}
     </article>
 
     <!-- 03 -->
-    <article class="proj">
+    <article class="proj" id="p3">
       <div class="proj-top">
         <div class="proj-info">
           <div class="proj-num"><span>03</span><span class="badge grey" data-en="Concept · personal project" data-fr="Concept · projet personnel">Concept · personal project</span></div>
@@ -467,7 +602,7 @@ footer ul{display:flex;flex-wrap:wrap;gap:6px 18px;list-style:none}
     </article>
 
     <!-- 04 -->
-    <article class="proj">
+    <article class="proj" id="p4">
       <div class="proj-top">
         <div class="proj-info">
           <div class="proj-num"><span>04</span><span class="badge" data-en="Freelance work" data-fr="Mission freelance">Freelance work</span></div>
@@ -632,7 +767,34 @@ footer ul{display:flex;flex-wrap:wrap;gap:6px 18px;list-style:none}
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="wrap">
-    <h2 class="display" data-en="Get in<br>touch" data-fr="Contactez-<br>moi">Get in<br>touch</h2>
+    <div class="touch-head">
+      <h2 class="bubble" id="bubble" aria-label="Get in touch"><span class="bubble-txt" data-en="Get in touch" data-fr="Contactez-moi">Get in touch</span></h2>
+      <svg class="smiley" id="smiley" viewBox="0 0 200 210" aria-hidden="true" focusable="false">
+        <defs>
+          <radialGradient id="smFill" cx="34%" cy="28%" r="78%">
+            <stop offset="0" stop-color="#FBFFE3"/>
+            <stop offset=".38" stop-color="#DBFF4F"/>
+            <stop offset=".78" stop-color="#B2D61F"/>
+            <stop offset="1" stop-color="#86A80E"/>
+          </radialGradient>
+          <radialGradient id="smGround" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#000028" stop-opacity=".45"/>
+            <stop offset="1" stop-color="#000028" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <ellipse class="sm-ground" cx="100" cy="198" rx="66" ry="10" fill="url(#smGround)"/>
+        <g class="sm-body">
+          <circle cx="100" cy="96" r="86" fill="url(#smFill)" stroke="#0E0E0E" stroke-width="4"/>
+          <ellipse cx="54" cy="122" rx="15" ry="9" fill="#FF5B23" opacity=".35"/>
+          <ellipse cx="146" cy="122" rx="15" ry="9" fill="#FF5B23" opacity=".35"/>
+          <g class="sm-eye"><ellipse cx="72" cy="82" rx="10.5" ry="17" fill="#0E0E0E"/><circle cx="75.5" cy="75" r="3.6" fill="#fff"/></g>
+          <g class="sm-eye sm-eye-r"><ellipse cx="128" cy="82" rx="10.5" ry="17" fill="#0E0E0E"/><circle cx="131.5" cy="75" r="3.6" fill="#fff"/></g>
+          <path class="sm-wink" d="M114 86 Q128 72 142 86" fill="none" stroke="#0E0E0E" stroke-width="8" stroke-linecap="round"/>
+          <path d="M56 114 Q100 160 144 114" fill="none" stroke="#0E0E0E" stroke-width="9" stroke-linecap="round"/>
+          <ellipse cx="66" cy="42" rx="28" ry="13" fill="#fff" opacity=".6" transform="rotate(-28 66 42)"/>
+        </g>
+      </svg>
+    </div>
     <p data-en="I’m looking for a full-time job (CDI or CDD) in France or Belgium, and I can start right away." data-fr="Je cherche un poste à temps plein (CDI ou CDD) en France ou en Belgique, et je suis disponible tout de suite.">I’m looking for a full-time job (CDI or CDD) in France or Belgium, and I can start right away.</p>
     <a class="mail" href="mailto:amiinebrahiimii@gmail.com">amiinebrahiimii@gmail.com</a>
     <div class="btns">
@@ -681,6 +843,127 @@ function toggleMenu(force){
   try { saved = localStorage.getItem('site-lang') || localStorage.getItem('lang'); } catch (e) {}
   if (!saved && (navigator.language || '').toLowerCase().indexOf('fr') === 0) saved = 'fr';
   if (saved === 'fr') setLang('fr');
+})();
+
+/* ---------- "Get in touch": letters pop up and turn 3D ---------- */
+(function(){
+  var h = document.getElementById('bubble'); if (!h) return;
+  var tilts = ['-7deg','5deg','-4deg','8deg','-6deg','3deg','-8deg','6deg'];
+  function split(){
+    var box = h.querySelector('.bubble-txt'); if (!box || box.querySelector('.ch')) return;
+    var text = box.textContent; h.setAttribute('aria-label', text);
+    var html = '', k = 0;
+    text.split(' ').forEach(function(w, wi){
+      if (wi) html += ' ';
+      html += '<span class="word" aria-hidden="true">';
+      Array.from(w).forEach(function(c){
+        var e = c.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+        html += '<span class="ch" data-ch="' + e + '" style="--r:' + tilts[k++ % tilts.length] + '"><span>' + e + '</span></span>';
+      });
+      html += '</span>';
+    });
+    box.innerHTML = html;
+  }
+  split();
+  new MutationObserver(split).observe(document.documentElement, {attributes:true, attributeFilter:['lang']});
+  // touch: letters pop as the finger taps or slides over them
+  function popAt(x, y){
+    var el = document.elementFromPoint(x, y); var ch = el && el.closest ? el.closest('.bubble .ch') : null;
+    if (!ch) return;
+    ch.classList.add('pop'); clearTimeout(ch._t);
+    ch._t = setTimeout(function(){ ch.classList.remove('pop'); }, 700);
+  }
+  h.addEventListener('pointerdown', function(e){ if (e.pointerType !== 'mouse') popAt(e.clientX, e.clientY); });
+  h.addEventListener('touchmove', function(e){ var t = e.touches[0]; if (t) popAt(t.clientX, t.clientY); }, {passive:true});
+})();
+/* ---------- smiley wink on click / tap ---------- */
+(function(){
+  var sm = document.getElementById('smiley'); if (!sm) return;
+  var t;
+  sm.addEventListener('click', function(){
+    sm.classList.add('wink'); clearTimeout(t);
+    t = setTimeout(function(){ sm.classList.remove('wink'); }, 900);
+  });
+})();
+/* ---------- hero photo -> phone ---------- */
+(function(){
+  var flip = document.getElementById('flip'); if (!flip) return;
+  var btn = document.getElementById('portrait-btn'), stage = document.getElementById('phone-stage');
+  var track = document.getElementById('track'), dotsBox = document.getElementById('dots');
+  var prev = document.getElementById('pc-prev'), next = document.getElementById('pc-next'), close = document.getElementById('phone-close');
+  var slides = track.querySelectorAll('.slide'), n = slides.length, cur = 0;
+  function lang(){ return document.documentElement.lang === 'fr' ? 'fr' : 'en'; }
+  function labels(){ document.querySelectorAll('[data-en-label]').forEach(function(el){ el.setAttribute('aria-label', el.getAttribute('data-' + lang() + '-label')); }); }
+  for (var i=0;i<n;i++){ (function(i){
+    var d = document.createElement('button'); d.type='button'; d.setAttribute('role','tab'); d.setAttribute('aria-label', (i+1)+' / '+n);
+    d.addEventListener('click', function(){ go(i); }); dotsBox.appendChild(d);
+  })(i); }
+  var dots = dotsBox.querySelectorAll('button');
+  function mark(i){
+    cur = i;
+    dots.forEach(function(d,k){ d.setAttribute('aria-selected', k===i ? 'true' : 'false'); });
+    prev.disabled = i === 0; next.disabled = i === n-1;
+  }
+  var lock = 0, settle;
+  function go(i, instant){
+    i = Math.max(0, Math.min(n-1, i));
+    lock = Date.now() + 700;
+    track.scrollTo({left: i * track.clientWidth, behavior: instant ? 'auto' : 'smooth'});
+    mark(i);
+  }
+  track.addEventListener('scroll', function(){
+    clearTimeout(settle);
+    settle = setTimeout(function(){
+      if (Date.now() < lock || down) return;
+      var i = Math.round(track.scrollLeft / track.clientWidth); if (i !== cur) mark(i);
+    }, 90);
+  });
+  prev.addEventListener('click', function(){ go(cur-1); });
+  next.addEventListener('click', function(){ go(cur+1); });
+  track.addEventListener('keydown', function(e){
+    if (e.key === 'ArrowRight'){ e.preventDefault(); go(cur+1); }
+    if (e.key === 'ArrowLeft'){ e.preventDefault(); go(cur-1); }
+  });
+  // drag with the mouse (touch already swipes natively)
+  var down = false, moved = false, sx = 0, sl = 0;
+  track.addEventListener('pointerdown', function(e){
+    if (e.pointerType !== 'mouse' || e.button !== 0) return;
+    down = true; moved = false; sx = e.clientX; sl = track.scrollLeft;
+  });
+  window.addEventListener('pointermove', function(e){
+    if (!down) return;
+    var dx = e.clientX - sx;
+    if (!moved && Math.abs(dx) > 5){ moved = true; track.classList.add('dragging'); }
+    if (moved) track.scrollLeft = sl - dx;
+  });
+  window.addEventListener('pointerup', function(e){
+    if (!down) return; down = false;
+    if (!moved) return;
+    track.classList.remove('dragging');
+    var dx = e.clientX - sx, w = track.clientWidth, i = Math.round(sl / w);
+    if (dx < -w*0.15) i++; else if (dx > w*0.15) i--;
+    go(i);
+  });
+  track.addEventListener('click', function(e){ if (moved){ e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+  function open(){
+    flip.classList.add('open'); btn.setAttribute('aria-expanded','true');
+    stage.removeAttribute('inert'); btn.setAttribute('inert','');
+    go(0, true);
+    setTimeout(function(){ track.focus({preventScroll:true}); }, 350);
+  }
+  function shut(){
+    flip.classList.remove('open'); btn.setAttribute('aria-expanded','false');
+    stage.setAttribute('inert',''); btn.removeAttribute('inert');
+    setTimeout(function(){ btn.focus({preventScroll:true}); }, 50);
+  }
+  btn.addEventListener('click', open);
+  close.addEventListener('click', shut);
+  stage.addEventListener('keydown', function(e){ if (e.key === 'Escape') shut(); });
+  window.addEventListener('resize', function(){ if (flip.classList.contains('open')) go(cur, true); });
+  // keep aria-labels in the chosen language
+  labels();
+  new MutationObserver(labels).observe(document.documentElement, {attributes:true, attributeFilter:['lang']});
+  mark(0);
 })();
 </script>
 </body>
